@@ -1,8 +1,8 @@
 <?php
 /**
- * oke functions and definitions
+ * Amy Fletcher functions and definitions
  *
- * @package oke
+ * @package amy-fletcher
  */
 
 /****************************************************/
@@ -10,57 +10,52 @@
 /****************************************************/
 
 /* Enqueue scripts and styles */
-add_action('wp_enqueue_scripts', 'oke_scripts');
+add_action('wp_enqueue_scripts', 'sl_scripts');
 
 /* Add Menus */
-add_action('init', 'oke_custom_menu');
+add_action('init', 'sl_custom_menu');
 
 /* Dashboard Config */
-add_action('wp_dashboard_setup', 'oke_dashboard_widget');
+add_action('wp_dashboard_setup', 'sl_dashboard_widget');
 
 /* Dashboard Style */
-add_action('admin_head', 'oke_custom_fonts');
+add_action('admin_head', 'sl_custom_style');
 
 /* Remove Default Menu Items */
-add_action('admin_menu', 'oke_remove_menus');
+add_action('admin_menu', 'sl_remove_menus');
 
 /* Change Posts Columns */
-add_filter('manage_posts_columns', 'oke_manage_columns');
+add_filter('manage_posts_columns', 'sl_manage_columns');
 
 /* Reorder Admin Menu */
-add_filter('custom_menu_order', 'oke_reorder_menu');
-add_filter('menu_order', 'oke_reorder_menu');
+add_filter('custom_menu_order', 'sl_reorder_menu');
+add_filter('menu_order', 'sl_reorder_menu');
 
 /* Remove Comments Link */
-add_action('wp_before_admin_bar_render', 'oke_manage_admin_bar');
+add_action('wp_before_admin_bar_render', 'sl_manage_admin_bar');
+
+/* Allow SVG */
+add_filter( 'wp_check_filetype_and_ext', 'sl_allow_svg', 10, 4 );
+add_filter( 'upload_mimes', 'sl_mime_types' );
+add_action( 'admin_head', 'sl_fix_svg' );
+
+/* Add Custom Post Types */
+require 'custom-post-types.php';
 
 
 /****************************************************/
 /*                     Functions                     /
 /****************************************************/
 
-function oke_scripts() {
-	wp_enqueue_style( 'oke-style', get_stylesheet_uri() );
-	wp_enqueue_script( 'oke-core-js', get_template_directory_uri() . '/inc/js/compiled.js', array('jquery'), true); 
+function sl_scripts() {
+	wp_enqueue_style( 'sl-style', get_stylesheet_uri() );
+	wp_enqueue_script( 'sl-core-js', get_template_directory_uri() . '/inc/js/compiled.js', array('jquery'), true); 
 }
 
-function oke_custom_menu() {
+function sl_custom_menu() {
 	register_nav_menus(array(
 		'main-menu' => __( 'Main Menu' )
 	));
-}
-
-function oke_dashboard_widget() {
-	global $wp_meta_boxes;
-	wp_add_dashboard_widget('custom_help_widget', 'oke Support', 'oke_dashboard_help');
-}
-
-function oke_dashboard_help() {
-	echo file_get_contents(__DIR__ . "/admin-settings/dashboard.html");
-}
-
-function oke_custom_fonts() {
-	echo '<style type="text/css">' . file_get_contents(__DIR__ . "/admin-settings/style-admin.css") . '</style>';
 	
 	if(function_exists('acf_add_options_page')) {
 		acf_add_options_page(array(
@@ -70,36 +65,97 @@ function oke_custom_fonts() {
 			'capability'	=> 'edit_posts',
 			'redirect'		=> false
 		));
+		
+		acf_add_options_page(array(
+			'page_title' 	=> 'Call To Action',
+			'menu_title'	=> 'Call To Action',
+			'menu_slug' 	=> 'call-to-action',
+			'capability'	=> 'edit_posts',
+			'redirect'		=> false
+		));
 	}
 }
+
+function sl_dashboard_widget() {
+	global $wp_meta_boxes;
+	wp_add_dashboard_widget('custom_help_widget', 'sl Support', 'sl_dashboard_help');
+}
+
+function sl_dashboard_help() {
+	echo file_get_contents(__DIR__ . "/admin-settings/dashboard.html");
+}
+
+function sl_custom_style() {
+	echo '<style type="text/css">' . file_get_contents(__DIR__ . "/admin-settings/style-admin.css") . '</style>';
+}
  
-function oke_remove_menus(){
+function sl_remove_menus(){
 	remove_menu_page( 'edit-comments.php' ); //Comments
 }
 
-function oke_manage_columns($columns) {
+function sl_manage_columns($columns) {
 	unset($columns["comments"]);
 	return $columns;
 }
 
-function oke_reorder_menu() {
+function sl_reorder_menu($menu_order) {
     return array(
-		'index.php',                        // Dashboard
-		'separator1',                       // --Space--
-		'edit.php',                         // Posts
-		'edit.php?post_type=page',          // Pages
-		'upload.php',                       // Media
-		'separator2',                       // --Space--
-		'themes.php',                       // Appearance
-		'plugins.php',                      // Plugins
-		'users.php',                        // Users
-		'tools.php',                        // Tools
-		'options-general.php',              // Settings
-		'wpcf7',                            // Contact Form 7 
+		'index.php',                            // Dashboard
+		'edit.php?post_type=interior',          // Interior
+		'edit.php?post_type=artisan',           // Artisan
+		'edit.php?post_type=furniture',         // Furniture
+		'separator1',                           // --Space--
+		'edit.php',                             // Posts
+		'edit.php?post_type=page',              // Pages
+		'upload.php',                           // Media
+		'separator-last',                       // --Space--
+		'edit.php?post_type=testimonial',       // Furniture
+		'call-to-action',                       // Call to Action
+		'site-general-settings',                // Theme Settings
+		'separator2',                           // --Space--
+		'themes.php',                           // Appearance
+		'plugins.php',                          // Plugins
+		'users.php',                            // Users
+		'tools.php',                            // Tools
+		'options-general.php',                  // Settings
+		'edit.php?post_type=acf-field-group',   // ACF
+		'wpcf7',                                // Contact Form 7
+		'wppusher',                             // WP Pusher 
    );
 }
 
-function oke_manage_admin_bar(){
+function sl_manage_admin_bar(){
 	global $wp_admin_bar;
 	$wp_admin_bar->remove_menu('comments');
+}
+
+function sl_allow_svg($data, $file, $filename, $mimes) {
+ 
+	global $wp_version;
+	if($wp_version !== '5.2.2') {
+		return $data;
+	}
+	
+	$filetype = wp_check_filetype( $filename, $mimes );
+	
+	return [
+		'ext'             => $filetype['ext'],
+		'type'            => $filetype['type'],
+		'proper_filename' => $data['proper_filename']
+	];
+ 
+}
+ 
+function sl_mime_types( $mimes ){
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+ 
+function sl_fix_svg() {
+	echo '<style type="text/css">
+			.attachment-266x266, .thumbnail img {
+				width: 100% !important;
+				height: auto !important;
+			}
+		</style>';
 }

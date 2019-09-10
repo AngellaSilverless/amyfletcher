@@ -19,8 +19,9 @@ body {
     font-family: $body-font;
     font-size: 14px;
     font-weight: 200;
-    background: hsl(0, 0%, 96%);
-    color: hsl(0, 0%, 41%);
+    background: $background-light;
+    color: hsl(0, 0%, 27%);
+    margin: 10px;
 }
 
 h2, .h2 {
@@ -73,17 +74,50 @@ main {
     min-height: 100vh;
 }
 
+.hero {
+	@include backgroundCover;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	&:before {
+		content: "";
+		height: 100%;
+		width: 100%;
+		background: black;
+		position: absolute;
+		opacity: 0.25;
+		z-index: -1;
+		top: 0;
+	}
+	
+	&__content {
+		text-align: center;
+	}
+	
+	&__logo {
+		width: 40em;
+		
+		path {
+			fill: white;
+		}
+	}
+}
+
 p {
-    font-size: 1.2em;
-    font-weight: 200;  
-    line-height: 1.5em
+    font-size: 1.2em; 
+	line-height: 1.6;
+	margin: 0;
+	padding: 1em 0;
 }
 
 a {
     display: inline-block;
     line-height: 1.2em;
     color: $brand-primary;
-    transition:color 0.3s ease;
+    transition:color 0.3s ease-in-out;
     text-decoration: none;
 
     &:hover {
@@ -105,7 +139,7 @@ img {
 
 .heading {
     font-family: $brand-font;
-    font-weight: 100;    
+    font-weight: 100;   
     
     &__alt {
         font-family: $supporting-font;        
@@ -158,8 +192,8 @@ img {
     }
     
     &__xl {
-        font-size: 4em;
-        line-height: 1em;
+        font-size: 5em;
+        line-height: 1.5;
     }
     
     &__lg {      
@@ -218,9 +252,15 @@ nav {
 	left: 0;
 	z-index: 200;
 	width: 100%;
-	background: $brand-primary;
 	color: white;
-	padding: 1em;
+	padding: 2.5em 1em;
+	
+	.col {
+		padding: 0 2em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 	
 	.menu-trigger {
 		cursor: pointer;
@@ -248,10 +288,11 @@ nav {
 		
 			a {
 			    display: block;
-			    padding: 0.25em 0;
+			    padding: 1em;
 			    color: white;
 			    line-height: 1.5em;
-				transition: color 1s ease;
+				font-size: 1.2em;
+				font-weight: 400;
 			}
 			
 			&.current-menu-item:before {
@@ -275,6 +316,21 @@ nav {
 			}
 		}
 	}
+}
+
+.read-more {
+	letter-spacing: 1px;
+	outline: none;
+	background: none;
+	border: none;
+	font-size: 1em;
+	font-weight: 100;
+	color: $brand-dark-grey;
+	border-right: 2px solid $brand-dark-grey;
+	border-left: 2px solid $brand-dark-grey;
+	cursor: pointer;
+	width: 30em;
+    padding: 1em 0;
 }
 
 .brand {
@@ -332,9 +388,10 @@ nav {
 /*===========FOOTER==========*/
 
 footer {
+	background: black;
 		
 	a {
-		color: $brand-tertiary;
+		color: white;
 		
 		&:hover {
 			color: white;
@@ -343,30 +400,28 @@ footer {
 	
 	.pre-socket {
 		padding: 2em 1em;
-		background: $brand-primary;
-		color: $brand-tertiary;
+		color: white;
 		
 		.socials a {
-		    color: $brand-light-grey;
+		    color: white;
 		
 			&:hover {
 				color: white;
 			}
 		    
 		    &:not(:first-child) {
-			    margin-left: 1em;
+			    margin-left: 2em;
 		    }
 		}
 	}
 	
 	.socket {
 		letter-spacing: 1px;
-		background: $brand-dark-grey;
-		color: $brand-tertiary;
+		color: white;
 		padding: 1em;
 		
 		.colophon, .mandatory {
-			font-size: 0.9em;
+			font-size: 1em;
 			display: flex;
 			align-items: center;
 		}

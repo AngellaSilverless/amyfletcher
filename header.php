@@ -2,7 +2,7 @@
 /**
  * Header
  *
- * @package oke
+ * @package amy-fletcher
  */
 
 ?>
@@ -16,7 +16,7 @@
 <meta name="keywords" content=" ">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>oke Master Theme</title>
+<title>Amy Fletcher</title>
 
 <link rel="stylesheet" href="https://use.typekit.net/dmz2ckm.css"><!--TYPEKIT INJECT-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -29,21 +29,38 @@
 </head>
 
 <body <?php body_class(); ?>>
+	
+	<div class="page-border page-border__left-top"></div>
+	<div class="page-border page-border__right-bottom"></div>
 
 	<div id="page" class="site-wrapper">
 	
 		<main><!--closes in footer.php-->
 		
 			<nav id="nav">
-			
-			<?php
-			
-			wp_nav_menu(array(
-				'theme_location'  => 'main-menu',
-				'container_class' => 'mainMenu'
-			));
-			
-			?>
+				
+				<div class="container fullwidth cols-3-6-3">
+				
+					<div class="col" id="logo-amy-fletcher">
+						<a href="<?php echo home_url(); ?>">
+							<?php echo file_get_contents(get_field("logo", "options")["url"]); ?>
+						</a>
+					</div>
+					
+					<div class="col" id="main-menu">
+						<?php wp_nav_menu(array(
+							'theme_location'  => 'main-menu',
+							'container_class' => 'mainMenu'
+						)); ?>
+					</div>
+					
+					<div class="col" id="contact-info">
+						<?php $phone = get_field("phone", "options"); $email = get_field("email", "options"); ?>
+						<a class="phone" href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+						<a class="email" href="mail:<?php echo $email; ?>"><?php echo $email; ?></a>
+					</div>
+				
+				</div>
 		
 			</nav>
 		

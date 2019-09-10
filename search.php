@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages
  *
- * @package oke
+ * @package amy-fletcher
  */
 
 get_header(); ?>

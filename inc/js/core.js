@@ -1,4 +1,4 @@
-//@prepros-prepend jquery.magnific-popup.js
+//@prepros-prepend magnific-popup.js
 //@prepros-prepend owl.carousel.min.js
 
 jQuery(document).ready(function( $ ) {
@@ -145,44 +145,19 @@ jQuery(document).ready(function( $ ) {
 
 
 // ========== Controller for lightbox elements
-
-	$(".gallery").each(function() {
-		$(this).find(".lightbox-gallery").magnificPopup({
-	        type: 'image',
-	        gallery:{
-	            enabled:true
-	        }
-	    });
-	});
-    
-    $('.single-image').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		closeBtnInside: false,
-		fixedContentPos: true,
-		mainClass: 'mfp-no-margins mfp-with-zoom',
-		image: {
-			verticalFit: true
-		},
-		zoom: {
-			enabled: true,
-			duration: 300
-		}
-	});
 	
-	$('.post-image a').magnificPopup({
+	$('.gallery').magnificPopup({
+		delegate: 'a',
 		type: 'image',
 		closeOnContentClick: true,
 		closeBtnInside: false,
-		fixedContentPos: true,
-		mainClass: 'mfp-no-margins mfp-with-zoom',
 		image: {
-			verticalFit: true
+			verticalFit: true,
 		},
-		zoom: {
-			enabled: true,
-			duration: 300
+		gallery: {
+			enabled: true
 		}
+		
 	});
  
 // GLOBAL OWL CAROUSEL SETTINGS
@@ -219,7 +194,7 @@ jQuery(document).ready(function( $ ) {
     
     $(".read-more").click(function() {
 	    $(this).prev().slideToggle();
-	    $(this).text($(this).text() == "Read more" ? "Read less" : "Read more");
+	    $(this).text($(this).text() == "Read More" ? "Read Less" : "Read More");
     });
 
 // ========== Add class if in viewport on page load

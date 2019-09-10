@@ -54,11 +54,6 @@ ul#adminmenu>li.current>a.current:after {
 
 #toplevel_page {
 	
-	&_testimonials .dashicons-admin-generic:before {
-		font-family: dashicons;
-		content: "\f101"
-	}
-	
 	&_call-to-action .dashicons-admin-generic:before {
 		font-family: dashicons;
 		content: "\f488"
@@ -112,4 +107,8 @@ ul#adminmenu>li.current>a.current:after {
 			color: hsl(0, 0%, 100%);
 		}
 	}
+}
+
+.acf-field.full-width .acf-image-uploader .image-wrap img[src$=".svg"] {
+	min-width: fit-content;
 }

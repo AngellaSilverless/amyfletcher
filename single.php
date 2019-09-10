@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts
  *
- * @package oke
+ * @package amy-fletcher
  */
 get_header(); ?>
 

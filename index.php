@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package oke
+ * @package amy-fletcher
  */
 get_header();?>
 

@@ -14,15 +14,11 @@ if( get_field('hero_type') !== 'slider'):
 
 	<div class="container">
 		
-		<div class="hero__content">
-		
-			<?php $brandImage = get_field('logo', 'options');?>
+		<div class="col hero__content">
 			
-			<a href="<?php echo home_url(); ?>" alt="<?php wp_title(''); ?>" title="<?php wp_title(''); ?>" class="logo"><?php
-				
-				get_template_part('template-parts/logo');
-			
-			?></a>
+			<a href="<?php echo home_url(); ?>" class="logo hero__logo slide-up">
+				<?php echo file_get_contents(get_field('logo', 'options')["url"]); ?>
+			</a>
 		
 			<h1 class="heading heading__xl slow-fade"><?php the_field('hero_heading');?></h1>
 		

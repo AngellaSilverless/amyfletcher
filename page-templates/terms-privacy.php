@@ -2,7 +2,7 @@
 /**
  * ============== Template Name: Terms and Privacy
  *
- * @package oke
+ * @package amy-fletcher
  */
 get_header();?>
 

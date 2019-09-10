@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages
  *
- * @package oke
+ * @package amy-fletcher
  */
 
 get_header();

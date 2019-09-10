@@ -5,7 +5,8 @@
     grid-template-columns: repeat($col-count, 1fr);
     grid-gap: $grid-gap;
     max-width: $container-width;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
 
     &.fullwidth {
         max-width: none;
@@ -107,18 +108,35 @@
 
 /*=====PROJECT GRID RULES=====*/
 
-/* New grid layouts follow this syntax:
-    
-&.cols-4-8 {
-    .col:nth-of-type(2n - 1) {
-        grid-column: span 4;      
-    }
-    .col:nth-of-type(2n) {
-        grid-column: span 8;     
-    }    
+.container {
+	
+	&.cols-3-6-3 {
+		& > .col:nth-of-type(3n - 2) {
+			grid-column: span 3;      
+		}
+		& > .col:nth-of-type(3n - 1) {
+			grid-column: span 6;      
+		}
+		& > .col:nth-of-type(3n) {
+			grid-column: span 3;     
+		}    
+	}
+	
+	&.cols-4-10 {
+		& > .col:nth-of-type(n) {
+			grid-column: 4/10;     
+		}    
+	}
+	
+	&.cols-4-8 {
+		& > .col:nth-of-type(2n - 1) {
+			grid-column: span 4;      
+		}
+		& > .col:nth-of-type(2n) {
+			grid-column: span 8;      
+		}
+	}
 }
-
-*/
 
 /*===========MEDIA QUERIES==========*/
 
