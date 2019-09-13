@@ -87,15 +87,14 @@
 }
 
 .gallery {
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     width: 100%;
 
     .img-wrapper {
-        flex: auto;
         height: 30em;
         width: 100%;
-        margin: 0; /* Some gutter */
+        margin: 0;
         cursor: zoom-in;
         
         a {
@@ -104,37 +103,62 @@
 	        height: 100%;
         }
     }
+    
+    &__single {
+	    
+	    .img-wrapper {
+		    grid-column: span 12;
+		    height: 32em;
+		}
+    }
 
 	&__about {
-		$padding: 1.5em;
+		grid-gap: 1.5em;
 		
 		.img-wrapper {
 			
-			&:nth-of-type(4n - 3) {
-				flex: 33.33%;
-				padding-bottom: $padding;
-				padding-right: $padding;
+			&:nth-of-type(3n - 2) {
+				grid-column: span 12;
+				height: 28em;
 			}
 			
-			&:nth-of-type(4n - 2) {
-				flex: 33.33%;
-				padding-bottom: $padding;
-				padding-right: $padding;
+			&:nth-of-type(3n - 1), &:nth-of-type(3n) {
+				grid-column: span 6;
+				height: 13em;
+			}
+		}
+	}
+	
+	&__interior {
+		grid-gap: 1.5em;
+		
+		.img-wrapper {
+			height: 45em;
+			
+			&:nth-of-type(11n - 10), &:nth-of-type(11n - 4) {
+				grid-column: span 12;
 			}
 			
-			&:nth-of-type(4n - 1) {
-				flex: 33.33%;
-				padding-bottom: $padding;
+			&:nth-of-type(11n - 9), &:nth-of-type(11n - 8), &:nth-of-type(11n - 7), &:nth-of-type(11n - 5), &:nth-of-type(11n - 1) {
+				grid-column: span 4;
 			}
 			
-			&:nth-of-type(4n) {
-				flex: 100%;
-				padding-bottom: $padding;
+			&:nth-of-type(11n - 6), &:nth-of-type(11n), {
+				grid-column: span 8;
 			}
 			
-			&:last-of-type {
-				padding-bottom: 0;
+			&:nth-of-type(11n - 3), &:nth-of-type(11n - 2) {
+				grid-column: span 6;
 			}
+		}
+	}
+	
+	&__working {
+		grid-gap: 1.5em;
+		
+		.img-wrapper {
+			grid-column: span 4;
+			height: 22em;
 		}
 	}
 }
@@ -146,13 +170,50 @@
 
 .block {
 	
+	.text {
+		color: $brand-mid-grey;
+		font-weight: normal;
+		letter-spacing: 1px;
+	}
+	
 	&-text {
 		text-align: center;
-		
-		.text {
-			color: $brand-mid-grey;
-			font-weight: 400;
-			letter-spacing: 1px;
-		}
+	}
+	
+	&-info {
+		text-align: left;
+	}
+}
+
+.gallery-working {
+	position: relative;
+}
+
+.tape {
+	position: absolute;
+	width: 16em;
+	
+	&.tl {
+		top: -2em;
+		left: -8em;
+		transform: rotate(315deg);
+	}
+	
+	&.tr {
+		top: -2em;
+		right: -8em;
+		transform: rotate(45deg);
+	}
+	
+	&.bl {
+		bottom: -2em;
+		left: -8em;
+		transform: rotate(225deg);
+	}
+	
+	&.br {
+		bottom: -2em;
+		right: -8em;
+		transform: rotate(135deg);
 	}
 }

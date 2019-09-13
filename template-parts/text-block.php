@@ -2,9 +2,9 @@
 
 <div class="container cols-4-10 pt5 pb5">
 	
-	<div class="col block-text">
+	<div class="col block block-text">
 		
-		<div class="heading heading__md heading__caps font600 spacing1"><?php echo $text_block["heading"]; ?></div>
+		<h2 class="heading heading__md spacing1 mb0"><?php echo $text_block["heading"]; ?></h2>
 		
 		<div class="text"><p><?php echo $text_block["text_block_text"]; ?></p></div>
 		
@@ -12,7 +12,7 @@
 		
 		<div class="text" style="display: none"><p><?php echo $text_block["text_block_text_more"]; ?></p></div>
 		
-		<button class="read-more mt1">Read More</button>
+		<button class="read-more button mt1">Read More</button>
 		
 		<?php endif; ?>
 	</div>

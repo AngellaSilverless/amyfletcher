@@ -43,7 +43,7 @@
 				
 					<div class="col" id="logo-amy-fletcher">
 						<a href="<?php echo home_url(); ?>">
-							<?php echo file_get_contents(get_field("logo", "options")["url"]); ?>
+							<?php echo file_get_contents(get_field("logo_standard", "options")["url"]); ?>
 						</a>
 					</div>
 					

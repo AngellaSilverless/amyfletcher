@@ -1,12 +1,12 @@
 <?php $services = get_field("section_services", get_option("page_on_front")); if($services): ?>
 
-<div class="services dark-background center pt5 pb5">
+<div class="services background-mid center pt5 pb5">
 	
 	<div class="container">
 	
 		<div class="col">
 			
-			<div class="heading heading__md heading__caps heading__light font600 spacing1 pb3"><?php echo $services["heading"]; ?></div>
+			<h2 class="heading heading__md heading__light spacing1 pb3"><?php echo $services["heading"]; ?></h2>
 			
 			<div class="items-wrapper container cols-2">
 				

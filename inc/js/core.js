@@ -146,18 +146,28 @@ jQuery(document).ready(function( $ ) {
 
 // ========== Controller for lightbox elements
 	
-	$('.gallery').magnificPopup({
-		delegate: 'a',
+	$(".gallery").each(function(gallery) {
+		$(this).magnificPopup({
+			delegate: 'a',
+			type: 'image',
+			closeOnContentClick: true,
+			closeBtnInside: false,
+			image: {
+				verticalFit: true,
+			},
+			gallery: {
+				enabled: true
+			}
+		});
+	});
+	
+	$('.single-image').magnificPopup({
 		type: 'image',
 		closeOnContentClick: true,
 		closeBtnInside: false,
 		image: {
 			verticalFit: true,
-		},
-		gallery: {
-			enabled: true
 		}
-		
 	});
  
 // GLOBAL OWL CAROUSEL SETTINGS
@@ -195,6 +205,10 @@ jQuery(document).ready(function( $ ) {
     $(".read-more").click(function() {
 	    $(this).prev().slideToggle();
 	    $(this).text($(this).text() == "Read More" ? "Read Less" : "Read More");
+    });
+    
+    $(".view-slideshow").click(function() {
+	    $(".gallery__interior a").eq(0)[0].click();
     });
 
 // ========== Add class if in viewport on page load

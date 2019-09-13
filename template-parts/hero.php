@@ -10,7 +10,7 @@ if( get_field('hero_type') !== 'slider'):
 
 ?>
 
-<div class="hero <?php the_field('hero_height');?>" style="background-image: url(<?php echo $heroImage['url']; ?>); background-color: <?php echo $heroColor; ?>;">
+<div class="hero pt5 <?php the_field('hero_height');?>" style="background-image: url(<?php echo $heroImage['url']; ?>); background-color: <?php echo $heroColor; ?>;">
 
 	<div class="container">
 		
@@ -20,7 +20,7 @@ if( get_field('hero_type') !== 'slider'):
 				<?php echo file_get_contents(get_field('logo', 'options')["url"]); ?>
 			</a>
 		
-			<h1 class="heading heading__xl slow-fade"><?php the_field('hero_heading');?></h1>
+			<h1 class="heading heading__xl heading__brand heading__light slow-fade"><?php the_field('hero_heading');?></h1>
 		
 		</div>
 	

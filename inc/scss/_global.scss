@@ -19,7 +19,7 @@ body {
     font-family: $body-font;
     font-size: 14px;
     font-weight: 200;
-    background: $background-light;
+    background: hsl(0, 0%, 98%);
     color: hsl(0, 0%, 27%);
     margin: 10px;
 }
@@ -107,7 +107,7 @@ main {
 }
 
 p {
-    font-size: 1.2em; 
+    font-size: 1.25em; 
 	line-height: 1.6;
 	margin: 0;
 	padding: 1em 0;
@@ -138,15 +138,16 @@ img {
 }
 
 .heading {
-    font-family: $brand-font;
-    font-weight: 100;   
+    font-family: $body-font;
+    font-weight: 400;
+    text-transform: uppercase;
     
     &__alt {
         font-family: $supporting-font;        
     }
     
-    &__body {
-        font-family: $body-font;
+    &__brand {
+        font-family: $brand-font;
     }
     
     &__caps {
@@ -157,8 +158,8 @@ img {
         color: white;
     }
     
-    &__alt-color {
-      color: $brand-dark-grey;
+    &__secondary-color {
+      color: $brand-secondary;
     }
     
     &__seperator {
@@ -276,7 +277,7 @@ nav {
 	ul {
 		list-style: none;
 		padding: 0;
-		font-family: $brand-font;
+		font-family: $body-font;
 		font-weight: 100;
 		letter-spacing: 2px;
 		transition: margin 1s ease;
@@ -292,7 +293,7 @@ nav {
 			    color: white;
 			    line-height: 1.5em;
 				font-size: 1.2em;
-				font-weight: 400;
+				font-weight: 300;
 			}
 			
 			&.current-menu-item:before {
@@ -316,21 +317,6 @@ nav {
 			}
 		}
 	}
-}
-
-.read-more {
-	letter-spacing: 1px;
-	outline: none;
-	background: none;
-	border: none;
-	font-size: 1em;
-	font-weight: 100;
-	color: $brand-dark-grey;
-	border-right: 2px solid $brand-dark-grey;
-	border-left: 2px solid $brand-dark-grey;
-	cursor: pointer;
-	width: 30em;
-    padding: 1em 0;
 }
 
 .brand {
@@ -399,7 +385,7 @@ footer {
 	}
 	
 	.pre-socket {
-		padding: 2em 1em;
+		padding: 3em 1em 1em 1em;
 		color: white;
 		
 		.socials a {
@@ -410,7 +396,7 @@ footer {
 			}
 		    
 		    &:not(:first-child) {
-			    margin-left: 2em;
+			    margin-left: 0.5em;
 		    }
 		}
 	}

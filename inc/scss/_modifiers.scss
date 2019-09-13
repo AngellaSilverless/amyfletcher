@@ -122,3 +122,65 @@ $weight: (1, 2, 3, 4, 5, 6, 7, 8, 9); // Amount string.
 .center {
 	text-align: center;
 }
+
+/* Font faces */
+
+@font-face {
+	font-family: 'Zeitung';
+	  src: url('inc/font/Zeitung/Zeitung-Bold.eot');
+	  src: url('inc/font/Zeitung/Zeitung-Bold.eot?#iefix') format('embedded-opentype'),
+	       url('inc/font/Zeitung/Zeitung-Bold.woff2') format('woff2'),
+	       url('inc/font/Zeitung/Zeitung-Bold.woff') format('woff'),
+	       url('inc/font/Zeitung/Zeitung-Bold.ttf') format('truetype'),
+	       url('inc/font/Zeitung/Zeitung-Bold.svg#Zeitung-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Zeitung';
+	  src: url('inc/font/Zeitung/Zeitung-Light.eot');
+	  src: url('inc/font/Zeitung/Zeitung-Light.eot?#iefix') format('embedded-opentype'),
+	       url('inc/font/Zeitung/Zeitung-Light.woff2') format('woff2'),
+	       url('inc/font/Zeitung/Zeitung-Light.woff') format('woff'),
+	       url('inc/font/Zeitung/Zeitung-Light.ttf') format('truetype'),
+	       url('inc/font/Zeitung/Zeitung-Light.svg#Zeitung-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Zeitung';
+	  src: url('inc/font/Zeitung/Zeitung-Regular.eot');
+	  src: url('inc/font/Zeitung/Zeitung-Regular.eot?#iefix') format('embedded-opentype'),
+	       url('inc/font/Zeitung/Zeitung-Regular.woff2') format('woff2'),
+	       url('inc/font/Zeitung/Zeitung-Regular.woff') format('woff'),
+	       url('inc/font/Zeitung/Zeitung-Regular.ttf') format('truetype'),
+	       url('inc/font/Zeitung/Zeitung-Regular.svg#Zeitung-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Trajan';
+	  src: url('inc/font/Trajan/TrajanPro-Regular.eot');
+	  src: url('inc/font/Trajan/TrajanPro-Regular.eot?#iefix') format('embedded-opentype'),
+	       url('inc/font/Trajan/TrajanPro-Regular.woff2') format('woff2'),
+	       url('inc/font/Trajan/TrajanPro-Regular.woff') format('woff'),
+	       url('inc/font/Trajan/TrajanPro-Regular.ttf') format('truetype'),
+	       url('inc/font/Trajan/TrajanPro-Regular.svg#TrajanPro-Regular') format('svg');
+	font-weight: light;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Trajan';
+	  src: url('inc/font/Trajan/TrajanPro-Bold.eot');
+	  src: url('inc/font/Trajan/TrajanPro-Bold.eot?#iefix') format('embedded-opentype'),
+	       url('inc/font/Trajan/TrajanPro-Bold.woff2') format('woff2'),
+	       url('inc/font/Trajan/TrajanPro-Bold.woff') format('woff'),
+	       url('inc/font/Trajan/TrajanPro-Bold.ttf') format('truetype'),
+	       url('inc/font/Trajan/TrajanPro-Bold.svg#TrajanPro-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}

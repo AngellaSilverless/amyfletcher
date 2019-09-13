@@ -15,17 +15,22 @@
 			
 			<?php
 				
-			$phone = get_field("phone", "options");
 			$email = get_field("email", "options");
-			$skype = get_field("skype", "options");
 			$socials = get_field("social_links", "options");
+			$contact = get_field("contact_footer", "options");
 			
 			?>
 			
 			<div class="col info">
-				<div><a class="phone" href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a></div>
-				<div><a class="email" href="mail:<?php echo $email; ?>"><?php echo $email; ?></a></div>
-				<div><a class="skype" href="skype:<?php echo $skype; ?>"><?php echo $skype; ?></a></div>
+				<div class="contact-wrapper"><a class="email" href="mail:<?php echo $email; ?>"><?php echo $email; ?></a></div>
+				
+				<?php foreach($contact as $con): ?>
+					<div class="contact-wrapper">
+						<div class="country"><?php echo $con["country"]; ?></div>
+						<div class="address"><?php echo $con["address"]; ?></div>
+						<a class="phone" href="tel:<?php echo $con["phone"]; ?>">Tel: <?php echo $con["phone"]; ?></a>
+					</div>
+				<?php endforeach ?>
 				
 				<div class="socials">
 					<?php foreach($socials as $social): ?>
