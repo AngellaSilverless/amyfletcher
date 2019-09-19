@@ -20,6 +20,10 @@
 		background: $background-dark;
 	}
 	
+	&-primary {
+		background: $brand-primary;
+	}
+	
 	&-secondary {
 		background: $brand-secondary;
 	}
@@ -263,10 +267,8 @@ nav svg {
 	}
 }
 
-.img-wrapper.quotation-interior {
+.img-wrapper.quotation-interior, .quotation-artisan {
 	cursor: initial;
-	background: $brand-primary;
-	color: white;
 	
 	p {
 		font-size: 1em;
@@ -283,7 +285,6 @@ nav svg {
 		letter-spacing: 1px;
 		display: flex;
 		align-items: center;
-		margin-left: 0.5em;
 		
 		div {
 			position: relative;
@@ -295,14 +296,26 @@ nav svg {
 			z-index: 2;
 			top: 0.5em;
 			left: -1.3em;
-			
-			path {
-				fill: $brand-secondary;
-			}
 		}
 	}
 }
 
+.img-wrapper.quotation-interior {
+	background: $brand-primary;
+	color: white;
+	
+	.quote-wrapper svg path {
+		fill: $brand-secondary;
+	}
+	
+	.quote-wrapper {
+		margin-left: 0.5em;
+	}
+}
+
+.quotation-artisan .quote-wrapper svg path {
+	fill: $brand-primary;
+}
 
 
 .career-history {
@@ -396,6 +409,30 @@ nav svg {
 	}
 }
 
+.recent-posts {
+	line-height: 1;
+
+	.project-background {
+		@include backgroundCover;
+		height: 12em;
+	}
+	
+	.title {
+		line-height: 1;
+		color: hsl(0, 0%, 27%);
+		
+		svg {
+			width: 2.5em;
+			height: auto;
+			margin-left: 0.5em;
+			
+			path {
+				fill: hsl(0, 0%, 27%);
+			}
+		}
+	}
+}
+
 .primary-overlay {
 	position: relative;
 	z-index: 2;
@@ -427,6 +464,338 @@ nav svg {
 		letter-spacing: 1px;
 		font-size: 1.1em;
 		font-weight: 400;
+	}
+}
+
+.artisan-info {
+	
+	.label {
+		display: inline-block;
+		width: 10em;
+		text-align: right;
+		padding-right: 1em;
+		padding-bottom: 0.2em;
+	}
+	
+	.value {
+		display: inline-block;
+		color: $brand-mid-grey;
+		font-weight: normal;
+		letter-spacing: 1px;
+		font-size: 1.2em;
+	}
+}
+
+.brand-text {
+	font-weight: normal;
+	letter-spacing: 1px;
+	color: $brand-mid-grey;
+}
+
+.artisan-wrapper {
+	
+	.title {
+		color: darken($background-mid, 20%);
+	}
+	
+	.tilde {
+		width: 1.8em;
+		fill: $brand-primary;
+		opacity: 0.5;
+		margin-top: 1em;
+	}
+	
+	.arrow {
+		width: 4em;
+		fill: $brand-dark-grey;
+	}
+	
+	.img {
+		height: 35em;
+		width: 100%;
+		@include backgroundCover;
+	}
+}
+
+.post-title {
+	
+	h1 {
+		font-size: 2.5em;
+		letter-spacing: 2px;
+	}
+	
+	svg {
+		width: 0.8em;
+		margin: 0 0.2em 0.4em 0;
+		fill: $brand-primary;
+	}
+	
+	.date {
+		font-weight: normal;
+		letter-spacing: 1px;
+		color: $brand-mid-grey;
+		font-size: 1.2em;
+	}
+}
+
+.other-posts {
+	line-height: 1.5;
+	
+	.single-post {
+		width: 100%;
+		
+		.img {
+			@include backgroundCover;
+			height: 12em;
+		}
+	}
+}
+
+.post-wrapper {
+	display: flex;
+	flex-direction: column;
+	
+	&:nth-of-type(3n - 1) {
+		
+		.img {
+			order: 2;
+		}
+		
+		.post-info {
+			order: 1;
+			margin-bottom: 2em;
+		}
+	}
+	
+	.post-info {
+		padding: 2em;
+	}
+	
+	.img {
+		@include backgroundCover;
+		height: 40em;
+	}
+	
+	h2 {
+		font-size: 1.3em;
+	}
+	
+	.arrow {
+		width: 4.5em;
+		fill: $brand-dark-grey;
+	}
+	
+	.date {
+		font-weight: normal;
+		color: $brand-mid-grey;
+		letter-spacing: 1px;
+		font-size: 1.1em;
+	}
+	
+	.read-more-text {
+		font-size: 1.2em;
+		color: $brand-primary;
+		letter-spacing: 2px;
+		font-weight: 400;
+		margin-bottom: 1.8em;
+		margin-top: 1em;
+		text-transform: capitalize;
+	}
+}
+
+.sidebar {
+	
+	.title {
+		height: 2.5em;
+		border-bottom: 2px solid;
+	}
+	
+	.list-items {
+		
+		.item {
+		    display: block;
+		    padding: 0.75em 0;
+		    font-size: 1.2em;
+		    text-transform: uppercase;
+		    letter-spacing: 1px;
+		    
+		    &.active { 
+			    
+			    a {
+				    color: $brand-primary;
+				    font-weight: bold;
+			    }
+			    
+			    .tilde {
+				    display: block;
+			    }
+			}
+		    
+		    a {
+			    color: inherit;
+		    }
+		}
+		   
+		.tilde {
+			width: 1em;
+			fill: $brand-primary;
+			margin-top: 1.5em;
+			display: none;
+		}
+	}
+	
+	.collections {
+	    padding: 0.75em 0 0 0;
+	    font-size: 1.2em;
+	    text-transform: uppercase;
+	    letter-spacing: 1px;
+	    color: $brand-primary;
+		font-weight: bold;
+		cursor: pointer;
+		
+		div {
+			position: relative;
+		}
+		
+		.simple-arrow {
+			width: 1.2em;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			fill: $brand-primary;
+		}
+		
+		.tilde {
+			display: block;
+		}
+	}
+}
+
+.shop-items {
+	margin-top: calc(1.5 * 2.5em);
+	
+	.item {
+		cursor: pointer;
+		
+		.img {
+			@include backgroundCover;
+			height: 22em;
+		}
+		
+		.title {
+			margin-top: 1.5em;
+		}
+		
+		.heading {
+			line-height: 1.5;
+		}
+	}
+}
+
+#show-furniture {
+	position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: hsla(0, 0%, 0%, 0.6);
+    z-index: 999;
+    
+    &.hidden {
+	    display: none;
+    }
+    
+    .wrapper {
+	    width: 100%;
+	    height: 100%;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+    }
+    
+    .product-info {
+	    background: white;
+	    position: relative;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		max-width: 80em;
+		min-height: 40em;
+		max-height: 80em;
+	}
+	
+	.close {
+		position: absolute;
+		width: 2.5em;
+		height: 2.5em;
+		background: white;
+		border-radius: 50%;
+		right: 1em;
+		top: 1em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		
+		span {
+			font-size: 1.5em;
+			font-weight: bold;
+			display: block;
+			margin-top: -0.2em;
+			color: $brand-primary;
+		}
+	}
+	
+	.image {
+		@include backgroundCover;
+	}
+	
+	.info {
+		padding: 2em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+		
+	.heading {
+		line-height: 1.5;
+	}
+	
+	.tilde {
+		fill: $brand-secondary;
+		opacity: 0.8;
+		width: 1.5em;
+		margin-top: 1em;
+	}
+	
+	.brand-text {
+		color: white;
+		font-weight: 200;
+		
+		p {
+			padding: 0;
+			margin-top: 1em;
+		}
+	}
+}
+
+.bespoke {
+	position: relative;
+	
+	.col.active::before {
+		content: "";
+		position: absolute;
+		width: 5em;
+		height: 5em;
+		bottom: 0;
+		background: $brand-primary;
+		transform: translateX(-50%) translateY(1em) rotate(45deg);
+	}
+}
+
+.bespoke-items {
+	
+	.brand-text {
+		color: white;
 	}
 }
 

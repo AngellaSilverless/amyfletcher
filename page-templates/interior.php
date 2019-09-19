@@ -31,6 +31,10 @@ get_header();?>
 			'posts_per_page' => 3,
 		));
 		
+		$recent_ids = array_map(function($element) {
+			return $element->ID;
+		}, $interiors);
+		
 		if($interiors && sizeof($interiors) > 0): ?>
 		
 		<div class="container cols-4">
@@ -41,7 +45,11 @@ get_header();?>
 				
 				<div class="project-wrapper primary-overlay">
 				
-					<div class="heading heading__sm heading__secondary-color spacing2 font200 mb1">Okavango, Botswana</div>
+					<div class="heading heading__sm heading__secondary-color spacing2 font200 mb1"><?php
+						$location = get_the_terms($interior->ID, "location")[0];
+						$location_parent = get_term($location->parent, "location");
+						echo $location->name . ", " . $location_parent->name;
+					?></div>
 			
 					<h3 class="heading heading__lg heading__brand heading__light slow-fade title"><?php echo $interior->post_title; ?></h3>
 					
@@ -61,7 +69,7 @@ get_header();?>
 
 <!-- Previous Projects -->
 
-<div class="container center pb5">
+<div class="container center pb8">
 	
 	<div class="col">
 		
@@ -72,6 +80,7 @@ get_header();?>
 		$interiors = get_posts(array(
 			'post_type' => 'interior',
 			'posts_per_page' => 3,
+			'post__not_in' => $recent_ids
 		));
 		
 		if($interiors && sizeof($interiors) > 0): ?>
@@ -82,7 +91,11 @@ get_header();?>
 			
 			<a href="<?php echo get_permalink($interior->ID); ?>" class="col project-block-small" style="background-image: url(<?php echo get_field("hero_background_image", $interior)["sizes"]["medium_large"]; ?>);">
 				
-				<div class="heading heading__sm heading__light spacing2 font200">Okavango, Botswana</div>
+				<div class="heading heading__sm heading__light spacing2 font200"><?php
+					$location = get_the_terms($interior->ID, "location")[0];
+					$location_parent = get_term($location->parent, "location");
+					echo $location->name . ", " . $location_parent->name;
+				?></div>
 		
 				<div class="heading heading__sm heading__light spacing2 font200"><?php echo $interior->post_title; ?></div>
 					

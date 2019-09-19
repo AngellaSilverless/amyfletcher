@@ -483,3 +483,73 @@ a.next-section {
 	}
 }
 
+#contact-form-newsletter {
+	font-size: 1.05em;
+	
+	p {
+		font-size: 1em;
+	}
+	
+	span {
+		display: inline-block;
+		line-height: 1;
+		width: 40em;
+		
+		&.ajax-loader {
+			width: 16px;
+		}
+	}
+	
+	input {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 1em 1.5em;
+		border: none;
+		width: 100%;
+		outline: none;
+		font-size: 1.2em;
+		letter-spacing: 1px;
+		color: darken($background-dark, 15%);
+		text-align: center;
+		
+		&::placeholder {
+			font-family: $body-font;
+		}
+	}
+	
+	.wpcf7-submit {
+		background: $brand-secondary;
+		color: white;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: 600;
+		letter-spacing: 2px;
+		cursor: pointer;
+		font-family: $body-font;
+		width: 25em;
+		margin-top: 2em;
+		font-size: 1em;
+	}
+	
+	span.wpcf7-not-valid-tip {
+		color: $background-light;
+		padding-top: 5px;
+	}
+	
+	div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+		border: none;
+		background: $background-mid;
+		color: darken($background-dark, 15%);
+		margin: 0;
+		padding: 1em 2em;
+		font-size: 1em;
+		font-weight: 400;
+		letter-spacing: 1px;
+		display: inline-block;
+	}
+}
+
+.owl-stage {
+	padding-left: 0 !important;
+}

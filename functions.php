@@ -39,8 +39,13 @@ add_filter( 'wp_check_filetype_and_ext', 'sl_allow_svg', 10, 4 );
 add_filter( 'upload_mimes', 'sl_mime_types' );
 add_action( 'admin_head', 'sl_fix_svg' );
 
-/* Add Custom Post Types */
+/* AJAX call for Furniture Description */
+add_action( 'wp_ajax_furniture_info', 'furniture_info' );
+add_action( 'wp_ajax_nopriv_furniture_info', 'furniture_info' );
+
+/* Add Custom Post Types and Taxonomies */
 require 'custom-post-types.php';
+require 'custom-taxonomies.php';
 
 
 /****************************************************/
@@ -49,7 +54,11 @@ require 'custom-post-types.php';
 
 function sl_scripts() {
 	wp_enqueue_style( 'sl-style', get_stylesheet_uri() );
-	wp_enqueue_script( 'sl-core-js', get_template_directory_uri() . '/inc/js/compiled.js', array('jquery'), true); 
+	wp_enqueue_script( 'sl-core-js', get_template_directory_uri() . '/inc/js/compiled.js', array('jquery'), true);
+	
+	wp_localize_script('sl-core-js', 'ajax_object', array(
+		'ajax_url' => admin_url( 'admin-ajax.php' )
+	)); 
 }
 
 function sl_custom_menu() {
@@ -158,4 +167,22 @@ function sl_fix_svg() {
 				height: auto !important;
 			}
 		</style>';
+}
+
+function furniture_info() {
+	$title  = get_the_title($_POST["id"]);
+	$colour = get_field("colour", $_POST["id"]);
+	
+	if($colour)
+		$title .= ",";
+	
+	$return = array(
+		'success'     => true,
+		'title'       => $title,
+		'colour'      => $colour,
+		'description' => get_field("description", $_POST["id"]),
+		'image'       => get_field("image", $_POST["id"])["url"]
+	);
+	
+	wp_send_json($return);
 }

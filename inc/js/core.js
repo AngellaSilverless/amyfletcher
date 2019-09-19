@@ -171,27 +171,10 @@ jQuery(document).ready(function( $ ) {
 	});
  
 // GLOBAL OWL CAROUSEL SETTINGS
-
-    $('.owl-carousel').owlCarousel({
-        loop:true,
-        autoplay:false,
-        autoplayHoverPause:true,
-        nav:true,
-    	    navClass: ['owl-prev', 'owl-next'],
-        responsive:{
-            0:{
-                items: 1
-            },
-            768: {
-	            items: 2
-            },
-            992:{
-                items: 3
-            },
-            1200: {
-	            items: 4
-            }
-        }
+    
+    $(".owl-carousel").owlCarousel({
+	    margin: 100,
+	    stagePadding: 100
     });
 
 /* CLASS AND FOCUS ON CLICK */
@@ -210,6 +193,59 @@ jQuery(document).ready(function( $ ) {
     $(".view-slideshow").click(function() {
 	    $(".gallery__interior a").eq(0)[0].click();
     });
+    
+    $(".shop-items .item").click(function() {
+	    
+	    $.ajax({
+			type : "POST",
+			dataType : "JSON",
+			url : ajax_object.ajax_url,
+			data : {
+				action: "furniture_info",
+				id: $(this).attr("furniture")
+			},
+			success: function(response) {
+				if(response && response.success) {
+				    $("#show-furniture .title").text(response.title);
+				    $("#show-furniture .colour").text(response.colour);
+				    $("#show-furniture .description p").text(response.description);
+				    $("#show-furniture .image").css("background-image", "url(" + response.image + ")");
+				    
+				}
+				
+				$("#show-furniture").fadeIn();
+			}
+		});
+    });
+    
+    $("#show-furniture .close").click(function() {
+		$("#show-furniture").fadeOut();
+	});
+	
+	if($("body").hasClass("page-template-shop")) {
+		
+		$(document).mouseup(function(e) {
+			if($("#show-furniture").css("display") == "block") {
+				var container = $(".product-info")
+				if(!container.is(e.target) && container.has(e.target).length === 0) {
+					$("#show-furniture .close")[0].click();
+				}
+			}
+		});
+		
+		
+		
+		$(document).mouseup(function(e) 
+{
+    var container = $("YOUR CONTAINER SELECTOR");
+
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) 
+    {
+        container.hide();
+    }
+});
+	}
 
 // ========== Add class if in viewport on page load
 

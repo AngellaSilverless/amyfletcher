@@ -28,11 +28,11 @@ get_header();?>
 
 <!-- Gallery Block -->
 
-<div class="gallery-interior pb10">
+<?php $gallery = get_field("gallery_2"); if($gallery): ?>
+
+<div class="gallery-interior pb5">
 	
-	<?php $gallery = get_field("gallery_2"); if($gallery): ?>
-	
-	<div class="container cols-12 gallery-working">
+	<div class="container cols-12 gallery-working mb5">
 		
 		<img class="tape tl" src="<?php echo get_template_directory_uri()."/inc/img/tape.svg"; ?>">
 		<img class="tape tr" src="<?php echo get_template_directory_uri()."/inc/img/tape.svg"; ?>">
@@ -52,10 +52,10 @@ get_header();?>
 		</div>
 	
 	</div>
+
+</div>
 	
-	<?php endif; ?>
-	
-	</div>
+<?php endif; ?>
 
 </div>
 

@@ -46,7 +46,6 @@
 		
 		&:before {
 			content: "";
-			background: url("inc/img/arrow-shape.svg");
 			@include backgroundContain;
 			position: absolute;
 			width: 2em;
@@ -111,6 +110,14 @@
 		    height: 32em;
 		}
     }
+    
+    &__single-large {
+	    
+	    .img-wrapper {
+		    grid-column: span 12;
+		    height: 35em;
+		}
+    }
 
 	&__about {
 		grid-gap: 1.5em;
@@ -159,6 +166,43 @@
 		.img-wrapper {
 			grid-column: span 4;
 			height: 22em;
+		}
+	}
+	
+	&__artisan {
+		grid-gap: 1.5em;
+		
+		&.img-1 .img-wrapper {
+			grid-column: span 12;
+			height: 40em;
+		}
+			
+		&.img-2 .img-wrapper {
+			grid-column: span 6;
+			height: 35em;
+		}
+		
+		&.img-3 .img-wrapper {
+			grid-column: span 4;
+			height: 30em;
+		}
+		
+		&.img-4 .img-wrapper {
+			grid-column: span 3;
+			height: 25em;
+		}
+		
+		&.img-5 .img-wrapper {
+			
+			&:nth-of-type(5n - 4), &:nth-of-type(5n - 3), &:nth-of-type(5n - 2) {
+				grid-column: span 4;
+				height: 30em;
+			}
+			
+			&:nth-of-type(5n - 1), &:nth-of-type(5n) {
+				grid-column: span 6;
+				height: 30em;
+			}
 		}
 	}
 }
@@ -216,4 +260,13 @@
 		right: -8em;
 		transform: rotate(135deg);
 	}
+}
+
+.brand-tilde {
+	
+}
+
+.arrow {
+	width: 2.5em;
+	height: auto;
 }

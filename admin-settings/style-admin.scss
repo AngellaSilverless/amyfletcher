@@ -60,7 +60,15 @@ ul#adminmenu>li.current>a.current:after {
 	}
 }
 
-.post-type-page, .post-type-interior {
+.post-type-post {
+	
+	#postdivrich {
+		padding: 0 1em 1em 1em;
+		background: hsl(283, 14%, 20%);
+	}
+}
+
+.post-type-page, .post-type-interior, .post-type-artisan, .post-type-post {
 	
 	.acf-postbox {
 		background: hsl(283, 14%, 20%);
@@ -111,4 +119,16 @@ ul#adminmenu>li.current>a.current:after {
 
 .acf-field.full-width .acf-image-uploader .image-wrap img[src$=".svg"] {
 	min-width: fit-content;
+}
+
+#locationchecklist {
+	
+	> li:not(.popular-category) > label {
+		font-weight: bold;
+		pointer-events: none;
+		
+		input {
+			display: none;
+		}
+	}
 }
