@@ -1,0 +1,1 @@
+jQuery(document).ready(function(t){t(".show_on_contact input[type=radio]:not(:disabled)").change(function(){t(".show_on_contact label").not(this.parentElement).removeClass("selected"),t(".show_on_contact input[type=radio]:not(:disabled)").not(this).prop("checked",!1)})});

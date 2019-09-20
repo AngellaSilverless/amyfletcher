@@ -29,7 +29,7 @@ if($artisans && sizeof($artisans) > 0): ?>
 	
 	<?php foreach($artisans as $artisan): ?>
 	
-	<a href="<?php echo get_permalink($artisan->ID); ?>" class="col artisan-wrapper mb5">
+	<a href="<?php echo get_permalink($artisan->ID); ?>" class="col info-wrapper mb5">
 		
 		<?php $image = get_field("hero_background_image", $artisan->ID); $url = $image["sizes"]["medium_large"];?>
 		

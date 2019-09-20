@@ -161,6 +161,21 @@ jQuery(document).ready(function( $ ) {
 		});
 	});
 	
+	$(".owl-carousel").each(function(gallery) {
+		$(this).magnificPopup({
+			delegate: 'a',
+			type: 'image',
+			closeOnContentClick: true,
+			closeBtnInside: false,
+			image: {
+				verticalFit: true,
+			},
+			gallery: {
+				enabled: true
+			}
+		});
+	});
+	
 	$('.single-image').magnificPopup({
 		type: 'image',
 		closeOnContentClick: true,
@@ -173,8 +188,9 @@ jQuery(document).ready(function( $ ) {
 // GLOBAL OWL CAROUSEL SETTINGS
     
     $(".owl-carousel").owlCarousel({
-	    margin: 100,
-	    stagePadding: 100
+		margin: 0,
+		autoWidth:true,
+		items:4
     });
 
 /* CLASS AND FOCUS ON CLICK */
@@ -195,7 +211,6 @@ jQuery(document).ready(function( $ ) {
     });
     
     $(".shop-items .item").click(function() {
-	    
 	    $.ajax({
 			type : "POST",
 			dataType : "JSON",
@@ -232,20 +247,14 @@ jQuery(document).ready(function( $ ) {
 				}
 			}
 		});
-		
-		
-		
-		$(document).mouseup(function(e) 
-{
-    var container = $("YOUR CONTAINER SELECTOR");
-
-    // if the target of the click isn't the container nor a descendant of the container
-    if (!container.is(e.target) && container.has(e.target).length === 0) 
-    {
-        container.hide();
-    }
-});
 	}
+	
+	$(".bespoke .item").click(function() {
+		$(this).siblings().removeClass("active");
+		$(this).addClass("active");
+		$(".bespoke-items .heading").text($(this).find(".label").text());
+		$(".bespoke-items .brand-text p").text($(this).attr("description"));
+	});
 
 // ========== Add class if in viewport on page load
 

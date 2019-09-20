@@ -22,19 +22,7 @@ get_header();?>
 
 <!-- Properties Block -->
 
-<div class="properties center pt5 pb5">
-	
-	<div class="container">
-	
-		<div class="col">
-			
-			<h2 class="heading heading__md spacing1 pb3">Properties</div>
-			
-		</div>
-	
-	</div>
-
-</div>
+<?php get_template_part("template-parts/interior"); ?>
 
 <!-- Hospitality Design Block -->
 
@@ -61,20 +49,8 @@ get_header();?>
 <?php endif; ?>
 
 <!-- Artisans Block -->
-
-<div class="artisans center pt5 pb5">
-	
-	<div class="container">
-	
-		<div class="col">
 			
-			<h2 class="heading heading__md spacing1 pb3">Artisans</h2>
-			
-		</div>
-	
-	</div>
-
-</div>
+<?php get_template_part("template-parts/artisans"); ?>
 
 <!-- As seen in Block -->
 

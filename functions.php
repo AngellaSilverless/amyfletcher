@@ -12,6 +12,9 @@
 /* Enqueue scripts and styles */
 add_action('wp_enqueue_scripts', 'sl_scripts');
 
+/* Enqueue admin script */
+add_action( 'admin_enqueue_scripts', 'sl_admin_scripts' );
+
 /* Add Menus */
 add_action('init', 'sl_custom_menu');
 
@@ -42,6 +45,9 @@ add_action( 'admin_head', 'sl_fix_svg' );
 /* AJAX call for Furniture Description */
 add_action( 'wp_ajax_furniture_info', 'furniture_info' );
 add_action( 'wp_ajax_nopriv_furniture_info', 'furniture_info' );
+
+/* Title */
+add_action( 'after_setup_theme', 'sl_custom_title' );
 
 /* Add Custom Post Types and Taxonomies */
 require 'custom-post-types.php';
@@ -185,4 +191,15 @@ function furniture_info() {
 	);
 	
 	wp_send_json($return);
+}
+
+function sl_admin_scripts($hook) {
+    if ('toplevel_page_site-general-settings' != $hook) {
+        return;
+    }
+    wp_enqueue_script( 'sl-admin-js', get_template_directory_uri() . '/admin-settings/script-admin.js', array('jquery'), true);
+}
+
+function sl_custom_title() {
+	add_theme_support('title-tag');
 }

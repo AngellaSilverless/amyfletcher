@@ -184,50 +184,9 @@ get_header();?>
 
 <?php get_template_part("template-parts/bespoke-manufacturing"); ?>
 
-<div class="background-brand bespoke-items center pt5 pb5">
-	
-	<div class="container">
-	
-		<div class="col">
-			
-			<h2 class="heading heading__md heading__primary-color spacing1 mb0">BLA BLA BLA</h2>
-			
-			<div class="container cols-4-10">
-	
-				<div class="col">
-					
-					<div class="brand-text"><p>BLA BLA BLA</p></div>
-				</div>
-				
-			</div>
-			
-		</div>
-	
-	</div>
-
-</div>
-
 <!-- Stockists -->
 
-
-<div class="brands background-white center pt5 pb5">
-	
-	<div class="container">
-	
-		<div class="col small-col">
-			
-			<h2 class="heading heading__md spacing1 pb1">Produt bla blaba</h2>
-			
-			<div class="items-wrapper container no-gutter cols-2">
-			
-			</div>
-			
-		</div>
-	
-	</div>
-
-</div>
-
+<?php get_template_part("template-parts/stockists"); ?>
 
 <!-- Single furniture -->
 

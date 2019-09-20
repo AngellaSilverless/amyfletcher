@@ -1,4 +1,12 @@
-<?php $recent_posts = "change"; if($recent_posts): ?>
+<?php
+
+$all_posts = get_posts(array(
+	'post_type' => 'post',
+	'posts_per_page' => 3,
+	'post__not_in' => array(get_the_ID())
+));
+				
+if($all_posts && sizeof($all_posts) > 0): ?>
 
 <div class="background-brand pt5 pb5">
 	

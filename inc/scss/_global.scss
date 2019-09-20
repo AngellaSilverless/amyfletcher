@@ -161,6 +161,10 @@ img {
         color: white;
     }
     
+    &__body-color {
+      color: hsl(0, 0%, 27%);
+    }
+    
     &__primary-color {
       color: $brand-primary;
     }
