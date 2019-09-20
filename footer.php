@@ -15,7 +15,8 @@
 			
 			<?php
 				
-			$email = get_field("email", "options");
+			$email   = get_field("email", "options");
+			$skype   = get_field("skype", "options");
 			$socials = get_field("social_links", "options");
 			$contact = get_field("contact_footer", "options");
 			
@@ -36,6 +37,7 @@
 					<?php foreach($socials as $social): ?>
 					<a href="<?php echo $social["link"]; ?>"><i class="fab fa-<?php echo $social["social_network"]; ?>"></i></a>
 					<?php endforeach; ?>
+					<a href="skype:<?php echo $skype; ?>?userinfo"><i class="fab fa-skype"></i></a>
 				</div>
 			</div>
 			

@@ -12,18 +12,71 @@ get_header();?>
 
 <!-- ******************* Hero Content END ******************* -->
 
+<?php
+
+$email = get_field("email", "options");
+$skype = get_field("skype", "options");
+$contact_info = get_field("contact_footer", "options");
+
+foreach($contact_info as $info) {
+	if($info["contact_page"] == "show") {
+		$show_info = $info;
+		break;
+	}
+}
+
+?>
+
 <!-- Contact Links -->
 
-<div class="container cols-4">
+<div class="container contact-links cols-4 center pt3 pb5">
+	
+	<?php if(isset($show_info)): ?>
 	
 	<div class="col">
 		
-		<div class="icon">
+		<a href="tel:<?php echo $show_info["phone"]; ?>">
+		
+			<div class="icon"><?php get_template_part("inc/img/contact", "phone"); ?></div>
 			
-		</div>
+			<div class="label"><?php echo $show_info["phone"]; ?></div>
+		
+		</a>
 		
 	</div>
 	
+	<div class="col">
+		
+		<a href="mail:<?php echo $email; ?>">
+		
+			<div class="icon mail"><?php get_template_part("inc/img/contact", "email"); ?></div>
+			
+			<div class="label"><?php echo $email; ?></div>
+		
+		</a>
+		
+	</div>
+	
+	<div class="col">
+		
+		<a href="skype:<?php echo $skype; ?>?call">
+		
+			<div class="icon"><?php get_template_part("inc/img/contact", "skype"); ?></div>
+			
+			<div class="label">Skype</div>
+		
+		</a>
+		
+	</div>
+	
+	<?php endif; ?>
+	
+</div>
+
+<div class="arrow-down center">
+	
+<?php get_template_part("inc/img/arrow"); ?>
+
 </div>
 
 <!-- Text Block -->
@@ -34,7 +87,17 @@ get_header();?>
 
 <div class="container cols-4-10 pb5">
 	
-	<div class="col"><?php echo do_shortcode('[contact-form-7 id="560" title="Contact Page" html_id="main-contact-form"]'); ?></div>
+	<div class="col contact-form-wrapper">
+		<?php
+		
+		get_template_part("inc/img/leaf");
+			
+		echo do_shortcode('[contact-form-7 id="560" title="Contact Page" html_id="main-contact-form"]');
+		
+		get_template_part("inc/img/leaf");
+		
+		?>
+	</div>
 	
 </div>
 
@@ -49,14 +112,6 @@ get_header();?>
 		<h2 class="heading heading__md spacing1 mb0"><?php echo $studio["heading"]; ?></h2>
 		
 		<?php
-			
-		$contact_info = get_field("contact_footer", "options");
-		foreach($contact_info as $info) {
-			if($info["contact_page"] == "show") {
-				$show_info = $info;
-				break;
-			}
-		}
 		
 		if(isset($show_info)): ?>
 		
@@ -93,34 +148,6 @@ get_header();?>
 
 <!-- Map -->
 
-<div style="height: 30em; background: wheat;">MAP BLOCK</div>
-
-<!-- Follow us -->
-
-<div class="center pt5 pb5">
-	
-	<div class="container">
-	
-		<div class="col small-col">
-			
-			<h2 class="heading heading__md spacing1 pb1">Follow us</h2>
-			
-			<div class="items-wrapper container no-gutter cols-2">
-				
-				<?php foreach($brands["gallery"] as $img): ?>
-					
-				<div class="col pr1 pl1">
-					<img src="<?php echo $img["url"]; ?>" alt="<?php echo $img["alt"]; ?>" title="<?php echo $img["title"]; ?>">
-				</div>
-					
-				<?php endforeach; ?>
-			
-			</div>
-			
-		</div>
-	
-	</div>
-
-</div>
+<div style="height: 30em; background: wheat;" class="mb1">MAP BLOCK</div>
 
 <?php get_footer();?>

@@ -49,6 +49,7 @@
 
 img.mfp-img {
 	max-height: 80vh !important;
+	max-width: calc(100vw - 20em);
 }
 
 .mfp-arrow-right:after, .mfp-arrow-left:after {
@@ -72,7 +73,7 @@ img.mfp-img {
 }
 
 button.mfp-arrow.mfp-arrow-right, button.mfp-arrow.mfp-arrow-left {
-	width: 14em;
+	width: 10em;
     height: 5em;
     display: flex;
     align-items: center;
@@ -108,8 +109,12 @@ button.mfp-close {
     padding: 1em;
     color: hsl(0, 0%, 27%);
     position: absolute;
-    top: 5vh;
     font-weight: normal;
+	bottom: 0;
+	font-weight: normal;
+	transform: translate(-50%, -4vh);
+	align-items: center;
+	justify-content: center;
 }
 
 .mfp-wrap {
@@ -118,4 +123,8 @@ button.mfp-close {
 
 .mfp-figure:after {
 	display: none;
+}
+
+.mfp-content {
+	position: initial;
 }

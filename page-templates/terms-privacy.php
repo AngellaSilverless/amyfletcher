@@ -4,7 +4,9 @@
  *
  * @package amy-fletcher
  */
-get_header();?>
+get_header();
+
+while(have_posts()): the_post(); ?> 
 
 <!-- ******************* Hero Content ******************* -->
 
@@ -12,16 +14,16 @@ get_header();?>
 
 <!-- ******************* Hero Content END ******************* -->
 
-<div class="container">
+<div class="container pt5 pb5 cols-12">
 	
-	<h1 class="heading heading__lg slow-fade mt2"><?php the_field("hero_heading"); ?></h1>
-	
-	<div class="wrapper-content">
+	<div class="col">
 		
-		<div class="copy"><?php the_field("content"); ?></div>
-	
+		<div class="text brand-text"><p><?php the_content(); ?></p></div>
+		
 	</div>
-
+	
 </div>
 
-<?php get_footer();?>
+<?php endwhile;
+	
+get_footer(); ?>

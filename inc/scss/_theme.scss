@@ -884,6 +884,75 @@ nav svg {
 	}
 }
 
+.contact-links {
+	
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		
+		&:hover {
+			
+			svg {
+				fill: $brand-secondary;
+			}
+		}
+	}
+	
+	.icon {
+		width: 10em;
+		height: 10em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		svg {
+			fill: $brand-primary;
+			max-width: 8em;
+			max-height: 5em;
+			width: 100%;
+			transition: fill 0.3s ease-in-out;
+		}
+		
+		&.mail {
+			margin-right: 1.8em;
+		}
+	}
+	
+	.label {
+		font-size: 1.2em;
+		font-weight: normal;
+		letter-spacing: 1px;
+	}
+}
+
+.arrow-down svg {
+	transform: rotate(90deg);
+	width: 4em;
+}
+
+.contact-form-wrapper {
+	position: relative;
+	
+	svg {
+		position: absolute;
+		fill: white;
+		height: 70%;
+		bottom: 6.5em;
+		
+		&:first-of-type {
+			transform: translateX(-100%);
+			left: 0;
+		}
+		
+		&:last-of-type {
+			transform: scaleX(-1) translateX(-100%);
+			right: 0;
+		}
+	}
+}
+
 /*===========FOOTER==========*/
 
 footer {
