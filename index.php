@@ -52,6 +52,6 @@ get_header();?>
 
 <?php get_template_part("template-parts/gallery", "instagram"); ?>
 
-<div class="pinteres" style="height:10em; background: wheat;">PINTEREST BLOCK</div>
+<div class="pinterest" style="height:10em; background: wheat;">PINTEREST BLOCK</div>
 
 <?php get_footer();?>

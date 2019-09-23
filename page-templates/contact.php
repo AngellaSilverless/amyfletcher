@@ -148,6 +148,18 @@ foreach($contact_info as $info) {
 
 <!-- Map -->
 
-<div style="height: 30em; background: wheat;" class="mb1">MAP BLOCK</div>
+<?php $map = get_field("map"); if($map && $map["map_image"]): ?>
+
+<div class="container fullwidth cols-12 map-container map-contact">
+	
+	<div class="col">
+		
+		<img src="<?php echo $map["map_image"]["url"]; ?>" alt="<?php echo $map["map_image"]["alt"]; ?>" title="<?php echo $map["map_image"]["title"]; ?>">
+		
+	</div>
+	
+</div>
+
+<?php endif; ?>
 
 <?php get_footer();?>

@@ -958,6 +958,17 @@ nav svg {
 	}
 }
 
+.map-container {
+	
+	img {
+		width: 100%;
+	}
+	
+	&.map-contact {
+		padding-bottom: 10px;
+	}
+}
+
 /*===========FOOTER==========*/
 
 footer {

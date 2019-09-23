@@ -111,6 +111,20 @@ get_header();?>
 	
 <?php endforeach; endif; ?>
 
+<?php $map = get_field("map"); if($map && $map["map_image"]): ?>
+
+<div class="container cols-12 map-container">
+	
+	<div class="col">
+		
+		<img src="<?php echo $map["map_image"]["url"]; ?>" alt="<?php echo $map["map_image"]["alt"]; ?>" title="<?php echo $map["map_image"]["title"]; ?>">
+		
+	</div>
+	
+</div>
+
+<?php endif; ?>
+
 <div class="wrapper-button center pt5 pb5">
 	
 	<a href="/artisan" class="button view-slideshow">Back to Artisans</a>
