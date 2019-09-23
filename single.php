@@ -12,7 +12,7 @@ get_header();?>
 
 <!-- ******************* Hero Content END ******************* -->
 
-<div class="container no-gutter cols-12 post-title center pt5 pb5">
+<div class="container container-wrapper no-gutter cols-12 post-title center pt5 pb5">
 	
 	<h1 class="col mb0"><?php get_template_part("inc/img/quotes-open");  the_field("hero_heading"); ?></h1>
 	
@@ -29,9 +29,9 @@ get_header();?>
 
 	<div class="pb5">
 	
-		<div class="container cols-12">
+		<div class="container container-wrapper cols-12">
 			
-			<div class="col container cols-4-10 center">
+			<div class="col container cols-4-10 cols-xl-3-11 cols-lg-2-12 cols-sm-12 center">
 				
 				<div class="col">
 				
@@ -82,7 +82,7 @@ get_header();?>
 
 <div class="newsletter-signup background-primary pt5 pb2">
 	
-	<div class="container center cols-12">
+	<div class="container container-wrapper center cols-12">
 		
 		<div class="col">
 			

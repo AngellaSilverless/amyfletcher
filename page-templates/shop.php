@@ -18,7 +18,7 @@ get_header();?>
 
 <!-- Shop -->
 
-<div class="container cols-3-9 gutter-lg">
+<div class="container container-wrapper cols-3-9 cols-lg-12 gutter-lg shop-container">
 	
 	<div class="col sidebar pr2">
 		
@@ -67,49 +67,57 @@ get_header();?>
 		
 		?>
 		
-		<div class="heading heading__md spacing1 mt0 title">Browse by:</div>
-		
-		<div class="list-items pt1 pb3">
+		<div>
 			
-			<div class="item <?php if(!$curr_type) echo "active"; ?>">
-				<a href="<?php urlType("all"); ?>">All furniture</a>
-				<?php get_template_part("inc/img/tilde"); ?>
+			<div class="heading heading__md spacing1 mt0 title">Browse by:</div>
+			
+			<div class="list-items pt1 pb3">
+				
+				<div class="item <?php if(!$curr_type) echo "active"; ?>">
+					<a href="<?php urlType("all"); ?>">All furniture</a>
+					<?php get_template_part("inc/img/tilde"); ?>
+				</div>
+				
+				<?php $types = get_terms("type"); foreach($types as $type): ?>
+				
+				<div class="item <?php if($curr_type == $type->slug) echo "active"; ?>">
+					<a href="<?php urlType($type->slug); ?>"><?php echo $type->name; ?></a>
+					<?php get_template_part("inc/img/tilde"); ?>
+				</div>
+				
+				<?php endforeach; ?>
+				
 			</div>
-			
-			<?php $types = get_terms("type"); foreach($types as $type): ?>
-			
-			<div class="item <?php if($curr_type == $type->slug) echo "active"; ?>">
-				<a href="<?php urlType($type->slug); ?>"><?php echo $type->name; ?></a>
-				<?php get_template_part("inc/img/tilde"); ?>
-			</div>
-			
-			<?php endforeach; ?>
 			
 		</div>
-			
-		<div class="heading heading__md spacing1 title">Filter by:</div>
 		
-		<div class="list-items pt1 pb3">
+		<div>
 			
-			<div class="item <?php if(!$curr_collection) echo "active"; ?>">
-				<a href="<?php urlCollection("all"); ?>">All collections</a>
-				<?php get_template_part("inc/img/tilde"); ?>
+			<div class="heading heading__md spacing1 title">Filter by:</div>
+			
+			<div class="list-items pt1 pb3">
+				
+				<div class="item <?php if(!$curr_collection) echo "active"; ?>">
+					<a href="<?php urlCollection("all"); ?>">All collections</a>
+					<?php get_template_part("inc/img/tilde"); ?>
+				</div>
+				
+				<?php $collections = get_terms("collection"); foreach($collections as $collection): ?>
+				
+				<div class="item <?php if($curr_collection == $collection->slug) echo "active"; ?>">
+					<a href="<?php urlCollection($collection->slug); ?>"><?php echo $collection->name; ?></a>
+					<?php get_template_part("inc/img/tilde"); ?>
+				</div>
+				
+				<?php endforeach; ?>
+				
 			</div>
-			
-			<?php $collections = get_terms("collection"); foreach($collections as $collection): ?>
-			
-			<div class="item <?php if($curr_collection == $collection->slug) echo "active"; ?>">
-				<a href="<?php urlCollection($collection->slug); ?>"><?php echo $collection->name; ?></a>
-				<?php get_template_part("inc/img/tilde"); ?>
-			</div>
-			
-			<?php endforeach; ?>
-			
+		
 		</div>
 		
 	</div>
 	
-	<div class="col shop-items container cols-4">
+	<div class="col shop-items container cols-4 cols-xl-6 cols-sm-12">
 	
 	<?php
 	

@@ -14,7 +14,7 @@ while(have_posts()): the_post(); ?>
 
 <!-- ******************* Hero Content END ******************* -->
 
-<div class="container pt5 pb5 cols-12">
+<div class="container container-wrapper pt5 pb5 cols-12">
 	
 	<div class="col">
 		

@@ -18,7 +18,7 @@ get_header();?>
 
 <?php set_query_var("text_block", get_field("text_block", $ID)); get_template_part("template-parts/text-block"); ?>
 
-<div class="container cols-4 pb10">
+<div class="container container-wrapper cols-4 cols-lg-12 pb10">
 
 	<?php while (have_posts()): the_post(); ?>
 

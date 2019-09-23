@@ -29,7 +29,7 @@ foreach($contact_info as $info) {
 
 <!-- Contact Links -->
 
-<div class="container contact-links cols-4 center pt3 pb5">
+<div class="container container-wrapper contact-links cols-4 cols-sm-12 center pt3 pb5">
 	
 	<?php if(isset($show_info)): ?>
 	
@@ -85,7 +85,7 @@ foreach($contact_info as $info) {
 
 <!-- Contact Form -->
 
-<div class="container cols-4-10 pb5">
+<div class="container container-wrapper cols-4-10 cols-md-2-12 cols-sm-12 pb5">
 	
 	<div class="col contact-form-wrapper">
 		<?php
@@ -105,7 +105,7 @@ foreach($contact_info as $info) {
 
 <?php $studio = get_field("studio"); if($studio): ?>
 
-<div class="container center pb5">
+<div class="container container-wrapper center pb5">
 	
 	<div class="col studio-info">
 		

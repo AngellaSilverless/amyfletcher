@@ -229,18 +229,3 @@
 .container .col.small-col {
 	grid-column: 2/12;
 }
-
-/*===========MEDIA QUERIES==========*/
-
-@each $name, $size in $breakpoints {
-	
-	@media (max-width: #{$size}) {
-		
-		@for $i from 1 through $col-count {
-			
-			.container.cols-#{$name}-#{$i} > .col {
-				grid-column: span $i;
-			}
-		}
-	}
-}

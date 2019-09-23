@@ -25,7 +25,7 @@ $artisans = get_posts(array(
 
 if($artisans && sizeof($artisans) > 0): ?>
 
-<div class="container cols-4 pt5">
+<div class="container-artisan container container-wrapper container-md cols-4 cols-xl-6 cols-md-12 pt5">
 	
 	<?php foreach($artisans as $artisan): ?>
 	
@@ -45,7 +45,7 @@ if($artisans && sizeof($artisans) > 0): ?>
 		
 		<?php get_template_part("inc/img/tilde"); ?>
 		
-		<div class="container cols-1-10 mb2">
+		<div class="container cols-1-10 cols-xl-12 mb2">
 			
 			<div class="col text brand-text"><p><?php the_field("introduction", $artisan->ID); ?></p></div>
 		

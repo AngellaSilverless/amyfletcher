@@ -18,7 +18,7 @@ get_header();?>
 
 <!-- Recent Projects -->
 
-<div class="container center pb5">
+<div class="container container-wrapper center pb5">
 	
 	<div class="col">
 		
@@ -37,7 +37,7 @@ get_header();?>
 		
 		if($interiors && sizeof($interiors) > 0): ?>
 		
-		<div class="container cols-4">
+		<div class="container container-md cols-4 cols-xl-6 cols-md-12">
 			
 			<?php foreach($interiors as $interior): ?>
 			
@@ -69,7 +69,7 @@ get_header();?>
 
 <!-- Previous Projects -->
 
-<div class="container center pb8">
+<div class="container container-wrapper center pb8">
 	
 	<div class="col">
 		
@@ -85,7 +85,7 @@ get_header();?>
 		
 		if($interiors && sizeof($interiors) > 0): ?>
 		
-		<div class="container cols-3">
+		<div class="container cols-3 cols-xl-4 cols-md-6 cols-sm-12">
 			
 			<?php foreach($interiors as $interior): ?>
 			

@@ -8,7 +8,7 @@
 			
 			<h2 class="heading heading__md heading__light spacing1 pb3"><?php echo $services["heading"]; ?></h2>
 			
-			<div class="items-wrapper container cols-2">
+			<div class="items-wrapper container cols-2 cols-xl-4 cols-sm-6">
 				
 				<?php foreach($services["items"] as $service): ?>
 					

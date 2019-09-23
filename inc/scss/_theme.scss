@@ -148,6 +148,7 @@ nav svg {
 .section-link {
 	
 	.section-wrapper {
+		@include backgroundCover;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -950,6 +951,10 @@ nav svg {
 			transform: scaleX(-1) translateX(-100%);
 			right: 0;
 		}
+	}
+	
+	textarea {
+		resize: none;
 	}
 }
 

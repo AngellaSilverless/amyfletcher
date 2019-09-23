@@ -9,15 +9,15 @@ $artisans = get_posts(array(
 
 if($block_info && $artisans && sizeof($artisans) > 0): ?>
 
-<div class="artisans pt5 pb5">
+<div class="artisans-block pt5 pb5">
 	
-	<div class="container">
+	<div class="container container-wrapper ">
 	
 		<div class="col">
 			
 			<h2 class="center heading heading__md spacing1 pb3"><?php echo $block_info["heading"]; ?></h2>
 			
-			<div class="container cols-4">
+			<div class="container container-lg cols-4 cols-xl-6 cols-lg-12">
 	
 				<?php foreach($artisans as $artisan): ?>
 				

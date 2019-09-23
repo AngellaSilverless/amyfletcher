@@ -8,15 +8,15 @@ $all_posts = get_posts(array(
 				
 if($all_posts && sizeof($all_posts) > 0): ?>
 
-<div class="background-light pt5 pb5">
+<div class="posts-wrapper background-light pt5 pb5">
 	
-	<div class="container">
+	<div class="container container-wrapper">
 	
 		<div class="col">
 			
 			<h2 class="heading heading__md spacing1 font200 pb1">Blog posts</h2>
 			
-			<div class="other-posts container cols-4">
+			<div class="other-posts container cols-4 cols-md-12">
 				
 				<?php
 					
@@ -28,7 +28,7 @@ if($all_posts && sizeof($all_posts) > 0): ?>
 				
 				foreach($all_posts as $single): ?>
 				
-				<div class="col container cols-1-10">
+				<div class="col container cols-1-10 cols-block">
 					
 					<div class="col">
 					

@@ -11,17 +11,17 @@ if($block_info && $properties && sizeof($properties) > 0): ?>
 
 <div class="interior-block pt5 pb5">
 	
-	<div class="container">
+	<div class="container container-wrapper">
 	
 		<div class="col">
 			
 			<h2 class="center heading heading__md spacing1 pb3"><?php echo $block_info["heading"]; ?></h2>
 			
-			<div class="container">
+			<div class="container container-lg">
 	
 				<?php foreach($properties as $property): ?>
 				
-				<a href="<?php echo get_permalink($property->ID); ?>" class="col info-wrapper mb5 container cols-7-5">
+				<a href="<?php echo get_permalink($property->ID); ?>" class="col info-wrapper mb5 container cols-7-5 cols-lg-12">
 					
 					<?php $image = get_field("hero_background_image", $property->ID); $url = $image["sizes"]["medium_large"];?>
 					
@@ -39,7 +39,7 @@ if($block_info && $properties && sizeof($properties) > 0): ?>
 						
 						<?php get_template_part("inc/img/tilde"); ?>
 						
-						<div class="container cols-1-10 mb2">
+						<div class="container cols-1-10 cols-xl-12 mb2">
 				
 							<div class="col text brand-text"><p><?php the_field("introduction", $property->ID); ?></p></div>
 						

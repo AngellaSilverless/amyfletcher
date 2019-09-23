@@ -16,7 +16,7 @@ get_header();?>
 
 <?php $info = get_field("information_block"); ?>
 
-<div class="container pt5 pb5 cols-1-7-13">
+<div class="container container-wrapper pt5 pb5 cols-1-7-13 cols-xl-1-7-13 cols-lg-12">
 	
 	<div class="col block block-info">
 		
@@ -40,7 +40,7 @@ get_header();?>
 
 <?php $section = get_field("section_link"); ?>
 
-<div class="container section-link pt5 pb5 cols-6">
+<div class="container container-wrapper section-link pt5 pb5 cols-6 cols-md-12">
 	
 	<a href="<?php echo $section["page"]; ?>" class="col primary-overlay section-wrapper" style="background-image: url(<?php echo $section["background_image"]; ?>)">
 		
@@ -63,7 +63,7 @@ get_header();?>
 
 <!-- Qualification and Career -->
 
-<div class="container qualification pb10 no-gutter cols-6">
+<div class="container container-wrapper qualification pb10 no-gutter cols-6 cols-md-12">
 	
 	<!-- Qualification -->
 	
@@ -141,9 +141,9 @@ get_header();?>
 		
 		<div class="heading heading__lg heading__brand heading__light slow-fade title"><?php echo $career["heading"]; ?></div>
 		
-		<div class="text container cols-3-11"><div class="col"><?php echo $career["description"]; ?></div></div>
+		<div class="text container cols-3-11 cols-lg-12"><div class="col"><?php echo $career["description"]; ?></div></div>
 		
-		<div class="image-wrapper container cols-3-11">
+		<div class="image-wrapper container cols-3-11 cols-lg-12">
 			
 			<div class="col">
 			

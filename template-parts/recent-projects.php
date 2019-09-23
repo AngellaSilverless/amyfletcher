@@ -11,13 +11,13 @@ if($projects && sizeof($projects) > 0): ?>
 
 <div class="recent-posts background-brand pt5 pb5">
 	
-	<div class="container">
+	<div class="container container-wrapper">
 	
 		<div class="col">
 			
 			<h2 class="heading heading__md spacing1 font200 pb1">Recent projects</h2>
 			
-			<div class="items-wrapper container cols-4-spaced">
+			<div class="items-wrapper container cols-4-spaced cols-xl-4 cols-md-12">
 				
 				<?php foreach($projects as $project): if($project->ID != $currID): ?>
 				

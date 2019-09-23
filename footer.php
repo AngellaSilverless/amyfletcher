@@ -11,7 +11,7 @@
 
 	<div class="pre-socket">
 		
-		<div class="container cols-4-8">
+		<div class="container container-wrapper cols-4-8 cols-md-12">
 			
 			<?php
 				
@@ -49,7 +49,7 @@
 	
 	<div class="socket">
 	
-		<div class="container cols-4">
+		<div class="container container-wrapper cols-4">
 			
 			<div class="col colophon">Copyright &copy; <?php echo date ('Y');?> Amy Fletcher Design</div>
 			

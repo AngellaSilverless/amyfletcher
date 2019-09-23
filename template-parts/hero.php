@@ -24,7 +24,7 @@ if( get_field('hero_type', $ID) !== 'slider'):
 
 <div class="hero pt5 <?php the_field('hero_height', $ID);?>" style="background-image: url(<?php echo $heroImage['url']; ?>); background-color: <?php echo $heroColor; ?>;">
 
-	<div class="container">
+	<div class="container container-wrapper">
 		
 		<div class="col hero__content">
 			

@@ -12,13 +12,15 @@ get_header();?>
 
 <!-- ******************* Hero Content END ******************* -->
 
-<div class="container cols-5-7 pb5 pt5">
+<div class="container container-wrapper cols-5-7 cols-xl-12 pb5 pt5">
 	
 	<!-- Info Block -->
 	
 	<div class="col artisan-info">
 		
 	<?php $info = get_field("information"); if($info): ?>
+	
+		<div class="wrapper-info">
 	
 		<?php foreach ($info as $item): ?>
 	
@@ -28,6 +30,8 @@ get_header();?>
 		</div>
 			
 		<?php endforeach; ?>
+		
+		</div>
 	
 	<?php endif; ?>
 	
@@ -81,11 +85,11 @@ get_header();?>
 	
 	<?php endif; ?>
 	
-	<div class="container cols-3-9-13 pb5">
+	<div class="container container-wrapper cols-3-9-13 cols-xl-1-9-13 cols-lg-12 pb5">
 		
 		<div class="col text brand-text"><p><?php echo $section["copy"]; ?></p></div>
 		
-		<div class="col quotation quotation-artisan container cols-3-13">
+		<div class="col quotation quotation-artisan container cols-3-13 cols-lg-2-12">
 		
 			<div class="quote-wrapper col">
 				

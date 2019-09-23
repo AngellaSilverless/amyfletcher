@@ -8,7 +8,7 @@
 			
 			<h2 class="heading heading__md heading__light spacing1 pb3"><?php echo $bespoke["heading"]; ?></h2>
 			
-			<div class="items-wrapper container cols-2">
+			<div class="items-wrapper container cols-2 cols-xl-4 cols-sm-6">
 				
 				<?php $i = 0; foreach($bespoke["items"] as $item): ?>
 					
@@ -35,7 +35,7 @@
 			
 			<h2 class="heading heading__md heading__primary-color spacing1 mb0"><?php echo $bespoke["items"][0]["label"]; ?></h2>
 			
-			<div class="container cols-4-10">
+			<div class="container cols-4-10 cols-xl-3-11 cols-md-2-12">
 	
 				<div class="col">
 					

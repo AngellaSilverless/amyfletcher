@@ -1,6 +1,6 @@
 <div class="instagram-block background-mid center pt5 pb5">
 	
-	<div class="container">
+	<div class="container container-wrapper">
 	
 		<div class="col">
 			

@@ -30,7 +30,7 @@ get_header();?>
 
 <div class="hospitality-design primary-overlay center pt5 pb5" style="background-image: url(<?php echo $section_link["background_image"]; ?>)">
 	
-	<div class="container cols-3-11 pr5 pl5">
+	<div class="container container-wrapper cols-3-11 cols-xl-2-12 pr5 pl5">
 	
 		<div class="col">
 			
@@ -64,7 +64,7 @@ get_header();?>
 			
 			<h2 class="heading heading__md spacing1 pb1"><?php echo $seen["heading"]; ?></h2>
 			
-			<div class="items-wrapper container cols-3">
+			<div class="items-wrapper container cols-3 cols-md-6">
 				
 				<?php $i = 0; foreach($seen["gallery"] as $img): $i++ ?>
 					
@@ -96,7 +96,7 @@ get_header();?>
 			
 			<h2 class="heading heading__md spacing1 pb1"><?php echo $brands["heading"]; ?></h2>
 			
-			<div class="items-wrapper container no-gutter cols-2">
+			<div class="items-wrapper container no-gutter cols-2 cols-lg-3 cols-md-4 cols-sm-6">
 				
 				<?php foreach($brands["gallery"] as $img): ?>
 					
