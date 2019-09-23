@@ -22,7 +22,7 @@ get_header();?>
 
 	<?php while (have_posts()): the_post(); ?>
 
-	<div class="col post-wrapper">
+	<a class="col post-wrapper" href="<?php echo get_permalink(); ?>">
 		
 		<?php $image = get_field("hero_background_image"); $url = $image["sizes"]["medium_large"];?>
 		
@@ -35,19 +35,14 @@ get_header();?>
 			<div class="col date"><?php echo get_the_date("F j Y"); ?></div>
 			
 			<div class="text brand-text"><p><?php the_field("introduction"); ?> [...]</p></div>
-			
-			
-			<a href="<?php echo get_permalink(); ?>">
 				
-				<div class="read-more-text">Read more</div>
-			
-				<?php get_template_part("inc/img/arrow"); ?>
-				
-			</a>
+			<div class="read-more-text">Read more</div>
+		
+			<?php get_template_part("inc/img/arrow"); ?>
 			
 		</div>
 		
-	</div>
+	</a>
 
 	<?php endwhile; ?>
 
