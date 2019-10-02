@@ -342,6 +342,7 @@ body {
 /*---HEADER---*/
 
 nav {
+
 	.container {
 		grid-gap: 0;
 	}
@@ -349,7 +350,7 @@ nav {
 	#toggle-menu {
 		display: block;
 		position: absolute;
-		padding: 1em;
+		padding: 2.5em;
 		top: 0;
 	    right: 0;
 	    cursor: pointer;
@@ -373,12 +374,16 @@ nav {
 	}
 	
 	svg {
-		max-width: 200px;
+		max-width: 100px;
 	}
 	
 	&::before {
 		transform: translateY(0);
 	}
+}
+
+#nav.darker:before {
+    opacity:0.9;
 }
 
 /*---CONTENT---*/

@@ -12,166 +12,86 @@ get_header();?>
 
 <!-- ******************* Hero Content END ******************* -->
 
+<!-- Signature Block -->
+<div class="signature-block slide-up slow">
+    <?php echo file_get_contents(get_field("logo_standard", "options")["url"]); ?>
+</div>
+
 <!-- Information Block -->
 
 <?php $info = get_field("information_block"); ?>
 
-<div class="container container-wrapper pt5 pb5 cols-1-7-13 cols-xl-1-7-13 cols-lg-12">
+<div class="container container-wrapper pt5 pb5 cols-1-4-1-5 cols-md-12">
 	
-	<div class="col block block-info">
-		
-		<h2 class="heading heading__md spacing1 mb0"><?php echo $info["heading"]; ?></h2>
-		
-		<div class="text"><p><?php echo $info["copy"]; ?></p></div>
-		
-	</div>
+	<div class="col"></div>
 	
 	<div class="col">
 		<?php set_query_var("gallery", $info["gallery"]); set_query_var("class", "gallery__about"); get_template_part("template-parts/gallery"); ?>
+
+        <div class="summary-block mt1">
+            <?php the_field('summary');?>
+        </div>
+	</div>
+
+    <div class="col"></div>
+
+    <div class="col block block-info">
+		
+		<h2 class="heading heading__md spacing1 font700 mb0 mt0"><?php echo $info["heading"]; ?></h2>
+		
+		<div class="text mb3"><?php echo $info["copy"]; ?></div>
+
+        <a href="/interior/" class="button arrow">See Some Of Our Work</a>
+
 	</div>
 	
 </div>
-
-<!-- Services Block -->
-
-<?php get_template_part("template-parts/services"); ?>
-
-<!-- Section Link -->
-
-<?php $section = get_field("section_link"); ?>
-
-<div class="container container-wrapper section-link pt5 pb5 cols-6 cols-md-12">
-	
-	<a href="<?php echo $section["page"]; ?>" class="col primary-overlay section-wrapper" style="background-image: url(<?php echo $section["background_image"]; ?>)">
 		
-		<div class="heading heading__md heading__secondary-color spacing1 font200 mb1"><?php echo $section["heading"]; ?></div>
-		
-		<div class="heading heading__lg heading__brand heading__light slow-fade title"><?php echo $section["copy"]; ?></div>
-		
-	</a>
-	
-	<div class="col gallery gallery__single">
-		
-		<div class="img-wrapper">
-			
-			<a class="side-image" href="<?php echo $section["side_image"]["url"]; ?>" style="background-image: url(<?php echo $section["side_image"]["url"]; ?>);"></a>
-		
-		</div>
-	</div>
-	
 </div>
+	
+<!-- Brands we've worked with Block -->
 
-<!-- Qualification and Career -->
+<?php $brands = get_field("brands"); if($brands): ?>
 
-<div class="container container-wrapper qualification pb10 no-gutter cols-6 cols-md-12">
+<div class="brands background-white center pt5 pb5">
 	
-	<!-- Qualification -->
+	<div class="container">
 	
-	<?php $qualifications = get_field("qualifications"); ?>
-	
-	<div class="col col-flex background-secondary pb3 pt3 pr1 pl1">
-		
-		<div class="heading heading__lg heading__brand heading__light slow-fade title"><?php echo $qualifications["heading"]; ?></div>
-		
-		<div class="text">
+		<div class="col small-col">
 			
-			<?php foreach($qualifications["education"] as $education): ?>
+			<h2 class="heading heading__md spacing1"><?php echo $brands["heading"]; ?></h2>
 			
-				<div class="education-wrapper">
-					
-					<div class="heading font200"><p><?php echo $education["heading"]; ?></p></div>
-					
-					<div class="description font400"><p><?php echo $education["copy"]; ?></p></div>
-					
-				</div>
-			
-			<?php endforeach; ?>
-			
-		</div>
-		
-	</div>
-	
-	<div class="col quotation container cols-3-11">
-		
-		<div class="quote-wrapper col">
-			
-			<div>
-			
-				<?php get_template_part("inc/img/quotes-open"); ?>
+			<div class="items-wrapper container no-gutter cols-2 cols-lg-3 cols-md-4 cols-sm-6">
 				
-				<p><?php echo $qualifications["quotation"]; ?></p>
-			
-			</div>
-			
-		</div>
-		
-	</div>
-	
-	<!-- Career -->
-	
-	<?php $career = get_field("career_history"); ?>
-	
-	<div class="col quotation career-quote container cols-3-11">
-		
-		<div class="quote-wrapper col">
-			
-			<div>
-			
-				<?php get_template_part("inc/img/quotes-open"); ?>
-				
-				<p><?php echo $career["quotation"]; ?></p>
-			
-			</div>
-			
-		</div>
-		
-		<?php if($career["quotation_background"]["subtype"] == "svg+xml"): 
-			
-			echo file_get_contents($career["quotation_background"]["url"]);
-		
-		else: ?>
-		
-		<img src="<?php echo $career["quotation_background"]["url"]; ?>" alt="<?php echo $career["quotation_background"]["alt"]; ?>" title="<?php echo $career["quotation_background"]["title"]; ?>">
-		
-		<?php endif; ?>
-		
-	</div>
-	
-	<div class="col col-flex background-secondary pb3 pt3 pr1 pl1 career-history">
-		
-		<div class="heading heading__lg heading__brand heading__light slow-fade title"><?php echo $career["heading"]; ?></div>
-		
-		<div class="text container cols-3-11 cols-lg-12"><div class="col"><?php echo $career["description"]; ?></div></div>
-		
-		<div class="image-wrapper container cols-3-11 cols-lg-12">
-			
-			<div class="col">
-			
-			<?php foreach($career["gallery"] as $img):
-				
-				if($img["subtype"] == "svg+xml"):
-				
-					echo file_get_contents($img["url"]);
+				<?php foreach($brands["gallery"] as $img): ?>
 					
-				else: ?>
-					
+				<div class="col pr1 pl1">
 					<img src="<?php echo $img["url"]; ?>" alt="<?php echo $img["alt"]; ?>" title="<?php echo $img["title"]; ?>">
+				</div>
 					
-				<?php endif;
-				
-			endforeach; ?>
+				<?php endforeach; ?>
 			
 			</div>
-		
+			
 		</div>
-		
-	</div>
 	
+	</div>
+
 </div>
 
-<!-- Recent Posts -->
+<?php endif; ?>
 
-<?php get_template_part("template-parts/recent", "posts"); ?>
+<!-- Quote Block -->
+
+    
+<div class="container pt3 pb3">
+    <div class="col">
+        <div class="quote-block single">
+        <?php the_field('quote');?>
+        </div>
+    </div>
+</div>
+
 
 <!-- Instagram Gallery -->
 

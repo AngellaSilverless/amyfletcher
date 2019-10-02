@@ -18,7 +18,7 @@ get_header();?>
 
 <?php set_query_var("text_block", get_field("text_block", $ID)); get_template_part("template-parts/text-block"); ?>
 
-<div class="container container-wrapper cols-4 cols-lg-12 pb10">
+<div class="container container-wrapper cols-3 cols-xl-4 cols-lg-12 pb10">
 
 	<?php while (have_posts()): the_post(); ?>
 
@@ -30,15 +30,14 @@ get_header();?>
 		
 		<div class="post-info">
 			
-			<h2 class="heading heading__sm heading__primary-color spacing2 font400 mb1"><?php the_title(); ?></h2>
+			<h2 class="heading heading__sm spacing2 font400"><?php the_title(); ?></h2>
 			
 			<div class="col date"><?php echo get_the_date("F j Y"); ?></div>
 			
 			<div class="text brand-text"><p><?php the_field("introduction"); ?> [...]</p></div>
 				
-			<div class="read-more-text">Read more</div>
-		
-			<?php get_template_part("inc/img/arrow"); ?>
+			
+    			<div class="button arrow">Read more	</div>
 			
 		</div>
 		
@@ -51,7 +50,5 @@ get_header();?>
 <!-- Instagram Gallery -->
 
 <?php get_template_part("template-parts/gallery", "instagram"); ?>
-
-<div class="pinterest" style="height:10em; background: wheat;">PINTEREST BLOCK</div>
 
 <?php get_footer();?>

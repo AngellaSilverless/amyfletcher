@@ -1,6 +1,7 @@
 //@prepros-prepend magnific-popup.js
 //@prepros-prepend owl.carousel.min.js
 
+
 jQuery(document).ready(function( $ ) {
 
 /* Add class on load */
@@ -66,6 +67,7 @@ jQuery(document).ready(function( $ ) {
 
 	$("#toggle-menu").click(function() {
 		$("#main-menu").slideToggle();
+        $('#nav').toggleClass('darker'); 
 	});
     
     $(".read-more").click(function() {
@@ -182,4 +184,31 @@ document.addEventListener("scroll", (evt) => {
 	    
 	});
 
+// ===== Stop orphans on hero heading
+
+/*
+$(document).ready(function() {
+    //Get last two words
+    var headingBrand = $(".hero h1").text();
+    var splitText = headingBrand.split(" ").splice(-2);
+    splitText = '<span>' + splitText + '</span>';
+    //Drop last two words
+
+console.log(splitText);
+//var headingBrand = $(".hero h1").replaceWith('<h1>' . headingBrand + splitText . '</h1>'); 
+});
+
+function wordCount(str){
+    return str.split(" ").length;
+}
+var headingBrand = $(".hero h1").text();
+console.log(wordCount(headingBrand));
+
+var sample = $(".hero h1").text();
+var words= sample.split(" ");
+var lastStr = words.pop(); // removed the last.
+var lastButStr= words.pop();
+console.log(lastStr,lastButStr);
+console.log(sample - lastStr, lastButStr);
+*/
 });//Don't remove ---- end of jQuery wrapper

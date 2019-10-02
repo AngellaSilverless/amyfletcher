@@ -18,54 +18,20 @@ get_header();?>
 
 <!-- Recent Projects -->
 
-<div class="container container-wrapper center pb5">
+
+<!-- Properties Block -->
+
+<?php get_template_part("template-parts/interior"); ?>
 	
-	<div class="col">
-		
-		<h2 class="heading heading__md spacing1 mb2	"><?php echo get_field("labels")["recent_projects"]; ?></h2>
-		
-		<?php
-			
-		$interiors = get_posts(array(
-			'post_type' => 'interior',
-			'posts_per_page' => 3,
-		));
-		
-		$recent_ids = array_map(function($element) {
-			return $element->ID;
-		}, $interiors);
-		
-		if($interiors && sizeof($interiors) > 0): ?>
-		
-		<div class="container container-md cols-4 cols-xl-6 cols-md-12">
-			
-			<?php foreach($interiors as $interior): ?>
-			
-			<a href="<?php echo get_permalink($interior->ID); ?>" class="col project-block" style="background-image: url(<?php echo get_field("hero_background_image", $interior)["sizes"]["medium_large"]; ?>);">
-				
-				<div class="project-wrapper primary-overlay">
-				
-					<div class="heading heading__sm heading__secondary-color spacing2 font200 mb1"><?php
-						$location = get_the_terms($interior->ID, "location")[0];
-						$location_parent = get_term($location->parent, "location");
-						echo $location->name . ", " . $location_parent->name;
-					?></div>
-			
-					<h3 class="heading heading__lg heading__brand heading__light slow-fade title"><?php echo $interior->post_title; ?></h3>
-					
-				</div>
-			
-			</a>
-			
-			<?php endforeach; ?>
-			
-		</div>
-		
-		<?php endif; ?>
-		
-	</div>
-	
-</div>
+<!-- CTA Block -->
+
+<div class="cta-block">
+    <a href="/contact/">
+    <i class="fas fa-phone"></i>
+    <p><?php the_field('call_to_action');?></p>
+    <p class="link">Get In Touch</p>
+    </a>		
+</div>    
 
 <!-- Previous Projects -->
 

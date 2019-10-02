@@ -28,9 +28,9 @@ if( get_field('hero_type', $ID) !== 'slider'):
 		
 		<div class="col hero__content">
 			
-			<a href="<?php echo home_url(); ?>" class="logo hero__logo slide-up">
+			<!--<a href="<?php echo home_url(); ?>" class="logo hero__logo slide-up">
 				<?php echo file_get_contents(get_field('logo', 'options')["url"]); ?>
-			</a>
+			</a>-->
 		
 			<h1 class="heading heading__xl heading__brand heading__light slow-fade"><?php echo $heading; ?></h1>
 		

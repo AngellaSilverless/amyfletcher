@@ -84,39 +84,10 @@ get_header();?>
 
 <?php endif; ?>
 
-<!-- Brands we've worked with Block -->
 
-<?php $brands = get_field("brands"); if($brands): ?>
-
-<div class="brands background-white center pt5 pb5">
-	
-	<div class="container">
-	
-		<div class="col small-col">
-			
-			<h2 class="heading heading__md spacing1 pb1"><?php echo $brands["heading"]; ?></h2>
-			
-			<div class="items-wrapper container no-gutter cols-2 cols-lg-3 cols-md-4 cols-sm-6">
-				
-				<?php foreach($brands["gallery"] as $img): ?>
-					
-				<div class="col pr1 pl1">
-					<img src="<?php echo $img["url"]; ?>" alt="<?php echo $img["alt"]; ?>" title="<?php echo $img["title"]; ?>">
-				</div>
-					
-				<?php endforeach; ?>
-			
-			</div>
-			
-		</div>
-	
-	</div>
-
-</div>
-
-<?php endif; ?>
 
 <!-- Instagram Gallery -->
+
 
 <?php get_template_part("template-parts/gallery", "instagram"); ?>
 

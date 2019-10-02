@@ -9,7 +9,7 @@ $properties = get_posts(array(
 
 if($block_info && $properties && sizeof($properties) > 0): ?>
 
-<div class="interior-block pt5 pb5">
+<div class="interior-block pt5">
 	
 	<div class="container container-wrapper">
 	
@@ -29,7 +29,7 @@ if($block_info && $properties && sizeof($properties) > 0): ?>
 					
 					<div class="col info">
 					
-						<div class="heading heading__sm heading__primary-color spacing2 font200 mb1"><?php
+						<div class="heading heading__sm spacing2 font200 mb1"><?php
 							$location = get_the_terms($property->ID, "location")[0];
 							$location_parent = get_term($location->parent, "location");
 							echo $location->name . ", " . $location_parent->name;
@@ -52,12 +52,6 @@ if($block_info && $properties && sizeof($properties) > 0): ?>
 				</a>
 				
 				<?php endforeach; ?>
-				
-			</div>
-			
-			<div class="wrapper-button center pt2 pb3">
-	
-				<a href="<?php echo $block_info["button_target"]; ?>" class="button"><?php echo $block_info["button_label"]; ?></a>
 				
 			</div>
 			

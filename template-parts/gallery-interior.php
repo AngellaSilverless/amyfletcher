@@ -14,12 +14,8 @@ if($gallery): $class = get_query_var("class"); ?>
 		
 			<div class="quote-wrapper col">
 				
-				<div>
-				
-					<?php get_template_part("inc/img/quotes-open"); ?>
-					
-					<p><?php echo $quotation; ?></p>
-				
+				<div class="quote-block single">
+                    <p><?php echo $quotation; ?></p>				
 				</div>
 				
 			</div>

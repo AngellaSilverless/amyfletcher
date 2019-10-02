@@ -23,18 +23,94 @@
 	outline: none;
 	transition: all 0.5s ease-in-out;
     min-width: fit-content;
+
+    &:before,
+    &:after {
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+        height: 2px;
+        background: #5c6970;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease;
+    }
+
+    &:after {
+        top:initial;
+        left:initial;
+        bottom:0;
+        right:0;
+        transform-origin: right;    
+    }
+
+    &:hover {
+        width: 25em;
+        
+        &:before,
+        &:after {
+            transform:scaleX(1);
+        }
+    }
 	
 	&__light {
 		color: $brand-secondary;
 		border-right: 2px solid $brand-secondary;
 		border-left: 2px solid $brand-secondary;
+		
+		&:before,
+		&:after {
+    		background: $brand-secondary;
+		}
+		
+		&:hover {
+    		color: white;
+		}
 	}
-	
-/*
-	&:hover {
-		width: 10em;
-	}
-*/
+
+    &.arrow {
+        position: relative;
+        padding-right: 40%;
+        border: 1px solid $brand-dark-grey;
+        text-transform: uppercase;
+        font-weight: 700;
+        
+        &:before {
+            content:'';
+            position: absolute;
+            top:50%;
+            left:60%;
+            width:3em;
+            height:2px;
+            background: $brand-dark-grey;
+            transition: width 0.5s ease;
+        }
+        &:after {
+            content:'';
+            position: absolute;
+            top:calc(50% - 4px);
+            left:calc(60% + 3em);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 0 5px 15px;
+            border-color: transparent transparent transparent $brand-dark-grey;    
+            transition: left 0.5s ease; 
+        }
+        
+        &:hover {
+            &:before {
+                width:4em;
+            }
+            &:after {
+                left:calc(60% + 4em);                
+            }
+            
+        }
+    }
+
 }
 
 a.next-section {
@@ -386,7 +462,7 @@ a.next-section {
 		.wpcf7-submit {
 			grid-column: 2;
 			grid-row: 4;
-			background: $brand-primary;
+			background: #3e3e3e;
 			color: white;
 			text-transform: uppercase;
 			text-align: left;

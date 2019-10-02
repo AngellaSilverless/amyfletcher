@@ -27,7 +27,7 @@ if($block_info && $artisans && sizeof($artisans) > 0): ?>
 					
 					<div class="img mb3" style="background-image: url(<?php echo $url; ?>);"></div>
 					
-					<div class="heading heading__sm heading__primary-color spacing2 font200 mb1"><?php
+					<div class="heading heading__sm spacing2 font200 mb1"><?php
 						$location = get_the_terms($artisan->ID, "location")[0];
 						$location_parent = get_term($location->parent, "location");
 						echo $location->name . ", " . $location_parent->name;
