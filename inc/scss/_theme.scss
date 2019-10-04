@@ -3,31 +3,31 @@
 /*===========GLOBAL==========*/
 
 .background {
-	
+
 	&-white {
 		background: white;
 	}
-	
+
 	&-light {
 		background: white;
 	}
-	
+
 	&-mid {
 		background: $background-mid;
 	}
-	
+
 	&-dark {
 		background: $background-dark;
 	}
-	
+
 	&-primary {
 		background: $brand-primary;
 	}
-	
+
 	&-secondary {
 		background: $brand-secondary;
 	}
-	
+
 	&-brand {
 		background: $background-brand;
 	}
@@ -39,7 +39,7 @@ nav svg {
 	width: 100%;
 	max-width: 150px;
 	height: auto;
-	
+
 	path {
 		fill: white;
 	}
@@ -50,13 +50,13 @@ nav svg {
 	align-items: flex-start;
 	font-size: 1.2em;
 	letter-spacing: 2px;
-	
+
 	a {
 		color: white;
 		line-height: 1.5;
 		font-weight: 100;
 	}
-	
+
 	.phone {
 		font-weight: 100;
 	}
@@ -64,7 +64,7 @@ nav svg {
 
 #main-menu {
 	position: relative;
-	
+
 	&:before,
 	&:after {
 		content: "";
@@ -74,7 +74,7 @@ nav svg {
 		background: #b1b1b1;
 		left: -1em;
 	}
-	
+
 	&:after {
     	left:initial;
 		right: -1em;
@@ -91,15 +91,15 @@ nav svg {
 /*===========BODY==========*/
 
 .items-wrapper {
-	
+
 	svg {
 		height: 5em;
-		
+
 		path {
 			fill: white;
 		}
 	}
-	
+
 	.label {
 		color: white;
 		font-weight: 400;
@@ -117,17 +117,17 @@ nav svg {
 }
 
 .as-seen .items-wrapper {
-	
+
 	.col {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
-	
+
 	svg {
 		max-width: 14em;
 	}
-	
+
 	svg path {
 		fill: hsl(34, 8%, 64%);
 	}
@@ -137,14 +137,14 @@ nav svg {
 	position: relative;
 	@include backgroundCover;
 	z-index: 2;
-	
+
 	.heading__brand {
 		line-height: 1.5;
 	}
 }
 
 .section-link {
-	
+
 	.section-wrapper {
 		@include backgroundCover;
 		display: flex;
@@ -153,13 +153,13 @@ nav svg {
 		text-align: center;
 		flex-direction: column;
 		padding: 1em;
-		
+
 		.title {
 			font-size: 3.2em;
 			line-height: 1.5;
 		}
 	}
-	
+
 	.side-image {
 		height: 38em;
 		width: 100%;
@@ -169,12 +169,12 @@ nav svg {
 
 .qualification {
 	color: white;
-	
+
 	p {
 		margin: 0;
 		padding: 0;
 	}
-	
+
 	.col-flex {
 		display: flex;
 		flex-direction: column;
@@ -183,11 +183,11 @@ nav svg {
 		text-align: center;
 		min-height: 32em;
 	}
-	
+
 	.title {
 		position: relative;
 		margin-bottom: 1.5em;
-		
+
 		&:before {
 			position: absolute;
 			content: "~";
@@ -200,20 +200,20 @@ nav svg {
 			opacity: 0.3;
 		}
 	}
-	
+
 	.text {
 		letter-spacing: 1px;
 	}
-	
+
 	.education-wrapper:first-of-type {
 		margin-bottom: 1em;
 	}
-	
+
 	.education-wrapper:last-of-type {
 		position: relative;
 		padding-top: 1.5em;
 		margin-top: 1.5em;
-		
+
 		&:before {
 			content: "";
 			position: absolute;
@@ -225,7 +225,7 @@ nav svg {
 			opacity: 0.3;
 		}
 	}
-	
+
 	.quotation {
 		color: hsl(0, 0%, 27%);
 		font-size: 2.4em;
@@ -233,32 +233,32 @@ nav svg {
 		text-align: left;
 		line-height: 1.4;
 		letter-spacing: 1px;
-		
+
 		p {
 			font-size: 1em;
 			text-align: left;
 			line-height: 1.5;
 		}
 	}
-	
+
 	.quote-wrapper {
 		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		
+
 		div {
 			padding: 0 1em;
 			position: relative;
 		}
-		
+
 		svg {
 			width: 1em;
 			position: absolute;
 			z-index: 2;
 			top: 0.2em;
 			left: -0.5em;
-			
+
 			path {
 				fill: $brand-primary;
 			}
@@ -268,14 +268,14 @@ nav svg {
 
 .img-wrapper.quotation-interior, .quotation-artisan {
 	cursor: initial;
-	
+
 	p {
 		font-size: 1em;
 		text-align: left;
 		line-height: 1.5;
 		padding: 0;
 	}
-	
+
 	.quote-wrapper {
 		font-size: 2.4em;
 		font-weight: bold;
@@ -284,11 +284,11 @@ nav svg {
 		letter-spacing: 1px;
 		display: flex;
 		align-items: center;
-		
+
 		div {
 			position: relative;
 		}
-		
+
 		svg {
 			width: 0.9em;
 			position: absolute;
@@ -302,11 +302,11 @@ nav svg {
 .img-wrapper.quotation-interior {
 	background: $brand-primary;
 	color: white;
-	
+
 	.quote-wrapper svg path {
 		fill: $brand-secondary;
 	}
-	
+
 	.quote-wrapper {
 		margin-left: 0.5em;
 	}
@@ -318,18 +318,18 @@ nav svg {
 
 
 .career-history {
-	
+
 	.col {
 		padding: 0 1.5em;
-		
+
 		p:first-of-type {
 			margin-bottom: 1.5em;
 		}
 	}
-	
+
 	.image-wrapper {
 		margin-top: 2em;
-		
+
 		svg, img {
 			height: 3.5em;
 			max-width: 9em;
@@ -341,7 +341,7 @@ nav svg {
 
 .career-quote {
 	position: relative;
-	
+
 	svg, img {
 		width: 60%;
 		position: absolute;
@@ -355,12 +355,12 @@ nav svg {
 	@include backgroundCover;
 	display: block;
 	line-height: 1.2;
-	
+
 	h3 {
 		font-size: 3.5em;
 		margin: 0;
 	}
-	
+
 	.project-wrapper {
 		height: 30em;
 		display: flex;
@@ -370,7 +370,7 @@ nav svg {
 		opacity: 0;
 		transition: opacity 0.3s ease-in-out;
 	}
-	
+
 	&:hover .project-wrapper {
 		opacity: 1;
 	}
@@ -391,7 +391,7 @@ nav svg {
 	position: relative;
     position: relative;
     filter: saturate(0);
-    
+
 	&:before {
 		content: "";
 		position: absolute;
@@ -404,7 +404,7 @@ nav svg {
 		z-index: -1;
 		transition: opacity 0.3s ease-in-out;
 	}
-	
+
 	&:hover::before {
 		opacity: 0.1;
 	}
@@ -417,16 +417,16 @@ nav svg {
 		@include backgroundCover;
 		height: 12em;
 	}
-	
+
 	.title {
 		line-height: 1;
 		color: hsl(0, 0%, 27%);
-		
+
 		svg {
 			width: 2.5em;
 			height: auto;
 			margin-left: 0.5em;
-			
+
 			path {
 				fill: hsl(0, 0%, 27%);
 			}
@@ -437,7 +437,7 @@ nav svg {
 .primary-overlay {
 	position: relative;
 	z-index: 2;
-	
+
 	&:before {
 		content: "";
 		position: absolute;
@@ -453,12 +453,12 @@ nav svg {
 
 .testimonials {
 	text-align: left;
-	
+
 	.text {
 		font-weight: bold;
 		letter-spacing: 1px;
 	}
-	
+
 	.author {
 		color: $brand-primary;
 		text-transform: uppercase;
@@ -469,7 +469,7 @@ nav svg {
 }
 
 .artisan-info {
-	
+
 	.label {
 		display: inline-block;
 		width: 10em;
@@ -477,7 +477,7 @@ nav svg {
 		padding-right: 1em;
 		padding-bottom: 0.2em;
 	}
-	
+
 	.value {
 		display: inline-block;
 		color: $brand-mid-grey;
@@ -497,26 +497,26 @@ nav svg {
 	.title {
 		color: darken($background-mid, 20%);
 	}
-	
+
 	.tilde {
 		width: 1.5em;
 		fill: #767469;
 		opacity: 0.5;
 		margin-top: 1em;
 	}
-	
+
 	.arrow {
 		width: 4em;
 		fill: $brand-dark-grey;
 		transition:margin 0.5s ease;
 	}
-	
+
 	.img {
-		height: 35em;
+		height: 20em;
 		width: 100%;
 		@include backgroundCover;
 	}
-	
+
 	&:hover {
     	.arrow {
         	margin-left:1em;
@@ -531,18 +531,18 @@ nav svg {
 }
 
 .post-title {
-	
+
 	h1 {
 		font-size: 2.5em;
 		letter-spacing: 2px;
 	}
-	
+
 	svg {
 		width: 0.8em;
 		margin: 0 0.2em 0.4em 0;
 		fill: $brand-primary;
 	}
-	
+
 	.date {
 		font-weight: normal;
 		letter-spacing: 1px;
@@ -553,10 +553,10 @@ nav svg {
 
 .other-posts {
 	line-height: 1.5;
-	
+
 	.single-post {
 		width: 100%;
-		
+
 		.img {
 			@include backgroundCover;
 			height: 12em;
@@ -566,20 +566,20 @@ nav svg {
 
 .post-wrapper {
     display: grid;
-    grid-template-rows: 15em auto;	
+    grid-template-rows: 15em auto;
 	.post-info {
         align-content: stretch;
         grid-template-rows: auto auto auto 1fr;
-        display: grid;    	
+        display: grid;
 		padding: 1em 2em;
 		background: white;
 	}
-	
+
 	.img {
 		@include backgroundCover;
 		height: 15em;
 	}
-	
+
 	.heading {
     	margin-bottom: 0.5em;
 		font-size: 1.3em;
@@ -598,14 +598,14 @@ nav svg {
     		border-color: transparent transparent transparent #cecece;
 		}
 	}
-	
+
 	.date {
 		font-weight: normal;
 		color: $brand-mid-grey;
 		letter-spacing: 1px;
 		font-size: 0.8em;
 	}
-	
+
 	.read-more-text {
 		font-size: 1.2em;
 		color: $brand-primary;
@@ -618,38 +618,38 @@ nav svg {
 }
 
 .sidebar {
-	
+
 	.title {
 		height: 2.5em;
 		border-bottom: 2px solid;
 	}
-	
+
 	.list-items {
-		
+
 		.item {
 		    display: block;
 		    padding: 0.75em 0;
 		    font-size: 1.2em;
 		    text-transform: uppercase;
 		    letter-spacing: 1px;
-		    
-		    &.active { 
-			    
+
+		    &.active {
+
 			    a {
 				    color: $brand-primary;
 				    font-weight: bold;
 			    }
-			    
+
 			    .tilde {
 				    display: block;
 			    }
 			}
-		    
+
 		    a {
 			    color: inherit;
 		    }
 		}
-		   
+
 		.tilde {
 			width: 1em;
 			fill: $brand-primary;
@@ -657,7 +657,7 @@ nav svg {
 			display: none;
 		}
 	}
-	
+
 	.collections {
 	    padding: 0.75em 0 0 0;
 	    font-size: 1.2em;
@@ -666,11 +666,11 @@ nav svg {
 	    color: $brand-primary;
 		font-weight: bold;
 		cursor: pointer;
-		
+
 		div {
 			position: relative;
 		}
-		
+
 		.simple-arrow {
 			width: 1.2em;
 			position: absolute;
@@ -679,7 +679,7 @@ nav svg {
 			transform: translateY(-50%);
 			fill: $brand-primary;
 		}
-		
+
 		.tilde {
 			display: block;
 		}
@@ -688,19 +688,19 @@ nav svg {
 
 .shop-items {
 	margin-top: calc(1.5 * 2.5em);
-	
+
 	.item {
 		cursor: pointer;
-		
+
 		.img {
 			@include backgroundCover;
 			height: 22em;
 		}
-		
+
 		.title {
 			margin-top: 1.5em;
 		}
-		
+
 		.heading {
 			line-height: 1.5;
 		}
@@ -714,11 +714,11 @@ nav svg {
     height: 100vh;
     background: hsla(0, 0%, 0%, 0.6);
     z-index: 999;
-    
+
     &.hidden {
 	    display: none;
     }
-    
+
     .wrapper {
 	    width: 100%;
 	    height: 100%;
@@ -726,7 +726,7 @@ nav svg {
 	    align-items: center;
 	    justify-content: center;
     }
-    
+
     .product-info {
 	    background: white;
 	    position: relative;
@@ -736,7 +736,7 @@ nav svg {
 		min-height: 40em;
 		max-height: 80em;
 	}
-	
+
 	.close {
 		position: absolute;
 		width: 2.5em;
@@ -749,7 +749,7 @@ nav svg {
 		align-items: center;
 		justify-content: center;
 		cursor: pointer;
-		
+
 		span {
 			font-size: 1.5em;
 			font-weight: bold;
@@ -758,33 +758,33 @@ nav svg {
 			color: $brand-primary;
 		}
 	}
-	
+
 	.image {
 		@include backgroundCover;
 	}
-	
+
 	.info {
 		padding: 2em;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 	}
-		
+
 	.heading {
 		line-height: 1.5;
 	}
-	
+
 	.tilde {
 		fill: $brand-secondary;
 		opacity: 0.8;
 		width: 1.5em;
 		margin-top: 1em;
 	}
-	
+
 	.brand-text {
 		color: white;
 		font-weight: 200;
-		
+
 		p {
 			padding: 0;
 			margin-top: 1em;
@@ -795,7 +795,7 @@ nav svg {
 .bespoke {
 	position: relative;
 	background: $background-mid;
-	 
+
     p {
         color: white;
     }
@@ -809,7 +809,7 @@ nav svg {
 		background: $background-mid;
 		transform: translateX(-50%) translateY(1em) rotate(45deg);
 	}
-	
+
 	.item {
 		cursor: pointer;
 	}
@@ -823,17 +823,17 @@ nav svg {
 }
 
 .stockists {
-	
+
 	.item {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		padding: 1em;
 	}
-	
+
 	svg {
 		max-width: 15em;
-		
+
 	    path {
 			fill: hsl(34, 8%, 64%);
 		}
@@ -841,11 +841,11 @@ nav svg {
 }
 
 .interior-block .info-wrapper {
-	
+
 	.info {
 		padding: 2em;
 	}
-	
+
 	.img {
 		height: 100%;
 		min-height: 25em;
@@ -853,7 +853,7 @@ nav svg {
 }
 
 .studio-info {
-	
+
 	.info {
 		padding-top: 1em;
 		font-size: 1.2em;
@@ -863,31 +863,31 @@ nav svg {
 
 
 .gallery-contact.owl-carousel .owl-item {
-	
+
 	&:not(:last-of-type) .img-wrapper {
 		padding-right: 1em;
 	}
-	
+
 	.img-wrapper {
 		padding-bottom: 1em;
 	}
-	
+
 	&:nth-of-type(5n - 4) a {
 		width: 60em;
 	}
-	
+
 	&:nth-of-type(5n - 3) a {
 		width: 25em;
 	}
-	
+
 	&:nth-of-type(5n - 2) a {
 		width: 35em;
 	}
-	
+
 	&:nth-of-type(5n - 1) a {
 		width: 50em;
 	}
-	
+
 	&:nth-of-type(5n) a {
 		width: 30em;
 	}
@@ -895,7 +895,7 @@ nav svg {
 
 .gallery-contact .img-wrapper {
 	height: 32em;
-	
+
 	a {
 		@include backgroundCover;
 		width: 20em;
@@ -904,28 +904,28 @@ nav svg {
 }
 
 .contact-links {
-	
+
 	a {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		
+
 		&:hover {
-			
+
 			svg {
 				fill: $brand-secondary;
 			}
 		}
 	}
-	
+
 	.icon {
 		width: 10em;
 		height: 10em;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		
+
 		svg {
 			fill: $brand-primary;
 			max-width: 8em;
@@ -933,12 +933,12 @@ nav svg {
 			width: 100%;
 			transition: fill 0.3s ease-in-out;
 		}
-		
+
 		&.mail {
 			margin-right: 1.8em;
 		}
 	}
-	
+
 	.label {
 		font-size: 1.2em;
 		font-weight: normal;
@@ -953,35 +953,35 @@ nav svg {
 
 .contact-form-wrapper {
 	position: relative;
-	
+
 	svg {
 		position: absolute;
 		fill: white;
 		height: 70%;
 		bottom: 6.5em;
-		
+
 		&:first-of-type {
 			transform: translateX(-100%);
 			left: 0;
 		}
-		
+
 		&:last-of-type {
 			transform: scaleX(-1) translateX(-100%);
 			right: 0;
 		}
 	}
-	
+
 	textarea {
 		resize: none;
 	}
 }
 
 .map-container {
-	
+
 	img {
 		width: 100%;
 	}
-	
+
 	&.map-contact {
 		padding-bottom: 10px;
 	}
@@ -1001,7 +1001,7 @@ nav svg {
 
 .quote-block {
     &.single {
-        
+
         p {
             position: relative;
             width:30%;
@@ -1019,7 +1019,7 @@ nav svg {
                 font-size:0.75em;
                 color: #fcb27d;
             }
-            
+
         }
     }
 }
@@ -1066,9 +1066,9 @@ nav svg {
             height: 0;
             border-style: solid;
             border-width: 5px 0 5px 12px;
-            border-color: transparent transparent transparent $brand-dark-grey;    
-            transition: left 0.5s ease; 
-        }        
+            border-color: transparent transparent transparent $brand-dark-grey;
+            transition: left 0.5s ease;
+        }
     }
 }
 
@@ -1079,7 +1079,7 @@ footer {
 	z-index: 2;
 	background-size: cover;
 	background-repeat: no-repeat;
-	
+
 	&:before {
 		content: "";
 		position: absolute;
@@ -1089,19 +1089,19 @@ footer {
 		opacity: 0.97;
 		z-index: -1;
 	}
-	
+
 	.info {
 		font-weight: 400;
 		letter-spacing: 1px;
 		font-size: 1.2em;
-		
+
 		.contact-wrapper {
 			padding-top: 0.5em;
 			padding-bottom: 0.5em;
 			line-height: 1.5;
 		}
 	}
-	
+
 	.socials {
 		font-size: 1.2em;
 		padding-top: 1em;

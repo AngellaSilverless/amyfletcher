@@ -2,16 +2,16 @@
 
 /*===========EXTRA LARGE (1400px)==========*/
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1200px) {
 
-/*---GLOBALS---*/ 
+/*---GLOBALS---*/
 
 .container-wrapper {
 	margin-right: 1em;
 	margin-left: 1em;
 }
 
-/*---HEADER---*/ 
+/*---HEADER---*/
 
 /*---CONTENT---*/
 
@@ -36,58 +36,58 @@
 /*---GRID---*/
 
 .container {
-		
+
 	&.cols-xl-3-9 {
 		& > .col:nth-of-type(2n - 1) {
-			grid-column: span 3;      
+			grid-column: span 3;
 		}
 		& > .col:nth-of-type(2n) {
-			grid-column: span 9;      
-		}  
+			grid-column: span 9;
+		}
 	}
-	
+
 	&.cols-xl-2-12 {
 		& > .col:nth-of-type(n) {
-			grid-column: 2/12;      
+			grid-column: 2/12;
 		}
 	}
-	
+
 	&.cols-xl-3-11 {
 		& > .col:nth-of-type(n) {
-			grid-column: 3/11;      
+			grid-column: 3/11;
 		}
 	}
-	
+
 	&.cols-xl-1-7-13 {
 		& > .col:nth-of-type(2n - 1) {
-			grid-column: 1/7;     
+			grid-column: 1/7;
 		}
 		& > .col:nth-of-type(2n) {
-			grid-column: 7/13;     
+			grid-column: 7/13;
 		}
 	}
-	
+
 	&.cols-xl-1-9-13 {
 		& > .col:nth-of-type(2n - 1) {
-			grid-column: 1/9;     
+			grid-column: 1/9;
 		}
 		& > .col:nth-of-type(2n) {
-			grid-column: 9/13;     
+			grid-column: 9/13;
 		}
 	}
-	
+
 	&.cols-block {
 		display: block;
 	}
 }
 
-/*---GLOBALS---*/ 
+/*---GLOBALS---*/
 
 .heading__xl {
 	font-size: 4em;
 }
 
-/*---HEADER---*/ 
+/*---HEADER---*/
 
 .hero__logo {
 	width: 30em;
@@ -114,7 +114,7 @@
 }
 
 .qualification {
-	
+
 	.title {
 	    font-size: 2.5em;
 	}
@@ -153,29 +153,29 @@
 }
 
 .gallery-contact {
-	
+
 	.img-wrapper {
-		height: 25em;	
+		height: 25em;
 	}
-		
+
 	&.owl-carousel .owl-item {
-	
+
 		&:nth-of-type(5n - 4) a {
 			width: 35em;
 		}
-		
+
 		&:nth-of-type(5n - 3) a {
 			width: 20em;
 		}
-		
+
 		&:nth-of-type(5n - 2) a {
 			width: 25em;
 		}
-		
+
 		&:nth-of-type(5n - 1) a {
 			width: 30em;
 		}
-		
+
 		&:nth-of-type(5n) a {
 			width: 20em;
 		}
@@ -184,12 +184,12 @@
 
 .contact-links .icon {
 	height: 8em;
-	
+
 	svg {
 		max-width: 6em;
 		max-height: 4em;
 	}
-	
+
 	&.mail {
 		margin-right: 1em;
 	}
@@ -203,19 +203,19 @@
 /*===========MEDIUM (992px)==========*/
 
 @media only screen and (max-width: 992px) {
-	
+
 /*---GRID---*/
 
 .container {
-	
+
 	&.cols-lg-2-12 {
 		& > .col:nth-of-type(n) {
-			grid-column: 2/12;      
+			grid-column: 2/12;
 		}
 	}
 }
-  
-/*---GLOBALS---*/ 
+
+/*---GLOBALS---*/
 
 body {
     font-size: 0.75em;
@@ -224,7 +224,7 @@ body {
 .container-lg {
 	max-width: 40em;
 }
- 
+
 /*---HEADER---*/
 
 /*---CONTENT---*/
@@ -234,15 +234,15 @@ body {
 }
 
 .gallery__artisan {
-	
+
 	&.img-1 .img-wrapper {
 		height: 30em;
 	}
-	
+
 	&.img-2 .img-wrapper {
 		height: 25em;
 	}
-	
+
 	&.img-3 .img-wrapper {
 		height: 20em;
 	}
@@ -262,24 +262,24 @@ body {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-column-gap: 2em;
-	
+
 	&:nth-of-type(2n - 1) {
-		
+
 		.img {
 			order: 1;
 			margin-bottom: 0;
 		}
-		
+
 		.post-info {
 			order: 2;
 		}
 	}
-	
+
 	&:nth-of-type(2n) {
 		.img {
 			order: 2;
 		}
-		
+
 		.post-info {
 			order: 1;
 			margin-bottom: 0;
@@ -315,10 +315,10 @@ body {
 /*---GRID---*/
 
 .container {
-	
+
 	&.cols-md-2-12 {
 		& > .col:nth-of-type(n) {
-			grid-column: 2/12;      
+			grid-column: 2/12;
 		}
 	}
 }
@@ -346,7 +346,7 @@ nav {
 	.container {
 		grid-gap: 0;
 	}
-	
+
 	#toggle-menu {
 		display: block;
 		position: absolute;
@@ -354,29 +354,29 @@ nav {
 		top: 0;
 	    right: 0;
 	    cursor: pointer;
-	
+
 		i {
 			font-size: 2em;
 		}
 	}
-	
+
 	#main-menu {
 		display: none;
-		
+
 		#menu-main-menu {
 			padding-top: 2em;
 			flex-direction: column;
 		}
 	}
-	
+
 	#logo-amy-fletcher {
 		justify-content: flex-start;
 	}
-	
+
 	svg {
 		max-width: 100px;
 	}
-	
+
 	&::before {
 		transform: translateY(0);
 	}
@@ -428,35 +428,35 @@ nav {
 }
 
 .posts-wrapper {
-	
+
 	h2 {
 		text-align: center;
 	}
-	
+
 	.cols-block .col {
 		max-width: 35em;
 		margin-left: auto;
 		margin-right: auto;
 	}
-	
+
 	.single-post .img {
 		height: 20em;
 	}
 }
 
 .recent-posts {
-	
+
 	h2 {
 		text-align: center;
 	}
-	
+
 	.col {
 		max-width: 35em;
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 1em;
 	}
-	
+
 	.project-background {
 		height: 20em;
 	}
@@ -464,12 +464,12 @@ nav {
 
 .contact-links .icon {
 	height: 6em;
-	
+
 	svg {
 		max-width: 4.5em;
 		max-height: 3.5em;
 	}
-	
+
 	&.mail {
 		margin-right: 1em;
 	}
@@ -477,14 +477,14 @@ nav {
 
 .gallery__interior {
 	grid-gap: 1.5em;
-	
+
 	.img-wrapper {
 		height: 25em;
-		
+
 		&:nth-of-type(n) {
 			grid-column: span 6;
 		}
-		
+
 		&:first-of-type {
 			grid-column: span 12;
 		}
@@ -493,7 +493,7 @@ nav {
 
 .gallery__working {
 	grid-gap: 1.5em;
-	
+
 	.img-wrapper {
 		grid-column: span 6;
 		height: 20em	;
@@ -505,20 +505,20 @@ nav {
 }
 
 .gallery__artisan {
-	
+
 	&.img-1 .img-wrapper {
 		height: 25em;
 	}
-	
+
 	&.img-2 .img-wrapper {
 		height: 20em;
 	}
-	
+
 	&.img-3 .img-wrapper {
 		height: 15em;
 	}
 }
-  
+
 /*---FOOTER---*/
 
 .pre-socket .info {
@@ -531,7 +531,7 @@ nav {
 /*===========EXTRA SMALL (576px)==========*/
 
 @media only screen and (max-width: 576px) {
-  
+
 /*---GLOBALS---*/
 
 .button {
@@ -559,41 +559,41 @@ nav {
 /*---CONTENT---*/
 
 #contact-form-footer {
-	
+
 	p {
 		grid-template-columns: 1fr;
-		
+
 		> span:nth-of-type(1) {
 			grid-column: unset;
 			grid-row: 1;
 		}
-		
+
 		> span:nth-of-type(2) {
 			grid-column: unset;
 			grid-row: 2;
 		}
-		
+
 		> span:nth-of-type(3) {
 			grid-column: unset;
 			grid-row: 3;
 		}
-		
+
 		> span:nth-of-type(4) {
 			grid-column: unset;
 			grid-row: 4;
 		}
-		
+
 		.wpcf7-submit {
 			grid-column: unset;
 			grid-row: 6;
 		}
-		
+
 		.mailing-list {
 			grid-column: unset;
 			grid-row: 5;
 		}
 	}
-	
+
 	textarea {
 		height: 10em;
 	}
@@ -622,12 +622,12 @@ nav {
 
 .post-wrapper:nth-of-type(n) {
 	grid-template-columns: 1fr;
-	
+
 	.img {
 		order: 1;
 		height: 25em;
 	}
-	
+
 	.post-info {
 		order: 2;
 		min-height: unset;
@@ -647,17 +647,17 @@ nav {
 }
 
 .gallery__artisan {
-	
+
 	&.img-1 .img-wrapper {
 		height: 20em;
 		grid-column: span 12;
 	}
-	
+
 	&.img-2 .img-wrapper {
 		height: 20em;
 		grid-column: span 12;
 	}
-	
+
 	&.img-3 .img-wrapper {
 		height: 20em;
 		grid-column: span 12;
@@ -666,10 +666,10 @@ nav {
 
 .gallery__interior {
 	grid-gap: 1.5em;
-	
+
 	.img-wrapper {
 		height: 25em;
-		
+
 		&:nth-of-type(n) {
 			grid-column: span 12;
 		}
@@ -679,7 +679,7 @@ nav {
 .container.gallery-working {
 	margin: 0 2em;
 	grid-gap: 1.5em;
-	
+
 	.img-wrapper {
 		grid-column: span 12;
 		height: 20em;
@@ -687,11 +687,11 @@ nav {
 }
 
 #contact-form-newsletter {
-	
+
 	span {
 		width: 100%;
 	}
-	
+
 	.wpcf7-submit {
 		width: 15em;
 	}
@@ -704,7 +704,7 @@ nav {
 }
 
 footer .socket {
-	
+
 	.colophon, .mandatory {
 		justify-content: center;
 	}
@@ -715,7 +715,7 @@ footer .socket {
 /*===========EXTRA SUPER SMALL (375px)==========*/
 
 @media only screen and (max-width: 375px) {
-  
+
 /*---GLOBALS---*/
 
 .button {
@@ -754,11 +754,11 @@ footer .socket {
 /*===========GRID MODIFIER - MEDIA QUERIES==========*/
 
 @each $name, $size in $breakpoints {
-	
+
 	@media (max-width: #{$size}) {
-		
+
 		@for $i from 1 through $col-count {
-			
+
 			.container.cols-#{$name}-#{$i} > .col:nth-of-type(n) {
 				grid-column: span $i;
 			}

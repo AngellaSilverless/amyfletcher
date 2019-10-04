@@ -22,9 +22,9 @@ get_header();?>
 <?php $info = get_field("information_block"); ?>
 
 <div class="container container-wrapper pt5 pb5 cols-1-4-1-5 cols-md-12">
-	
+
 	<div class="col"></div>
-	
+
 	<div class="col">
 		<?php set_query_var("gallery", $info["gallery"]); set_query_var("class", "gallery__about"); get_template_part("template-parts/gallery"); ?>
 
@@ -36,45 +36,49 @@ get_header();?>
     <div class="col"></div>
 
     <div class="col block block-info">
-		
+
 		<h2 class="heading heading__md spacing1 font700 mb0 mt0"><?php echo $info["heading"]; ?></h2>
-		
+
 		<div class="text mb3"><?php echo $info["copy"]; ?></div>
 
         <a href="/interior/" class="button arrow">See Some Of Our Work</a>
 
 	</div>
-	
+
 </div>
-		
+
 </div>
-	
+
+<!-- Services Block -->
+
+<?php get_template_part("template-parts/services"); ?>
+
 <!-- Brands we've worked with Block -->
 
 <?php $brands = get_field("brands"); if($brands): ?>
 
 <div class="brands background-white center pt5 pb5">
-	
+
 	<div class="container">
-	
+
 		<div class="col small-col">
-			
+
 			<h2 class="heading heading__md spacing1"><?php echo $brands["heading"]; ?></h2>
-			
+
 			<div class="items-wrapper container no-gutter cols-2 cols-lg-3 cols-md-4 cols-sm-6">
-				
+
 				<?php foreach($brands["gallery"] as $img): ?>
-					
+
 				<div class="col pr1 pl1">
 					<img src="<?php echo $img["url"]; ?>" alt="<?php echo $img["alt"]; ?>" title="<?php echo $img["title"]; ?>">
 				</div>
-					
+
 				<?php endforeach; ?>
-			
+
 			</div>
-			
+
 		</div>
-	
+
 	</div>
 
 </div>
@@ -83,7 +87,7 @@ get_header();?>
 
 <!-- Quote Block -->
 
-    
+
 <div class="container pt3 pb3">
     <div class="col">
         <div class="quote-block single">
