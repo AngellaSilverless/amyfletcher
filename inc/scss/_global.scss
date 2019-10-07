@@ -105,6 +105,21 @@ main {
             fill: white;
         }
     }
+
+    svg {
+        height:15em;
+        margin-bottom: 3em;
+        opacity:0;
+        transition: opacity 2s ease;
+        path,
+        polygon {
+            fill: white;
+        }
+    }
+}
+
+.loaded .hero svg {
+    opacity:1;
 }
 
 p {

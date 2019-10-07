@@ -15,9 +15,10 @@ if(is_single() && get_post_type() == "post") {
 <div class="hero pt5 <?php the_field('hero_height', $ID);?>" style="background-image: url(<?php echo $heroImage['url']; ?>); background-color: <?php echo $heroColor; ?>;">
 	<div class="container container-wrapper">
 		<div class="col hero__content">
-			<?php if ( is_front_page() && is_home() ) {
-				echo 'aaaaa';
-			}?>
+			 <?php if( is_front_page() ) :
+				echo file_get_contents(get_field("logo", "options")["url"]);
+				endif;
+			?>
 			<h1 class="heading heading__xl heading__brand heading__light slow-fade"><?php echo $heading; ?></h1>
 		</div>
 	</div>
