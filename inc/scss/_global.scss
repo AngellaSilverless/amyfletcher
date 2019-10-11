@@ -346,7 +346,7 @@ nav {
     &::before {
         content: "";
         width: 100%;
-        height: 100%;
+        height: calc(100% + 10px);
         background: #545454;
         opacity: 1;
         position: absolute;
@@ -355,6 +355,7 @@ nav {
         z-index: -1;
         transform: translateY(-100%);
         transition: all 0.5s ease-in-out;
+        border-bottom: 10px solid white;
     }
 
     &.scrolled::before {
