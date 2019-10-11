@@ -33,7 +33,7 @@
 		
 			<nav id="nav">
 				
-				<div class="container fullwidth cols-3-6-3 cols-xl-3-9 cols-md-12">
+				<div class="container cols-3-6-3 cols-xl-3-9 cols-md-12">
 				
 					<div class="col" id="logo-amy-fletcher">
 						<a href="<?php echo home_url(); ?>" alt="Amy Fletcher - Interior Designer, Logo">
