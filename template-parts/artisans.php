@@ -21,21 +21,23 @@ if($block_info && $artisans && sizeof($artisans) > 0): ?>
 	
 				<?php foreach($artisans as $artisan): ?>
 				
-				<a href="<?php echo get_permalink($artisan->ID); ?>" class="col info-wrapper mb5">
+				<a href="<?php echo get_permalink($artisan->ID); ?>" class="col info-wrapper artisan-item mb5">
 					
 					<?php $image = get_field("hero_background_image", $artisan->ID); $url = $image["sizes"]["medium_large"];?>
 					
-					<div class="img mb3" style="background-image: url(<?php echo $url; ?>);"></div>
+					<div class="img" style="background-image: url(<?php echo $url; ?>);"></div>
 					
-					<div class="heading heading__sm spacing2 font200 mb1"><?php
-						$location = get_the_terms($artisan->ID, "location")[0];
-						$location_parent = get_term($location->parent, "location");
-						echo $location->name . ", " . $location_parent->name;
-					?></div>
+					<div class="content pt3 pb3">
+    					<div class="heading heading__sm spacing2 font200 mb1"><?php
+    						$location = get_the_terms($artisan->ID, "location")[0];
+    						$location_parent = get_term($location->parent, "location");
+    						echo $location->name . ", " . $location_parent->name;
+    					?></div>
+    					
+    					<div class="heading heading__lg heading__brand title"><?php echo $artisan->post_title; ?></div>
+            			<?php get_template_part("inc/img/tilde"); ?>
+					</div>
 					
-					<div class="heading heading__lg heading__brand title"><?php echo $artisan->post_title; ?></div>
-					
-					<?php get_template_part("inc/img/tilde"); ?>
 					
 				</a>
 				

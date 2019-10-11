@@ -243,6 +243,7 @@
 .tape {
 	position: absolute;
 	width: 16em;
+	display: none;
 	
 	&.tl {
 		top: -2em;

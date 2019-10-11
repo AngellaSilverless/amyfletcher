@@ -25,7 +25,7 @@ get_header();?>
 
 	<div class="col"></div>
 
-	<div class="col">
+	<div class="col about-image">
 		<?php set_query_var("gallery", $info["gallery"]); set_query_var("class", "gallery__about"); get_template_part("template-parts/gallery"); ?>
 
         <div class="summary-block mt1">

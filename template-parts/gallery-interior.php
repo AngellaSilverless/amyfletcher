@@ -10,7 +10,7 @@ if($gallery): $class = get_query_var("class"); ?>
 		
 		<?php $i = 0; foreach($gallery as $image): if($quotation && $i == 2): ?>
 		
-		<div class="img-wrapper quotation quotation-interior container cols-3-11">
+		<div class="img-wrapper quotation quotation-interior">
 		
 			<div class="quote-wrapper col">
 				

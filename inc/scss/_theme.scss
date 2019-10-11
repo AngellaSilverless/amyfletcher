@@ -304,9 +304,11 @@ nav svg {
 }
 
 .img-wrapper.quotation-interior {
-	background: $brand-primary;
+	background: #a9a79e;
 	color: white;
-
+    display: grid;
+    padding: 4em;
+    
 	.quote-wrapper svg path {
 		fill: $brand-secondary;
 	}
@@ -320,6 +322,35 @@ nav svg {
 	fill: $brand-primary;
 }
 
+.gallery__interior .quote-block.single p {
+    width: 100%;
+    font-size: 1em;
+    &:before {
+        top:0;
+    }
+}
+
+.artisan-item {
+    transition:all 0.5s ease;
+    &:hover {
+        box-shadow: 0 0 0 3px #a9a79e;
+    }
+    overflow:hidden;
+    .img {
+        transition:all 1s ease;
+    }
+    &:hover > .img {
+        transform:scale(1.05);
+    }
+    .content {
+        transition: all 0.5s ease;
+    }
+    &:hover > .content {
+        padding-left:1em;
+        padding-right: 1em;
+        background:white;
+    }
+}
 
 .career-history {
 
@@ -395,7 +426,9 @@ nav svg {
 	position: relative;
     position: relative;
     filter: saturate(0);
-
+    &:hover {
+        filter:saturate(1);
+    }
 	&:before {
 		content: "";
 		position: absolute;
@@ -530,7 +563,10 @@ nav svg {
 
 .interior-block {
     .info-wrapper {
-	    background:white;
+	    grid-gap: 0;
+	    .col.info {
+    	    background: white;
+	    }
 	}
 }
 
@@ -597,9 +633,12 @@ nav svg {
 		border-color: #e0e0e0;
 		&:before {
     		background: #cecece;
+            transform: none;
 		}
 		&:after {
     		border-color: transparent transparent transparent #cecece;
+            background: transparent;
+            transform: none;
 		}
 	}
 
@@ -772,6 +811,7 @@ nav svg {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+	    background: #979695;
 	}
 
 	.heading {
@@ -914,7 +954,8 @@ nav svg {
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-
+        color: #696968;
+        
 		&:hover {
 
 			svg {
@@ -931,7 +972,7 @@ nav svg {
 		justify-content: center;
 
 		svg {
-			fill: $brand-primary;
+			fill: #696968;
 			max-width: 8em;
 			max-height: 5em;
 			width: 100%;
@@ -996,11 +1037,23 @@ nav svg {
     justify-content: center;
     padding-top: 3em;
     svg {
-        height:9em;
+        height: 3em;
+        margin-bottom: 3em;
         polygon, path {
             fill:#545454;
         }
     }
+}
+
+.summary-block {
+    h3, h4 {
+        font-size: 1.3em;
+        margin-bottom: 0;
+    }
+}
+
+.about-image .container {
+    padding:0;
 }
 
 .quote-block {
@@ -1103,6 +1156,10 @@ footer {
 			padding-top: 0.5em;
 			padding-bottom: 0.5em;
 			line-height: 1.5;
+			font-weight: 100;
+			.country {
+    			font-weight: 800;
+			}
 		}
 	}
 
