@@ -15,9 +15,7 @@ get_header();?>
 <?php $ID = get_option("page_for_posts"); ?>
 
 <!-- Text Block -->
-<div class="pt3 pb3">
 	<?php set_query_var("text_block", get_field("text_block", $ID)); get_template_part("template-parts/text-block"); ?>
-</div>
 
 <div class="container container-wrapper container__medium cols-4 cols-lg-12 pb10">
 

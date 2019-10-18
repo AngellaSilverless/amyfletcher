@@ -31,15 +31,15 @@ get_header();?>
 	<div class="col">
 		<img src="<?php the_field('profile_image');?>"/>
         <div class="summary-block mt1">
-            <h2 class="heading heading__md spacing1 font700 mb0 mt0">Qualifications</h2>
-            <?php the_field('qualifications');?>
-            <h2 class="heading heading__md spacing1 font700 mb0 mt0">Career History</h2>
-            <?php the_field('career_history');?>
+            <h2 class="heading heading__md spacing1 font700 mt0">Qualifications</h2>
+            <div class="mt1"><?php the_field('qualifications');?></div>
+            <h2 class="heading heading__md spacing1 font700 mt0">Career History</h2>
+            <div class="mt1"><?php the_field('career_history');?></div>
         </div>
 	</div>
 
 	<div class="col">
-    	<h2 class="heading heading__md spacing1 font700 mb0 mt0"><?php echo $info["heading"]; ?></h2>
+    	<h2 class="heading heading__md spacing1 font700 mt0"><?php echo $info["heading"]; ?></h2>
 		<div class="text mb1"><?php echo $info["copy"]; ?></div>
         <a href="/interior/" class="button-general">See Some Of Our work</a>
         

@@ -4,7 +4,7 @@
 	
 	<div class="col block block-text">
 		
-		<h2 class="heading heading__md spacing1 mb0"><?php echo $text_block["heading"]; ?></h2>
+		<h2 class="heading heading__md spacing1"><?php echo $text_block["heading"]; ?></h2>
 		
 		<div class="text"><p><?php echo $text_block["text_block_text"]; ?></p></div>
 		
