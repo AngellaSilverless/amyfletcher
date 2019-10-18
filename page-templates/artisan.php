@@ -26,7 +26,7 @@ $artisans = get_posts(array(
 
 if($artisans && sizeof($artisans) > 0): ?>
 
-<div class="container-artisan container container-wrapper container-md container__narrow cols-4 cols-xl-6 cols-md-12 pt5 pb5">
+<div class="container-artisan container container-wrapper container-md container__medium cols-4 cols-xl-6 cols-md-12 pt5 pb5">
 
 	<?php foreach($artisans as $artisan): ?>
 

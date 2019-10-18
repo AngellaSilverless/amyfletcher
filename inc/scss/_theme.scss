@@ -350,15 +350,20 @@ nav svg {
 	fill: $brand-primary;
 }
 
+.img-wrapper.quotation-interior .quote-wrapper {
+    margin-left: 0;
+}
+
 .gallery__interior .quote-block.single p {
     width: auto;
     font-size: .75em;
-    text-align: left;
+    text-align: center;
     &:before {
         top:0;
+        left:-1.25em;
     }
     &:after {
-        right: -1em;
+        right: -1.25em;
         bottom: 0;
     }
 }
@@ -470,6 +475,10 @@ nav svg {
 	display: block;
 	line-height: 1.2;
     background:white;
+    transition: all 0.5s ease;
+    &:hover {
+        box-shadow:0 0 0 10px #eae7e3;
+    }
     a {
         display: grid;
     }
