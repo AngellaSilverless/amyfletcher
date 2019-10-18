@@ -10,6 +10,20 @@
     padding-left: 2em;
     padding-right: 2em;
     
+    &__narrow {
+        max-width: 800px;
+        &-center {
+            margin:0 auto;
+        }
+    }
+
+    &__medium {
+        max-width: 950px;
+        &-center {
+            margin:0 auto;
+        }
+    }
+    
     &.fullwidth {
         max-width: none;
     }

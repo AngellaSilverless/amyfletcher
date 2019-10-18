@@ -28,7 +28,7 @@ foreach($contact_info as $info) {
 ?>
 
 <!-- Contact Links -->
-
+<div class="grey-block">
 <div class="container container-wrapper contact-links cols-4 cols-sm-12 center pt3 pb5">
 	
 	<?php if(isset($show_info)): ?>
@@ -71,6 +71,7 @@ foreach($contact_info as $info) {
 	
 	<?php endif; ?>
 	
+</div>
 </div>
 
 <div class="arrow-down center">
@@ -126,39 +127,9 @@ foreach($contact_info as $info) {
 
 </div>
 
-<!-- Gallery -->
+<div class="border-separator"></div>
 
-<?php $gallery = $studio["gallery"]; if($gallery): ?>
-
-<div class="owl-carousel gallery-contact">
-	
-	<?php foreach($gallery as $image): ?>
-		
-		<div class="img-wrapper">
-			<a href="<?php echo $image["url"]; ?>" title="<?php echo $image["title"]; ?>" alt="<?php echo $image["alt"]; ?>" style="background-image: url(<?php echo $image["url"]; ?>);"></a>
-		</div>
-	
-		<?php endforeach; ?>
-		
-	</div>
-	
-</div>
-
-<?php endif; endif; ?>
-
-<!-- Map -->
-
-<?php $map = get_field("map"); if($map && $map["map_image"]): ?>
-
-<div class="container fullwidth cols-12 map-container map-contact">
-	
-	<div class="col">
-		
-		<img src="<?php echo $map["map_image"]["url"]; ?>" alt="<?php echo $map["map_image"]["alt"]; ?>" title="<?php echo $map["map_image"]["title"]; ?>">
-		
-	</div>
-	
-</div>
+<?php echo do_shortcode('[wp_mapbox_gl_js map_id="752"]');?>
 
 <?php endif; ?>
 

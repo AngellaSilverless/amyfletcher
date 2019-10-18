@@ -17,9 +17,9 @@ get_header();?>
 <?php set_query_var("text_block", get_field("text_block")); get_template_part("template-parts/text-block"); ?>
 
 <!-- Gallery Block -->
-
+<div class="container__narrow container__narrow-center">
 <?php set_query_var("gallery", get_field("gallery")); set_query_var("class", "gallery__interior"); get_template_part("template-parts/gallery", "interior"); ?>
-
+</div>
 <!-- Text Block -->
 
 <div class="background-white">
@@ -27,6 +27,8 @@ get_header();?>
 <?php set_query_var("text_block", get_field("text_block_2")); get_template_part("template-parts/text-block"); ?>
 
 <!-- Gallery Block -->
+
+<div class="container__narrow container__narrow-center">
 
 <?php $gallery = get_field("gallery_2"); if($gallery): ?>
 
@@ -59,8 +61,10 @@ get_header();?>
 
 </div>
 
-<!-- Recent Projects -->
+</div>
 
-<?php get_template_part("template-parts/recent", "projects"); ?>
+<div class="grey-block pt5 pb5 align-center">
+    <a href=""><button class="read-more button mt1">View Other Recent Projects</button></a>
+</div>
 
 <?php get_footer();?>

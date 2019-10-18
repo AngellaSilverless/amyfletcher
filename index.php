@@ -19,30 +19,26 @@ get_header();?>
 	<?php set_query_var("text_block", get_field("text_block", $ID)); get_template_part("template-parts/text-block"); ?>
 </div>
 
-<div class="container container-wrapper cols-4 cols-lg-12 pb10">
+<div class="container container-wrapper container__medium cols-4 cols-lg-12 pb10">
 
 	<?php while (have_posts()): the_post(); ?>
 
-	<a class="col post-wrapper" href="<?php echo get_permalink(); ?>">
+	<div class="col post-wrapper">
 
-		<?php $image = get_field("hero_background_image"); $url = $image["sizes"]["medium_large"];?>
-
-		<div class="img" style="background-image: url(<?php echo $url; ?>);"></div>
-
+	    <?php $image = get_field("hero_background_image"); $url = $image["sizes"]["medium_large"];?>
+        <a href="<?php echo get_permalink(); ?>">
+		    <div class="img" style="background-image: url(<?php echo $url; ?>);"></div>
+        </a>
 		<div class="post-info">
 
 			<h2 class="heading heading__sm spacing2 font400"><?php the_title(); ?></h2>
-
-			<div class="col date"><?php echo get_the_date("F j Y"); ?></div>
-
+            <div class="tilde"></div>
 			<div class="text brand-text"><p><?php the_field("introduction"); ?> [...]</p></div>
-
-
-    			<div class="button arrow">Read more	</div>
+            <a href="<?php echo get_permalink($property->ID); ?>" class="button-general">Read More</a>
 
 		</div>
 
-	</a>
+	</div>
 
 	<?php endwhile; ?>
 

@@ -1,28 +1,47 @@
 <?php $gallery = get_query_var("gallery");
 	
-$quotation = get_field("quotation_gallery");
-	
+$quotation1 = get_field("quotation_gallery");
+$quotation2 = get_field("quotation_gallery2");	
+
 if($gallery): $class = get_query_var("class"); ?>
 
 <div class="container cols-12">
 	
 	<div class="col gallery <?php echo $class; ?>">
 		
-		<?php $i = 0; foreach($gallery as $image): if($quotation && $i == 2): ?>
+		<?php $i = 0; 
+    		foreach($gallery as $image): 
+    		if($quotation1 && $i == 2):?>
 		
 		<div class="img-wrapper quotation quotation-interior">
 		
 			<div class="quote-wrapper col">
 				
 				<div class="quote-block single">
-                    <p><?php echo $quotation; ?></p>				
+                    <p><?php echo $quotation1; ?></p>				
 				</div>
 				
 			</div>
 			
 		</div>
 		
-		<?php endif; ?>
+		    <?php endif; ?>
+
+    		<?php if($quotation2 && $i == 7):?>
+		
+		<div class="img-wrapper quotation quotation-interior">
+		
+			<div class="quote-wrapper col">
+				
+				<div class="quote-block single">
+                    <p><?php echo $quotation2; ?></p>				
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		    <?php endif; ?>
 		
 		<div class="img-wrapper">
 			

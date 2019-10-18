@@ -1,7 +1,6 @@
 //@prepros-prepend magnific-popup.js
 //@prepros-prepend owl.carousel.min.js
-
-
+ 
 jQuery(document).ready(function( $ ) {
 
 /* Add class on load */

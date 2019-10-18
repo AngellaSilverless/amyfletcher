@@ -7,19 +7,20 @@
 get_header();?>
 
 <!-- ******************* Hero Content ******************* -->
-
-<?php get_template_part("template-parts/hero"); ?>
+<?php $heroImage = get_field("hero_background_image");?>
+<div class="hero pt5 mb5 <?php the_field('hero_height');?>" style="background-image: url(<?php echo $heroImage['url']; ?>); background-color: <?php echo $heroColor; ?>;">
+	<div class="container container-wrapper">
+		<div class="col hero__content">
+			 <?php if( is_front_page() ) :
+				echo file_get_contents(get_field("logo", "options")["url"]);
+				endif;
+			?>
+			<h1 class="heading heading__xl heading__brand heading__light slow-fade"><?php the_title(); ?></h1>
+		</div>
+	</div>
+</div><!--hero-->
 
 <!-- ******************* Hero Content END ******************* -->
-
-<div class="container container-wrapper no-gutter cols-12 post-title center pt5 pb5">
-	
-	<h1 class="col mb0"><?php get_template_part("inc/img/quotes-open");  the_field("hero_heading"); ?></h1>
-	
-	<div class="col date mt1"><?php echo get_the_date("F j Y"); ?></div>
-
-</div>
-
 
 <?php $sections = get_field("section"); if($sections): ?>
 
@@ -80,24 +81,10 @@ get_header();?>
 
 <?php endif; ?>
 
-<div class="newsletter-signup background-primary pt5 pb2">
+<div class="wrapper-button center pt5 pb5">
 	
-	<div class="container container-wrapper center cols-12">
-		
-		<div class="col">
-			
-			<div class="heading heading__md heading__secondary-color spacing1 mb1"><?php the_field("newsletter_heading", "options"); ?></div>
-			
-			<?php echo do_shortcode('[contact-form-7 id="382" title="Newsletter" html_id="contact-form-newsletter"]'); ?>
-			
-		</div>
-		
-	</div>
+	<a href="/blog" class="button view-slideshow">Back to Blog</a>
 	
 </div>
-
-<!-- Other Posts -->
-
-<?php get_template_part("template-parts/other", "posts"); ?>
 
 <?php get_footer();?>

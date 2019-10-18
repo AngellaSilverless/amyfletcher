@@ -15,7 +15,7 @@ html {
 body {
     font-family: $body-font;
     font-size: 11px;
-    background: hsl(0, 0%, 98%);
+    background: #fbfbfb;
     color: #979695;
     margin: 10px;
 }
@@ -23,7 +23,7 @@ body {
 .h2,
 h2 {
     font-size: 2.5em;
-}
+} 
 
 .h3,
 h3 {
@@ -37,7 +37,7 @@ h3 {
     left: 0;
     height: 100%;
     width: 10px;
-    background-color: hsl(0, 0%, 98%);
+    background-color: #e9e7e3;
     z-index: 1000;
 
     &__left-top {
@@ -46,7 +46,7 @@ h3 {
             position: fixed;
             width: 100%;
             height: 10px;
-            background-color: white;
+            background-color: #e9e7e3;
         }
     }
 
@@ -61,7 +61,7 @@ h3 {
             bottom: 0;
             width: 100%;
             height: 10px;
-            background-color: white;
+            background-color: #e9e7e3;
         }
     }
 }
@@ -126,7 +126,7 @@ p {
     font-size: 1.2em;
     line-height: 1.6;
     margin: 0;
-    padding: 1em 0;
+    padding: 0 0 1em;
     font-weight: 100;
 }
 
@@ -347,7 +347,7 @@ nav {
         content: "";
         width: 100%;
         height: calc(100% + 10px);
-        background: #545454;
+        background: #7b7168;
         opacity: 1;
         position: absolute;
         top: 0;
@@ -355,7 +355,7 @@ nav {
         z-index: -1;
         transform: translateY(-100%);
         transition: all 0.5s ease-in-out;
-        border-bottom: 10px solid white;
+        border-bottom: 10px solid #e9e7e3;
     }
 
     &.scrolled::before {
@@ -419,10 +419,10 @@ nav {
 }
 /*===========FOOTER==========*/
 footer {
-    background: black;
-
+    background: #d4d0ca;
+    color: red;
     a {
-        color: white;
+        color: red;
 
         &:hover {
             color: white;
@@ -431,11 +431,19 @@ footer {
 
     .pre-socket {
         padding: 3em 1em 1em;
-        color: white;
 
         .socials a {
-            color: white;
-
+            color: #948576;
+            margin: 0 2em;
+            i {
+                font-size: 2em;
+            }
+            span {
+                display: block;
+                text-transform: uppercase;
+                font-size: 0.75em;
+                margin-top: 1em;
+            }
             &:hover {
                 color: white;
             }
@@ -450,9 +458,11 @@ footer {
         letter-spacing: 1px;
         color: white;
         padding: 1em;
-
+        background: #948676;
+        a {
+            color: white;
+        }
         > .container {
-            border-top: 1px solid #9a9a9a;
             font-weight: 100;
             padding-top: 0.5em;
         }

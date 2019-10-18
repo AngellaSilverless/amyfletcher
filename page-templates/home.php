@@ -24,33 +24,7 @@ get_header();?>
 
 <?php get_template_part("template-parts/interior"); ?>
 
-<!-- Hospitality Design Block -->
-
-<?php $section_link = get_field("section_link"); if($section_link): ?>
-
-<div class="hospitality-design primary-overlay center pt5 pb5" style="background-image: url(<?php echo $section_link["background_image"]; ?>)">
-
-	<div class="container container-wrapper cols-3-11 cols-xl-2-12 pr5 pl5">
-
-		<div class="col">
-
-			<h2 class="heading heading__md heading__secondary-color spacing1 pb3"><?php echo $section_link["heading"]; ?></h2>
-
-			<div class="heading heading__lg heading__brand heading__light slow-fade mb1"><?php echo $section_link["copy"]; ?></div>
-
-			<a href="<?php echo $section_link["button_target"]; ?>" class="button button__light"><?php echo $section_link["button_label"]; ?></a>
-
-		</div>
-
-	</div>
-
-</div>
-
-<?php endif; ?>
-
-<!-- Artisans Block -->
-
-<?php get_template_part("template-parts/artisans"); ?>
+<div class="border-separator"></div>
 
 <!-- As seen in Block -->
 
@@ -83,12 +57,5 @@ get_header();?>
 </div>
 
 <?php endif; ?>
-
-
-
-<!-- Instagram Gallery -->
-
-
-<?php get_template_part("template-parts/gallery", "instagram"); ?>
 
 <?php get_footer();?>
