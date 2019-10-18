@@ -6,7 +6,7 @@
 	
 		<div class="col">
 			
-			<h2 class="heading heading__md heading__light spacing1 mb0"><?php echo $bespoke["heading"]; ?></h2>
+			<h2 class="heading heading__md heading__light spacing1"><?php echo $bespoke["heading"]; ?></h2>
 				<div class="container cols-4-10">
                     <div class="col"><?php echo $bespoke["copy"]; ?></div>
 				</div>
@@ -35,7 +35,7 @@
 	
 		<div class="col">
 			
-			<h2 class="heading heading__md spacing1 mb0"><?php echo $bespoke["items"][0]["label"]; ?></h2>
+			<h2 class="heading heading__md spacing1"><?php echo $bespoke["items"][0]["label"]; ?></h2>
 			
 			<div class="container cols-4-10 cols-xl-3-11 cols-md-2-12">
 	

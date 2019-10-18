@@ -835,23 +835,26 @@ nav svg {
 }
 
 .shop-items {
-	margin-top: calc(1.5 * 2.5em);
+	/*margin-top: calc(1.5 * 2.5em);*/
 
 	.item {
 		cursor: pointer;
-
+        background: white;
 		.img {
 			@include backgroundCover;
-			height: 22em;
+			height: 15em;
 		}
+        .content {
+            padding: 2em 1em 1em;
+        }
 
-		.title {
-			margin-top: 1.5em;
-		}
-
-		.heading {
-			line-height: 1.5;
-		}
+	}
+	.tilde {
+    background: #d4d4d4;
+    width: 1.5em;
+    margin-top: 1em;
+    height: 1px;
+    margin-bottom: 1em;
 	}
 }
 
