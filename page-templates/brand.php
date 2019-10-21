@@ -29,8 +29,8 @@ get_header();?>
 			
 			<h2 class="heading heading__md heading__light spacing1 pb2"><?php echo $services["heading"]; ?></h2>
 			
-			<div class="items-wrapper container align-center cols-3 cols-xl-3 cols-sm-6">
-				
+			<div class="items-wrapper container cols-3-2-2-2-3 cols-xl-2 cols-sm-6">
+				<div class="col"></div>
 				<?php foreach($services["items"] as $service): ?>
 					
 				<div class="col pr2 pl2">
@@ -49,15 +49,61 @@ get_header();?>
 </div>
 
 <?php endif; ?>
+
+<!-- Brands we've worked with Block -->
+
+<?php $brands = get_field("brands"); if($brands): ?>
+
+<div class="brands background-white center pt5 pb5">
+
+	<div class="container">
+
+		<div class="col small-col">
+
+			<h2 class="heading heading__md spacing1"><?php echo $brands["heading"]; ?></h2>
+
+			<div class="items-wrapper container no-gutter cols-2 cols-lg-3 cols-md-4 cols-sm-6">
+
+				<?php foreach($brands["gallery"] as $img): ?>
+
+				<div class="col pr1 pl1">
+					<img src="<?php echo $img["url"]; ?>" alt="<?php echo $img["alt"]; ?>" title="<?php echo $img["title"]; ?>">
+				</div>
+
+				<?php endforeach; ?>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<?php endif; ?>
+
 	
 <!-- Quote Block -->
 
-<div class="container background-light pt8 pb5">
+<div class="container pt5 pb5">
     <div class="col">
         <div class="quote-block single">
         <?php the_field('quote');?>
         </div>
     </div>
 </div>   
+
+<!-- Image Block -->
+
+<div class="container background-light pt5 pb5">
+    <div class="col">
+        <div class="large-brand-image">
+        <img src="<?php the_field('lower_image');?>" />
+        </div>
+    </div>
+</div>  
+
+
+
 
 <?php get_footer();?>
