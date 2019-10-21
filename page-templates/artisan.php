@@ -42,7 +42,7 @@ if($artisans && sizeof($artisans) > 0): ?>
 		    <div class="heading heading__sm heading__brand title"><?php echo $artisan->post_title; ?></div>
             <div class="tilde"></div>
             <p><?php the_field("introduction", $artisan->ID); ?></p>
-            <a href="<?php echo get_permalink($property->ID); ?>" class="button-general">Read More</a>
+            <a href="<?php echo get_permalink($artisan->ID); ?>" class="button-general">Read More</a>
         </div>
         </div>
 	</div>

@@ -94,7 +94,7 @@ get_header();?>
 </div>   
 
 <!-- Image Block -->
-
+<div class="background-light">
 <div class="container container__narrow background-light pt5 pb5">
     <div class="col">
         <div class="large-brand-image">
@@ -102,7 +102,7 @@ get_header();?>
         </div>
     </div>
 </div>  
-
+</div>
 
 
 

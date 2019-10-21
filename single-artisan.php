@@ -25,7 +25,7 @@ get_header();?>
 		<?php foreach ($info as $item): ?>
 	
 		<div>
-			<div class="label heading heading__md spacing1 mb0"><?php echo $item["label"]; ?></div>
+			<div class="label heading heading__md spacing1"><?php echo $item["label"]; ?></div>
 			<div class="value"><?php echo $item["value"]; ?></div>
 		</div>
 			
@@ -41,7 +41,7 @@ get_header();?>
 		
 		<?php $description = get_field("description"); if($description): ?>
 		
-		<div class="heading heading__md spacing1 mb0"><?php echo $description["heading"]; ?></div>
+		<div class="heading heading__md spacing1"><?php echo $description["heading"]; ?></div>
 		
 		<div class="text brand-text"><p><?php echo $description["copy"]; ?></p></div>
 		

@@ -26,14 +26,15 @@ get_header();?>
 <?php get_template_part("template-parts/interior"); ?>
 	
 <!-- Quote Block -->
-
-<div class="container background-light pt8 pb5">
+<div class="background-light">
+<div class="container pt8 pb5">
     <div class="col">
         <div class="quote-block single">
         <?php the_field('quote');?>
         </div>
     </div>
 </div>   
+</div>
 
 <!-- Previous Projects -->
 
@@ -73,7 +74,7 @@ get_header();?>
 			<?php endforeach; ?>
 			
 </div>
-		
+
 <?php endif; ?>
 
 <?php get_footer();?>
