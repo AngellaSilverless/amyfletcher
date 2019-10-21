@@ -95,7 +95,7 @@ get_header();?>
 
 <!-- Image Block -->
 
-<div class="container background-light pt5 pb5">
+<div class="container container__narrow background-light pt5 pb5">
     <div class="col">
         <div class="large-brand-image">
         <img src="<?php the_field('lower_image');?>" />

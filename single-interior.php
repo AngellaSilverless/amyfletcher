@@ -64,7 +64,7 @@ get_header();?>
 </div>
 
 <div class="grey-block pt5 pb5 align-center">
-    <a href=""><button class="read-more button mt1">View Other Recent Projects</button></a>
+    <a href="/interior"><button class="read-more button mt1">View Other Recent Projects</button></a>
 </div>
 
 <?php get_footer();?>
