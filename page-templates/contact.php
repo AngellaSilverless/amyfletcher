@@ -74,11 +74,7 @@ foreach($contact_info as $info) {
 </div>
 </div>
 
-<div class="arrow-down center">
-	
-<?php get_template_part("inc/img/arrow"); ?>
 
-</div>
 
 <!-- Text Block -->
 

@@ -89,16 +89,16 @@ get_header();?>
 		
 		<div class="col text brand-text"><p><?php echo $section["copy"]; ?></p></div>
 		
-		<div class="col quotation quotation-artisan container cols-3-13 cols-lg-2-12">
+		<div class="col quotation quotation-artisan container">
 		
 			<div class="quote-wrapper col">
 				
 				<div>
-				
-					<?php get_template_part("inc/img/quotes-open"); ?>
-					
-					<p><?php echo $section["quotation"]; ?></p>
-				
+				<?php if( $section['quotation'] ): ?>
+                    <div class="quote-block single">
+                        <p><?php echo $section["quotation"]; ?></p>
+                    </div>
+				<?php endif; ?>
 				</div>
 				
 			</div>
