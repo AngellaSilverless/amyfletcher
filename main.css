@@ -2478,7 +2478,7 @@ nav svg {
     transform: rotate(45deg); }
 
 .button-general {
-  padding: 1em;
+  padding: 1em 2em;
   border: 1px solid #dfdddb;
   display: block;
   color: #8e877c;
