@@ -39,7 +39,7 @@ jQuery(document).ready(function( $ ) {
 		});
 	});
 	
-	$(".owl-carousel").each(function(gallery) {
+	/*$(".owl-carousel").each(function(gallery) {
 		$(this).magnificPopup({
 			delegate: 'a',
 			type: 'image',
@@ -56,10 +56,28 @@ jQuery(document).ready(function( $ ) {
  
 /* Owl carousel */
     
-    $(".owl-carousel").owlCarousel({
-		margin: 0,
-		autoWidth:true,
-		items:4
+/*$(".owl-carousel").owlCarousel({
+	margin: 0,
+	autoWidth:true,
+	items:4
+});*/
+
+    $('.large-carousel').owlCarousel({
+        loop:true,
+        nav:true,
+    	    navClass: ['owl-prev', 'owl-next'],
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
     });
 
 /* Class and focus on click */

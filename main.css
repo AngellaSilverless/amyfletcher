@@ -1657,7 +1657,7 @@ button.mfp-arrow.mfp-arrow-right, button.mfp-arrow.mfp-arrow-left {
 button.mfp-close {
   width: 1.5em;
   height: 1.5em;
-  background: #1f938d !important;
+  background: #a0a9a9 !important;
   border-radius: 50%;
   font-weight: bold;
   color: white;
@@ -2431,6 +2431,52 @@ nav svg {
   text-transform: uppercase; }
 
 /*===========BODY==========*/
+.slider-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 10; }
+  .slider-wrapper .static-elements {
+    position: absolute;
+    z-index: 2;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center; }
+    .slider-wrapper .static-elements svg {
+      width: 20em; }
+      .slider-wrapper .static-elements svg path,
+      .slider-wrapper .static-elements svg polygon {
+        fill: white; }
+      .slider-wrapper .static-elements svg .st0 {
+        stroke: none; }
+
+.large-carousel {
+  height: 100vh; }
+  .large-carousel__item {
+    background-size: cover !important;
+    /* !important added as result of rule not working inside display:grid */
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    height: 100vh; }
+  .large-carousel.owl-carousel .owl-nav.disabled {
+    display: block; }
+  .large-carousel .owl-nav {
+    top: calc(50% - 2em); }
+  .large-carousel .owl-nav .owl-next:before,
+  .large-carousel .owl-nav .owl-prev:before {
+    left: 2em;
+    width: 2em;
+    height: 2em;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    transform: rotate(-135deg);
+    z-index: 9999; }
+  .large-carousel .owl-nav .owl-next:before {
+    left: initial;
+    right: 2em;
+    transform: rotate(45deg); }
+
 .button-general {
   padding: 1em;
   border: 1px solid #dfdddb;
@@ -2666,7 +2712,8 @@ nav svg {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: white; }
+  background: white;
+  transition: box-shadow 0.5s ease; }
   .container-artisan .info-wrapper .content {
     padding: 2em;
     display: flex;
@@ -2693,9 +2740,15 @@ nav svg {
     background-size: cover !important;
     /* !important added as result of rule not working inside display:grid */
     background-position: center center !important;
-    background-repeat: no-repeat !important; }
-  .container-artisan .info-wrapper:hover .arrow {
-    margin-left: 1em; }
+    background-repeat: no-repeat !important;
+    filter: saturate(0.3);
+    transition: filter 0.5s ease; }
+  .container-artisan .info-wrapper:hover {
+    box-shadow: 0 0 0 10px #eae7e3; }
+    .container-artisan .info-wrapper:hover .img {
+      filter: saturate(1); }
+    .container-artisan .info-wrapper:hover .arrow {
+      margin-left: 1em; }
 
 .career-history .col {
   padding: 0 1.5em; }
@@ -2844,6 +2897,9 @@ nav svg {
 .info-wrapper {
   display: grid;
   background: white; }
+  .info-wrapper a,
+  .info-wrapper a:hover {
+    color: #979695; }
   .info-wrapper .content {
     padding: 2em; }
   .info-wrapper .title {
@@ -2866,6 +2922,10 @@ nav svg {
     /* !important added as result of rule not working inside display:grid */
     background-position: center center !important;
     background-repeat: no-repeat !important; }
+    .info-wrapper .img a {
+      display: block;
+      height: 100%;
+      width: 100%; }
   .info-wrapper:hover .arrow {
     margin-left: 1em; }
 
@@ -2900,7 +2960,10 @@ nav svg {
 
 .post-wrapper {
   display: grid;
-  grid-template-rows: 15em auto; }
+  grid-template-rows: 15em auto;
+  transition: box-shadow 0.5s ease; }
+  .post-wrapper:hover {
+    box-shadow: 0 0 0 10px #eae7e3; }
   .post-wrapper .post-info {
     display: flex;
     flex-direction: column;
@@ -2921,7 +2984,11 @@ nav svg {
     /* !important added as result of rule not working inside display:grid */
     background-position: center center !important;
     background-repeat: no-repeat !important;
-    height: 15em; }
+    height: 15em;
+    filter: saturate(0.3);
+    transition: all 0.5s ease; }
+  .post-wrapper:hover .img {
+    filter: saturate(1); }
   .post-wrapper .heading {
     margin-bottom: 0.5em;
     font-size: 1.3em; }

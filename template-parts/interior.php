@@ -25,10 +25,10 @@ if($block_info && $properties && sizeof($properties) > 0): ?>
 					
 					<?php $image = get_field("hero_background_image", $property->ID); $url = $image["sizes"]["medium_large"];?>
 					
-					<div class="col img" style="background-image: url(<?php echo $url; ?>);"></div>
+					<div class="col img" style="background-image: url(<?php echo $url; ?>);"><a href="<?php echo get_permalink($property->ID); ?>"></a></div>
 					
 					<div class="col info">
-					
+					<a href="<?php echo get_permalink($property->ID); ?>">
 						<div class="heading heading__sm spacing2 font200 mb1"><?php
 							$location = get_the_terms($property->ID, "location")[0];
 							$location_parent = get_term($location->parent, "location");
@@ -42,11 +42,11 @@ if($block_info && $properties && sizeof($properties) > 0): ?>
 						<p class="mb1"><?php the_field("introduction", $property->ID); ?></p>
 											
 						<a href="<?php echo get_permalink($property->ID); ?>" class="button-general">View <?php echo $property->post_title; ?></a>
-						
+					</a>
 					</div>
 					
 				</div>
-				
+				</a>
 				<?php endforeach; ?>
 				
 			</div>

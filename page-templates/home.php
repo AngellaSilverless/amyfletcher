@@ -1,16 +1,34 @@
-<?php
+<?php 
 /**
  * ============== Template Name: Home
  *
  * @package amy-fletcher
  */
-get_header();?>
+get_header();
+$ID = get_the_ID();  
+$heading = get_field("hero_heading", $ID);?>
 
 <!-- ******************* Hero Content ******************* -->
+<div class="slider-wrapper">
+    <div class="static-elements">
+        <?php if( is_front_page() ) :
+				echo file_get_contents(get_field("logo", "options")["url"]);
+				endif;
+			?>
+			<h1 class="heading heading__xl heading__brand heading__light slow-fade"><?php echo $heading; ?></h1>
+    </div>
 
-<?php get_template_part("template-parts/hero"); ?>
+    <div class="large-carousel owl-carousel owl-theme">
+<?php if( have_rows('slider_images') ):
+    while ( have_rows('slider_images') ) : the_row(); 
+    $heroImage = get_sub_field("image");
+    ?>    
+        <div class="large-carousel__item"style="background-image: url(<?php echo $heroImage; ?>);"></div>            
+<?php endwhile; endif;?>        
+    </div>
+</div>
+          
 
-<!-- ******************* Hero Content END ******************* -->
 
 <!-- Text Block -->
 

@@ -42,8 +42,4 @@ get_header();?>
 
 </div>
 
-<!-- Instagram Gallery -->
-
-<?php get_template_part("template-parts/gallery", "instagram"); ?>
-
 <?php get_footer();?>

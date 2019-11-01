@@ -96,6 +96,58 @@ nav svg {
 }
 
 /*===========BODY==========*/
+.slider-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    .static-elements {
+        position: absolute;
+        z-index: 2;
+        bottom: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        svg {
+            width:20em;
+            path,
+            polygon {
+                fill:white;
+            }
+            .st0 {
+                stroke:none;
+            }
+        }
+    }
+}
+.large-carousel {
+    height: 100vh;
+    &__item {
+        @include backgroundCover;
+        height: 100vh;
+    }
+    &.owl-carousel .owl-nav.disabled {
+        display: block;
+    }
+    .owl-nav {
+        top: calc(50% - 2em);
+    }
+    .owl-nav .owl-next:before, 
+    .owl-nav .owl-prev:before {
+        left:2em;
+        width:2em;
+        height: 2em;
+        border-top:1px solid white;
+        border-right:1px solid white;
+        transform:rotate(-135deg);
+        z-index: 9999;
+    }
+    .owl-nav .owl-next:before {
+        left:initial;
+        right:2em;
+        transform:rotate(45deg);
+    }
+}
 
 .button-general {
     padding: 1em;
@@ -415,6 +467,7 @@ nav svg {
     flex-direction: column;
     height: 100%;
     background:white;
+    transition:box-shadow 0.5s ease;
     .content {
         padding: 2em;
         display: flex;
@@ -447,9 +500,15 @@ nav svg {
 		height: 15em;
 		width: 100%;
 		@include backgroundCover;
+		filter:saturate(0.3);
+		transition:filter 0.5s ease;
 	}
 
 	&:hover {
+    	box-shadow: 0 0 0 10px #eae7e3;
+    	.img {
+            filter:saturate(1);
+    	}
     	.arrow {
         	margin-left:1em;
     	}
@@ -642,6 +701,10 @@ nav svg {
 .info-wrapper {
     display: grid;
     background:white;
+    a, 
+    a:hover {
+        color: #979695;
+    }
     .content {
         padding: 2em;
     }
@@ -668,6 +731,11 @@ nav svg {
 		height: 20em;
 		width: 100%;
 		@include backgroundCover;
+		a {
+            display: block;
+            height: 100%;
+            width: 100%;
+		}
 	}
 
 	&:hover {
@@ -720,6 +788,11 @@ nav svg {
 .post-wrapper {
     display: grid;
     grid-template-rows: 15em auto;
+    transition:box-shadow 0.5s ease;
+	&:hover {
+    	box-shadow: 0 0 0 10px #eae7e3;
+	}
+	
 	.post-info {
     	display: flex;
     	flex-direction: column;
@@ -742,8 +815,12 @@ nav svg {
 	.img {
 		@include backgroundCover;
 		height: 15em;
+        filter: saturate(0.3);
+        transition: all 0.5s ease;
 	}
-
+    &:hover .img {
+        filter:saturate(1);
+    }
 	.heading {
     	margin-bottom: 0.5em;
 		font-size: 1.3em;
