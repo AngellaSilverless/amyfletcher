@@ -27,7 +27,7 @@
 			<div class="col align-center pt2 pb3">
     			<div class="heading heading__lg heading__brand title spacing1 mb1">Follow Us</div>
 				<div class="socials">
-					<a href="skype:<?php echo $skype; ?>?userinfo"><i class="far fa-newspaper"></i><span>News</span></a>
+					<a href="/blog"><i class="far fa-newspaper"></i><span>News</span></a>
 					<?php foreach($socials as $social): ?>
 					<a href="<?php echo $social["link"]; ?>"><i class="fab fa-<?php echo $social["social_network"]; ?>"></i><span><?php echo $social["title"]; ?></span></a>
 					<?php endforeach; ?>
