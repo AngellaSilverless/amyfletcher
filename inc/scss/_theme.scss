@@ -701,11 +701,9 @@ nav svg {
 .info-wrapper {
     display: grid;
     background:white;
-    a {
+    a, 
+    a:hover {
         color: #979695;
-    }
-     a:hover {
-        color: white;
     }
     .content {
         padding: 2em;
