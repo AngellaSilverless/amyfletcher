@@ -36,7 +36,7 @@ get_header();?>
 				
 				<div class="col">
 				
-					<div class="heading heading__md spacing1 mb0"><?php echo $section["heading"]; ?></div>
+					<div class="heading heading__md spacing1"><?php echo $section["heading"]; ?></div>
 					
 					<div class="text brand-text"><p><?php echo $section["copy"]; ?></p></div>
 				
