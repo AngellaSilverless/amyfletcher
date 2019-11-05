@@ -10,7 +10,7 @@
 				<div class="container cols-4-10">
                     <div class="col"><?php echo $bespoke["copy"]; ?></div>
 				</div>
-			<div class="items-wrapper container cols-2 cols-xl-4 cols-sm-6 mt3">
+			<div class="items-wrapper container container-flex">
 				
 				<?php $i = 0; foreach($bespoke["items"] as $item): ?>
 					

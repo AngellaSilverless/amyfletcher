@@ -104,12 +104,13 @@ nav svg {
     .static-elements {
         position: absolute;
         z-index: 2;
-        bottom: 25%;
+        bottom: 32%;
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
         svg {
             width:20em;
+            margin-bottom: 3em;
             path,
             polygon {
                 fill:white;
@@ -1244,10 +1245,10 @@ nav svg {
 .signature-block {
     display: grid;
     justify-content: center;
-    padding-top: 3em;
+    padding-top: 5em;
     svg {
         height: 3em;
-        margin-bottom: 3em;
+        margin-bottom: 5em;
         polygon, path {
             fill:#545454;
         }

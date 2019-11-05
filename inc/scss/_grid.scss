@@ -9,7 +9,9 @@
     margin-left: auto;
     padding-left: 2em;
     padding-right: 2em;
-    
+    &-flex {
+        display: flex;
+    }
     &__narrow {
         max-width: 800px;
         &-center {

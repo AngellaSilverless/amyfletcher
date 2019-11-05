@@ -64,6 +64,7 @@ jQuery(document).ready(function( $ ) {
 
     $('.large-carousel').owlCarousel({
         loop:true,
+        animateOut: 'fadeOut',
         nav:true,
     	    navClass: ['owl-prev', 'owl-next'],
         dots:false,
