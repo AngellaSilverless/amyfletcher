@@ -701,8 +701,10 @@ nav svg {
 .info-wrapper {
     display: grid;
     background:white;
-    a, 
-    a:hover {
+    a {
+        color: #979695;
+    }
+     a:hover {
         color: white;
     }
     .content {
