@@ -1011,7 +1011,8 @@ nav svg {
 	}
 
 	.image {
-		@include backgroundCover;
+		@include backgroundContain;
+		margin: 1em;
 	}
 
 	.info {
