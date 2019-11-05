@@ -35,9 +35,9 @@ foreach ( $categories as $category ):
         )
     );
 ?>
-    <div class="container align-center">
+    <div class="container container__medium align-center">
         <div class="col">
-            <h3 class="heading heading__md mt3 mb2"><?php echo $category->name; ?></h3>
+            <h3 class="heading heading__md mt3 mb2 horiz-sep"><span><?php echo $category->name; ?></span></h3>
         </div>
     </div>
 
