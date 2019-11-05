@@ -555,9 +555,9 @@ nav svg {
 	line-height: 1.2;
     background:white;
     transition: all 0.5s ease;
-    &:hover {
+    /*&:hover {
         box-shadow:0 0 0 10px #eae7e3;
-    }
+    }*/
     a {
         display: grid;
     }
@@ -567,9 +567,9 @@ nav svg {
         filter:saturate(0.3);
         transition:all 0.5s ease;
     }
-    &:hover &__img {
+    /*&:hover &__img {
         filter:saturate(1);
-    }
+    }*/
 
 	h3 {
 		font-size: 3.5em;
