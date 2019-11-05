@@ -50,7 +50,7 @@ get_header();?>
 			
 		$interiors = get_posts(array(
 			'post_type' => 'interior',
-			'posts_per_page' => 3,
+			'posts_per_page' => 9,
 			'post__not_in' => $recent_ids,
 			'offset' => 3
 		));
