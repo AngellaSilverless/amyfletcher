@@ -32,7 +32,7 @@ get_header();?>
 	
 		<div class="container container-wrapper cols-12">
 			
-			<div class="col container cols-4-10 cols-xl-3-11 cols-lg-2-12 cols-sm-12 center">
+			<div class="col container cols-4-10 cols-xl-3-11 cols-lg-2-12 cols-sm-12">
 				
 				<div class="col">
 				

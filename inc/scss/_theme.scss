@@ -942,7 +942,7 @@ nav svg {
 		cursor: pointer;
         background: white;
 		.img {
-			@include backgroundCover;
+			@include backgroundContain;
 			height: 15em;
 		}
         .content {

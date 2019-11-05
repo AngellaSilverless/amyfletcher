@@ -3792,7 +3792,7 @@ nav svg {
     background: white; }
     /* line 944, /Volumes/Macintosh HD/Users/ash/Local Sites/amy-fletcher/app/public/wp-content/themes/amyfletcher/inc/scss/_theme.scss */
     .shop-items .item .img {
-      background-size: cover !important;
+      background-size: contain !important;
       /* !important added as result of rule not working inside display:grid */
       background-position: center center !important;
       background-repeat: no-repeat !important;
