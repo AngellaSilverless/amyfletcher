@@ -59,7 +59,7 @@ get_header();?>
 			
 			<?php foreach($interiors as $interior): ?>
 			<div class="col project-block">
-    		<a href="<?php echo get_permalink($interior->ID); ?>">	
+    		<!--<a href="<?php echo get_permalink($interior->ID); ?>">	-->
     		<div class="project-block__img" style="background-image: url(<?php echo get_field("hero_background_image", $interior)["sizes"]["medium_large"]; ?>);"></div>	
 			<div class="project-block-small">
 				<div class="heading heading__brand heading__sm spacing2 font200"><?php echo $interior->post_title; ?></div>
@@ -70,7 +70,7 @@ get_header();?>
 					echo $location->name . ", " . $location_parent->name;
 				?></div>
 			</div>
-			</a>
+			<!--</a>-->
     		</div>
 			<?php endforeach; ?>
 			
