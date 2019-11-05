@@ -1358,6 +1358,35 @@ nav svg {
     }
 }
 
+.post-content blockquote {
+    position: relative;
+    float: right;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    padding-left: 4em;
+    margin-right: -4em;
+    font-size: 1.5em;
+    &:before,
+    &:after {
+        content: "\f10d";
+        position: absolute;
+        top: 0;
+        left: 0.4em;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 1.75em;
+        color: #fcb27d;
+    }
+    &:after {
+        left:initial;
+        right:0em;
+        top:initial;
+        bottom:0;
+        transform:rotate(180deg);
+    }
+}
+
 /*===========FOOTER==========*/
 
 footer {

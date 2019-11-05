@@ -4156,26 +4156,55 @@ nav svg {
       border-color: transparent transparent transparent #5c6970;
       transition: left 0.5s ease; }
 
+/* line 1361, /Volumes/Macintosh HD/Users/ash/Local Sites/amy-fletcher/app/public/wp-content/themes/amyfletcher/inc/scss/_theme.scss */
+.post-content blockquote {
+  position: relative;
+  float: right;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  padding-left: 4em;
+  margin-right: -4em;
+  font-size: 1.5em; }
+  /* line 1371, /Volumes/Macintosh HD/Users/ash/Local Sites/amy-fletcher/app/public/wp-content/themes/amyfletcher/inc/scss/_theme.scss */
+  .post-content blockquote:before,
+  .post-content blockquote:after {
+    content: "\f10d";
+    position: absolute;
+    top: 0;
+    left: 0.4em;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.75em;
+    color: #fcb27d; }
+  /* line 1381, /Volumes/Macintosh HD/Users/ash/Local Sites/amy-fletcher/app/public/wp-content/themes/amyfletcher/inc/scss/_theme.scss */
+  .post-content blockquote:after {
+    left: initial;
+    right: 0em;
+    top: initial;
+    bottom: 0;
+    transform: rotate(180deg); }
+
 /*===========FOOTER==========*/
-/* line 1363, /Volumes/Macintosh HD/Users/ash/Local Sites/amy-fletcher/app/public/wp-content/themes/amyfletcher/inc/scss/_theme.scss */
+/* line 1392, /Volumes/Macintosh HD/Users/ash/Local Sites/amy-fletcher/app/public/wp-content/themes/amyfletcher/inc/scss/_theme.scss */
 footer {
   position: relative;
   z-index: 2; }
-  /* line 1368, /Volumes/Macintosh HD/Users/ash/Local Sites/amy-fletcher/app/public/wp-content/themes/amyfletcher/inc/scss/_theme.scss */
+  /* line 1397, /Volumes/Macintosh HD/Users/ash/Local Sites/amy-fletcher/app/public/wp-content/themes/amyfletcher/inc/scss/_theme.scss */
   footer .info {
     font-weight: 400;
     letter-spacing: 1px;
     font-size: 1.2em; }
-    /* line 1373, /Volumes/Macintosh HD/Users/ash/Local Sites/amy-fletcher/app/public/wp-content/themes/amyfletcher/inc/scss/_theme.scss */
+    /* line 1402, /Volumes/Macintosh HD/Users/ash/Local Sites/amy-fletcher/app/public/wp-content/themes/amyfletcher/inc/scss/_theme.scss */
     footer .info .contact-wrapper {
       padding-top: 0.5em;
       padding-bottom: 0.5em;
       line-height: 1.5;
       font-weight: 100; }
-      /* line 1378, /Volumes/Macintosh HD/Users/ash/Local Sites/amy-fletcher/app/public/wp-content/themes/amyfletcher/inc/scss/_theme.scss */
+      /* line 1407, /Volumes/Macintosh HD/Users/ash/Local Sites/amy-fletcher/app/public/wp-content/themes/amyfletcher/inc/scss/_theme.scss */
       footer .info .contact-wrapper .country {
         font-weight: 800; }
-  /* line 1384, /Volumes/Macintosh HD/Users/ash/Local Sites/amy-fletcher/app/public/wp-content/themes/amyfletcher/inc/scss/_theme.scss */
+  /* line 1413, /Volumes/Macintosh HD/Users/ash/Local Sites/amy-fletcher/app/public/wp-content/themes/amyfletcher/inc/scss/_theme.scss */
   footer .socials {
     font-size: 1.2em;
     padding-top: 1em; }
