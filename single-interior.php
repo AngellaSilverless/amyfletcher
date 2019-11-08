@@ -33,30 +33,30 @@ get_header();?>
 <?php $gallery = get_field("gallery_2"); if($gallery): ?>
 
 <div class="gallery-interior pb5">
-	
+
 	<div class="container cols-12 gallery-working mb5">
-		
-		<img class="tape tl" src="<?php echo get_template_directory_uri()."/inc/img/tape.svg"; ?>">
+
+		<!--<img class="tape tl" src="<?php echo get_template_directory_uri()."/inc/img/tape.svg"; ?>">
 		<img class="tape tr" src="<?php echo get_template_directory_uri()."/inc/img/tape.svg"; ?>">
 		<img class="tape bl" src="<?php echo get_template_directory_uri()."/inc/img/tape.svg"; ?>">
-		<img class="tape br" src="<?php echo get_template_directory_uri()."/inc/img/tape.svg"; ?>">
-		
+		<img class="tape br" src="<?php echo get_template_directory_uri()."/inc/img/tape.svg"; ?>">_-->
+
 		<div class="col gallery gallery__working">
-			
+
 			<?php foreach($gallery as $image): ?>
-			
+
 			<div class="img-wrapper">
-				<a href="<?php echo $image["url"]; ?>" title="<?php echo $image["title"]; ?>" alt="<?php echo $image["alt"]; ?>" style="background-image: url(<?php echo $image["url"]; ?>);"></a>
+				<div class="item" style="background-image: url(<?php echo $image["url"]; ?>);"></div>
 			</div>
-		
+
 			<?php endforeach; ?>
-			
+
 		</div>
-	
+
 	</div>
 
 </div>
-	
+
 <?php endif; ?>
 
 </div>

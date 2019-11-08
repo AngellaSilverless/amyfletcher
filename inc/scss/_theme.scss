@@ -109,7 +109,7 @@ nav svg {
         transform: translateX(-50%);
         text-align: center;
         svg {
-            width:20em;
+            width:30em;
             margin-bottom: 3em;
             path,
             polygon {
@@ -119,6 +119,9 @@ nav svg {
                 stroke:none;
             }
         }
+		.heading__xl {
+			font-size: 4em;
+		}
     }
 }
 .large-carousel {
@@ -133,7 +136,7 @@ nav svg {
     .owl-nav {
         top: calc(50% - 2em);
     }
-    .owl-nav .owl-next:before, 
+    .owl-nav .owl-next:before,
     .owl-nav .owl-prev:before {
         left:2em;
         width:2em;
@@ -389,7 +392,7 @@ nav svg {
 	color: white;
     display: grid;
     padding: 3em;
-    
+
 	.quote-wrapper svg path {
 		fill: $brand-secondary;
 	}
@@ -412,8 +415,8 @@ nav svg {
 }
 
 .single-artisan {
-    
-    
+
+
     .quote-block.single p {
         width: 80%;
         font-weight: 100;
@@ -702,7 +705,7 @@ nav svg {
 .info-wrapper {
     display: grid;
     background:white;
-    a, 
+    a,
     a:hover {
         color: #979695;
     }
@@ -796,7 +799,7 @@ nav svg {
 	&:hover {
     	box-shadow: 0 0 0 10px #eae7e3;
 	}
-	
+
 	.post-info {
     	display: flex;
     	flex-direction: column;
@@ -1165,7 +1168,7 @@ nav svg {
 		justify-content: center;
 		flex-direction: column;
         color: #696968;
-        
+
 		&:hover {
 
 			svg {
@@ -1259,7 +1262,7 @@ nav svg {
     .heading {
         margin-bottom: 0;
     }
-    
+
     .heading + p {
         margin-top:0;
         padding-top: 0;

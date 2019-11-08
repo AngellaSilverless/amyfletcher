@@ -1,6 +1,6 @@
 //@prepros-prepend magnific-popup.js
 //@prepros-prepend owl.carousel.min.js
- 
+
 jQuery(document).ready(function( $ ) {
 
 /* Add class on load */
@@ -10,7 +10,7 @@ jQuery(document).ready(function( $ ) {
 
         next();
     });
- 
+
 /* Smooth scroll */
 
     $('nav a, a.button, a.next-section').click(function(){
@@ -23,7 +23,7 @@ jQuery(document).ready(function( $ ) {
     });
 
 /* Magnific Popup */
-	
+
 	$(".gallery").each(function(gallery) {
 		$(this).magnificPopup({
 			delegate: 'a',
@@ -38,7 +38,7 @@ jQuery(document).ready(function( $ ) {
 			}
 		});
 	});
-	
+
 	/*$(".owl-carousel").each(function(gallery) {
 		$(this).magnificPopup({
 			delegate: 'a',
@@ -53,9 +53,9 @@ jQuery(document).ready(function( $ ) {
 			}
 		});
 	});
- 
+
 /* Owl carousel */
-    
+
 /*$(".owl-carousel").owlCarousel({
 	margin: 0,
 	autoWidth:true,
@@ -68,6 +68,7 @@ jQuery(document).ready(function( $ ) {
         nav:true,
     	    navClass: ['owl-prev', 'owl-next'],
         dots:false,
+        autoplay:true,
         responsive:{
             0:{
                 items:1
@@ -85,18 +86,18 @@ jQuery(document).ready(function( $ ) {
 
 	$("#toggle-menu").click(function() {
 		$("#main-menu").slideToggle();
-        $('#nav').toggleClass('darker'); 
+        $('#nav').toggleClass('darker');
 	});
-    
+
     $(".read-more").click(function() {
 	    $(this).prev().slideToggle();
 	    $(this).text($(this).text() == "Read More" ? "Read Less" : "Read More");
     });
-    
+
     $(".view-slideshow").click(function() {
 	    $(".gallery__interior a").eq(0)[0].click();
     });
-    
+
     $(".shop-items .item").click(function() {
 	    $.ajax({
 			type : "POST",
@@ -112,20 +113,20 @@ jQuery(document).ready(function( $ ) {
 				    $("#show-furniture .colour").text(response.colour);
 				    $("#show-furniture .description p").text(response.description);
 				    $("#show-furniture .image").css("background-image", "url(" + response.image + ")");
-				    
+
 				}
-				
+
 				$("#show-furniture").fadeIn();
 			}
 		});
     });
-    
+
     $("#show-furniture .close").click(function() {
 		$("#show-furniture").fadeOut();
 	});
-	
+
 	if($("body").hasClass("page-template-shop")) {
-		
+
 		$(document).mouseup(function(e) {
 			if($("#show-furniture").css("display") == "block") {
 				var container = $(".product-info")
@@ -135,7 +136,7 @@ jQuery(document).ready(function( $ ) {
 			}
 		});
 	}
-	
+
 	$(".bespoke .item").click(function() {
 		$(this).siblings().removeClass("active");
 		$(this).addClass("active");
@@ -158,28 +159,28 @@ document.addEventListener("scroll", (evt) => {
 // ========== Add class if in viewport on page load
 
 	$.fn.isOnScreen = function(){
-	    
+
 	    var win = $(window);
-	    
+
 	    var viewport = {
 	        top : win.scrollTop(),
 	        left : win.scrollLeft()
 	    };
 	    viewport.right = viewport.left + win.width();
 	    viewport.bottom = viewport.top + win.height();
-	    
+
 	    var bounds = this.offset();
 	    bounds.right = bounds.left + this.outerWidth();
 	    bounds.bottom = bounds.top + this.outerHeight();
-	    
+
 	    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-	    
+
 	};
 
 	$('.slide-up, .slide-down, .slide-right, .slow-fade').each(function() {
 		if ($(this).isOnScreen()) {
-			$(this).addClass('active');    
-		} 
+			$(this).addClass('active');
+		}
 	});
 
 // ========== Add class on entering viewport
@@ -191,15 +192,15 @@ document.addEventListener("scroll", (evt) => {
 	var viewportBottom = viewportTop + $(window).height();
 	return elementBottom > viewportTop && elementTop < viewportBottom;
 	};
-	
+
 	$(window).on('resize scroll', function() {
-		
+
 		$('.slide-up, .slide-down, .slide-right, .slow-fade').each(function() {
 			if ($(this).isInViewport()) {
-				$(this).addClass('active');    
-			} 
+				$(this).addClass('active');
+			}
 		});
-	    
+
 	});
 
 // ===== Stop orphans on hero heading
@@ -213,7 +214,7 @@ $(document).ready(function() {
     //Drop last two words
 
 console.log(splitText);
-//var headingBrand = $(".hero h1").replaceWith('<h1>' . headingBrand + splitText . '</h1>'); 
+//var headingBrand = $(".hero h1").replaceWith('<h1>' . headingBrand + splitText . '</h1>');
 });
 
 function wordCount(str){

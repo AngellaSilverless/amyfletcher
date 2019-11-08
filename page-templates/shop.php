@@ -12,10 +12,11 @@ get_header();?>
 
 <!-- ******************* Hero Content END ******************* -->
 
+<?php get_template_part("template-parts/bespoke-manufacturing"); ?>
+
 <!-- Text Block -->
-
-<?php set_query_var("text_block", get_field("text_block")); get_template_part("template-parts/text-block"); ?>
-
+<?php set_query_var("text_block", get_field("text_block"));
+get_template_part("template-parts/text-block"); ?>
 <!-- Shop -->
 
 <?php
@@ -65,7 +66,7 @@ foreach ( $categories as $category ):
 
 <!-- Call to Action -->
 
-<?php get_template_part("template-parts/bespoke-manufacturing"); ?>
+
 
 <!-- Stockists -->
 
@@ -74,7 +75,7 @@ foreach ( $categories as $category ):
 <!-- Single furniture -->
 
 <div id="show-furniture" class="hidden">
-	
+
 	<div class="wrapper">
 		<div class="product-info">
     		<div class="close"><span>x</span></div>
@@ -85,7 +86,7 @@ foreach ( $categories as $category ):
     			<div class="heading heading__sm heading__light spacing2 colour font200"></div>
     			<?php get_template_part("inc/img/tilde"); ?>
     			<div class="brand-text description"><p></p></div>
-    		</div>	
+    		</div>
     	</div>
 	</div>
 </div>

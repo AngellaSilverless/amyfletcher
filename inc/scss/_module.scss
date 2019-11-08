@@ -7,16 +7,16 @@
 }
 
 .carousel {
-    
+
     &__item {
-        @include backgroundCover; 
-        position: relative;         
+        @include backgroundCover;
+        position: relative;
         height: 100%;
         display: grid;
         align-content: flex-end;
         padding-bottom: 10%;
     }
-    
+
 }
 
 .owl-stage {
@@ -29,21 +29,21 @@
 	top: 50%;
 	width: 100%;
 	z-index: 1;
-	
+
 	.owl-prev, .owl-next {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
 		transition: filter 0.3s ease;
-		
+
 		span {
 			display: none;
 		}
-		
+
 		&:focus {
 			outline: none;
 		}
-		
+
 		&:before {
 			content: "";
 			@include backgroundContain;
@@ -52,24 +52,24 @@
 			height: 2em;
 			cursor: pointer;
 		}
-		
+
 		&:hover {
 			filter: brightness(70%);
 		}
 	}
-	
+
 	.owl-prev {
 		left: 0;
-		
+
 		&:before {
 			right: 2em;
 			transform: translateY(-50%) rotate(90deg);
 		}
 	}
-	
+
 	.owl-next {
 		right: 0;
-		
+
 		&:before {
 			left: 2em;
 			transform: translateY(-50%) rotate(-90deg);
@@ -96,31 +96,31 @@
         margin: 0;
         cursor: zoom-in;
         transition: all 0.5s ease;
-        
+
         &:hover {
             box-shadow: 0 0 0 10px #d4d0cb;
         }
         &.quotation:hover {
             box-shadow: none;
         }
-        
+
         a {
 	        @include backgroundCover;
 	        width: 100%;
 	        height: 100%;
         }
     }
-    
+
     &__single {
-	    
+
 	    .img-wrapper {
 		    grid-column: span 12;
 		    height: 32em;
 		}
     }
-    
+
     &__single-large {
-	    
+
 	    .img-wrapper {
 		    grid-column: span 12;
 		    height: 35em;
@@ -129,99 +129,107 @@
 
 	&__about {
 		grid-gap: 1.5em;
-		
+
 		.img-wrapper {
-			
+
 			&:nth-of-type(3n - 2) {
 				grid-column: span 12;
 				height: 28em;
 			}
-			
+
 			&:nth-of-type(3n - 1), &:nth-of-type(3n) {
 				grid-column: span 6;
 				height: 13em;
 			}
 		}
 	}
-	
+
 	&__interior {
 		grid-gap: 1.5em;
-		
+
 		.img-wrapper {
 			height: 20em;
-			
+
 			&:nth-of-type(11n - 10), &:nth-of-type(11n - 4) {
 				grid-column: span 12;
 			}
-			
+
 			&:nth-of-type(11n - 9), &:nth-of-type(11n - 8), &:nth-of-type(11n - 7), &:nth-of-type(11n - 5), &:nth-of-type(11n - 1) {
 				grid-column: span 4;
 			}
-			
+
 			&:nth-of-type(11n - 6), &:nth-of-type(11n), {
 				grid-column: span 8;
 			}
-			
+
 			&:nth-of-type(11n - 3), &:nth-of-type(11n - 2) {
 				grid-column: span 6;
 			}
 		}
 	}
-	
+
 	&__working {
 		grid-gap: 1.5em;
-		
+
 		.img-wrapper {
 			grid-column: span 4;
 			height: 22em;
 			filter:saturate(.4);
 			transition:all 0.5s ease;
+			.item {
+				@include backgroundCover;
+				display: block;
+				height:100%;
+				&:hover {
+					cursor: initial;
+				}
+			}
 		}
 		.img-wrapper:hover {
     		filter:saturate(1);
     		box-shadow: none;
 		}
 	}
-	
+
 	&__artisan {
 		grid-gap: 1.5em;
-		
+
 		&.img-1 .img-wrapper {
 			grid-column: span 12;
 			height: 40em;
 		}
-			
+
 		&.img-2 .img-wrapper {
 			grid-column: span 6;
 			height: 35em;
 		}
-		
+
 		&.img-3 .img-wrapper {
 			grid-column: span 4;
 			height: 30em;
 		}
-		
+
 		&.img-4 .img-wrapper {
 			grid-column: span 3;
 			height: 25em;
 		}
-		
+
 		&.img-5 .img-wrapper {
-			
+
 			&:nth-of-type(5n - 4), &:nth-of-type(5n - 3), &:nth-of-type(5n - 2) {
 				grid-column: span 4;
 				height: 30em;
 			}
-			
+
 			&:nth-of-type(5n - 1), &:nth-of-type(5n) {
 				grid-column: span 6;
 				height: 30em;
 			}
 		}
 	}
-	
+
 	&__contact {
-		
+
 		.img-wrapper {
 			padding-right: 1em;
 		}
@@ -234,17 +242,17 @@
 }
 
 .block {
-	
+
 	.text {
 		color: $brand-mid-grey;
 		font-weight: normal;
 		letter-spacing: 1px;
 	}
-	
+
 	&-text {
 		text-align: center;
 	}
-	
+
 	&-info {
 		text-align: left;
 	}
@@ -258,25 +266,25 @@
 	position: absolute;
 	width: 16em;
 	display: none;
-	
+
 	&.tl {
 		top: -2em;
 		left: -8em;
 		transform: rotate(315deg);
 	}
-	
+
 	&.tr {
 		top: -2em;
 		right: -8em;
 		transform: rotate(45deg);
 	}
-	
+
 	&.bl {
 		bottom: -2em;
 		left: -8em;
 		transform: rotate(225deg);
 	}
-	
+
 	&.br {
 		bottom: -2em;
 		right: -8em;
@@ -285,7 +293,7 @@
 }
 
 .brand-tilde {
-	
+
 }
 
 .arrow {
