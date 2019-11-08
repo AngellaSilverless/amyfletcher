@@ -15,8 +15,8 @@ get_header();?>
 <?php get_template_part("template-parts/bespoke-manufacturing"); ?>
 
 <!-- Text Block -->
-<?php set_query_var("text_block", get_field("text_block"));
-get_template_part("template-parts/text-block"); ?>
+<!--<?php set_query_var("text_block", get_field("text_block"));
+get_template_part("template-parts/text-block"); ?>-->
 <!-- Shop -->
 
 <?php
