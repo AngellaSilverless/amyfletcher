@@ -1,5 +1,5 @@
 <?php $text_block = get_query_var("text_block"); ?>
-<?php if($text_block["text_block_text"]):?>
+<?php if($text_block["heading"]):?>
 <div class="container container-wrapper cols-4-10 cols-xl-3-11 cols-md-2-12 cols-sm-12 pt5 pb5">
 
 	<div class="col block block-text">
