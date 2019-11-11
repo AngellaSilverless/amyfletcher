@@ -30,11 +30,12 @@ foreach ( $categories as $category ):
                 array(
                     'taxonomy'  => 'type',
                     'terms'     => array( $category->slug ),
-                    'field'     => 'slug'
+                    'field'     => 'slug',
                 )
             )
         )
     );
+    //var_dump($services);
 ?>
     <div class="container container__medium align-center">
         <div class="col">

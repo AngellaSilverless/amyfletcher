@@ -21,6 +21,8 @@ get_header();?>
 
 <?php $services = get_field("section_services"); if($services): ?>
 
+<div class="border-separator"></div>
+
 <div class="services background-mid center pt3 pb5">
 	
 	<div class="container align-center">
