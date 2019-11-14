@@ -13,7 +13,7 @@
 
 	<div class="pre-socket">
 
-		<div class="container container-wrapper cols-4 cols-sm-12">
+		<div class="container container-wrapper cols-12">
 
 			<?php
 

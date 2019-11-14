@@ -39,18 +39,18 @@ get_header();?>
 	</div>
 
 	<div class="col ml2">
-    	<h2 class="heading heading__md spacing1 font700 mt0" style="line-height: 0.65em;"><?php echo $info["heading"]; ?></h2>
+    	<h2 class="heading heading__md spacing1 font700 mt0"><?php echo $info["heading"]; ?></h2>
 		<div class="text mb1"><?php echo $info["copy"]; ?></div>
         <a href="/interior/" class="button-general">See Some Of Our work</a>
-        
+
         <div class="awards mt3">
         <h2 class="heading heading__md spacing1 font700 mb0 mt0">Awards</h2>
-        <?php $awards = get_field("awards"); 
+        <?php $awards = get_field("awards");
             foreach($awards as $award): ?>
 				<img src="<?php echo $award["award_image"]; ?>"/>
 				<?php endforeach; ?>
         </div>
-        
+
 	</div>
 
     <div class="col"></div>

@@ -43,7 +43,7 @@ foreach ( $categories as $category ):
         </div>
     </div>
 
-    <div class="shop-items container container__medium cols-4 cols-md-4 cols-sm-6">
+    <div class="shop-items container container__medium cols-4 cols-md-4 cols-sm-6 cols-xs-12">
         <?php while ($services->have_posts()) : $services->the_post(); ?>
             <div class="col item pb1" furniture="<?php echo get_the_ID(); ?>">
             	<?php $colour = get_field("colour"); ?>

@@ -23,29 +23,29 @@ get_header();?>
 
 <div class="border-separator"></div>
 
-<div class="services background-mid center pt3 pb5">
-	
+<div class="services branding background-mid center pt3 pb5">
+
 	<div class="container align-center">
-	
+
 		<div class="col">
-			
+
 			<h2 class="heading heading__md heading__light spacing1 pb2"><?php echo $services["heading"]; ?></h2>
-			
-			<div class="items-wrapper container cols-3-2-2-2-3 cols-xl-2 cols-sm-6">
+
+			<div class="items-wrapper container cols-3-2-2-2-3 cols-sm-4">
 				<div class="col"></div>
 				<?php foreach($services["items"] as $service): ?>
-					
+
 				<div class="col pr2 pl2">
 					<div class="icon"><?php echo file_get_contents($service["icon"]); ?></div>
 					<div class="label"><?php echo $service["label"]; ?></div>
 				</div>
-					
+
 				<?php endforeach; ?>
-			
+
 			</div>
-		
+
 		</div>
-		
+
 	</div>
 
 </div>
@@ -84,7 +84,7 @@ get_header();?>
 
 <?php endif; ?>
 
-	
+
 <!-- Quote Block -->
 
 <div class="container pt5 pb5">
@@ -93,7 +93,7 @@ get_header();?>
         <?php the_field('quote');?>
         </div>
     </div>
-</div>   
+</div>
 
 <!-- Image Block -->
 <div class="background-light">
@@ -103,7 +103,7 @@ get_header();?>
         <img src="<?php the_field('lower_image');?>" />
         </div>
     </div>
-</div>  
+</div>
 </div>
 
 
