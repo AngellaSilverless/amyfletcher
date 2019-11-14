@@ -23,7 +23,7 @@ body {
 .h2,
 h2 {
     font-size: 2.5em;
-} 
+}
 
 .h3,
 h3 {
@@ -85,7 +85,7 @@ main {
         width: 100%;
         background: black;
         position: absolute;
-        opacity: 0.25;
+        opacity: 0.15;
         z-index: -1;
         top: 0;
     }
@@ -244,7 +244,7 @@ strong {
         font-size: 0.75em;
         color: $brand-mid-grey;
     }
-    
+
     &__title-case {
         text-transform: capitalize;
     }
