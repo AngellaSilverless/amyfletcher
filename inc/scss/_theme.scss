@@ -366,7 +366,7 @@ nav svg {
 	}
 
 	.quote-wrapper {
-		font-size: 2.4em;
+		font-size: 1em;
 		font-weight: bold;
 		text-align: left;
 		line-height: 1.4;
@@ -392,7 +392,7 @@ nav svg {
 	background: #a9a79e;
 	color: white;
     display: grid;
-    padding: 3em;
+    padding: 1em;
 
 	.quote-wrapper svg path {
 		fill: $brand-secondary;
@@ -432,16 +432,12 @@ nav svg {
 
 
 .gallery__interior .quote-block.single p {
-    width: auto;
-    font-size: .75em;
-    text-align: center;
+	font-size: 1.5em;
     &:before {
-        top:0;
-        left:-1.25em;
+
     }
     &:after {
-        right: -1.25em;
-        bottom: 0;
+
     }
 }
 
@@ -1286,28 +1282,27 @@ nav svg {
 
         p {
             position: relative;
-            width:50%;
+            width:80%;
             margin: 0 auto;
-            font-size: 2em;
+			font-size: 1.8em;
             font-weight: 700;
             color: #545454;
-            text-align:justify;
+            text-align:center;
             &:before,
             &:after {
                 content: "\f10d";
-                position: absolute;
-                top:0;
-                left:-1.75em;
+				display: inline;
+                position: relative;
+				padding-right: 0.5em;
                 font-family: "Font Awesome 5 Free";
                 font-weight: 900;
                 font-size:0.75em;
                 color: #fcb27d;
             }
             &:after {
-                left: initial;
-                right: -1.75em;
-                top: initial;
-                bottom: 2em;
+				content: "\f10e";
+				padding-right: 0;
+				padding-left: 0.5em;
                 transform: rotate(180deg);
             }
         }
@@ -1390,6 +1385,9 @@ nav svg {
         bottom:0;
         transform:rotate(180deg);
     }
+	p {
+		font-weight: 700;
+	}
 }
 
 .horiz-sep {
