@@ -235,7 +235,6 @@ body {
 .slider-wrapper {
 	.static-elements {
 	    width: 80%;
-		bottom:20%;
 		svg {
 			width:20em;
 		}
@@ -430,7 +429,6 @@ nav {
 
 .slider-wrapper .static-elements {
     width: 80%;
-    bottom: 20%;
 	heading__xl {
 		font-size: 2.5em;
 	}
@@ -886,9 +884,7 @@ footer .pre-socket .socials a {
 
 
 /*---HEADER---*/
-.slider-wrapper .static-elements {
-    bottom: 30%;
-}
+
 .slider-wrapper .static-elements svg {
     width: 9em;
 }
