@@ -44,10 +44,11 @@ get_header();?>
 		<div class="col gallery gallery__working">
 
 			<?php foreach($gallery as $image): ?>
+				<div class="img-wrapper">
+					<a href="<?php echo $image["url"]; ?>" title="<?php echo $image["title"]; ?>" alt="<?php echo $image["alt"]; ?>" style="background-image: url(<?php echo $image["url"]; ?>);">
+					<div class="item" style="background-image: url(<?php echo $image["url"]; ?>);"></div></a>
+	 			</div>
 
-			<div class="img-wrapper">
-				<div class="item" style="background-image: url(<?php echo $image["url"]; ?>);"></div>
-			</div>
 
 			<?php endforeach; ?>
 
