@@ -29,13 +29,13 @@ if($block_info && $properties && sizeof($properties) > 0): ?>
 
 					<div class="col info">
 					<a href="<?php echo get_permalink($property->ID); ?>">
-						<div class="heading heading__sm spacing2 font200 mb1"><?php
+						<h3 class="heading heading__sm spacing2 font200 mb1"><?php
 							$location = get_the_terms($property->ID, "location")[0];
 							$location_parent = get_term($location->parent, "location");
 							echo $location->name . ", " . $location_parent->name;
-						?></div>
+						?></h3>
 
-						<div class="heading heading__lg heading__brand title"><?php echo $property->post_title; ?></div>
+						<h2 class="heading heading__lg heading__brand title"><?php echo $property->post_title; ?></h2>
 
 						<?php get_template_part("inc/img/tilde"); ?>
 
